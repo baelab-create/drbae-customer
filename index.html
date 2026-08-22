@@ -490,6 +490,26 @@ details.track > summary::-webkit-details-marker{display:none;}
   .track-body{padding:0 17px 24px;}
 }
 
+/* ============================== 각질층 단면 모식도 ============================== */
+.xsec{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:720px){ .xsec{grid-template-columns:1fr;} }
+.xp{background:#fbfcfe;border:1px solid var(--line-soft);border-radius:16px;padding:14px 14px 17px;}
+.xp svg{width:100%;height:auto;display:block;border-radius:11px;background:#fff;border:1px solid #eef2f6;}
+.xp figcaption{margin-top:12px;font-size:.9rem;color:#5c6775;line-height:1.62;}
+.xp figcaption b{display:block;font-size:.96rem;color:var(--navy);font-weight:800;margin-bottom:4px;letter-spacing:-.01em;}
+.xnote{margin-top:11px;font-size:.83rem;color:#98a2b0;text-align:center;}
+
+/* ============================== 안전 포지셔닝 ============================== */
+.safe{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:720px){ .safe{grid-template-columns:1fr;} }
+.sf{border:1px solid #cfe0f0;background:#f4f9fd;border-radius:16px;padding:19px 18px;}
+.sf .lb{
+  display:inline-block;font-size:.77rem;font-weight:800;letter-spacing:.06em;
+  color:#fff;background:var(--blue);border-radius:7px;padding:5px 12px;margin-bottom:11px;
+}
+.sf p{font-size:.93rem;color:var(--body);}
+.sf p b{color:var(--navy);font-weight:700;}
+
 /* ============================== FAQ ============================== */
 .faqs{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
 details.faq{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s;}
@@ -1357,6 +1377,23 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         마이크로젝션은 그 원리를 화장품 도포에 옮겨 온 기기입니다.
       </p>
 
+
+      <div class="xsec">
+        <figure class="xp">
+          <svg viewBox="0 0 200 140" role="img" aria-label="도포만 했을 때 — 앰플이 각질층 표면에 고르지 않게 남아 있는 단면 모식도"><rect x="0" y="0" width="200" height="140" fill="#ffffff"/><rect x="0" y="89" width="200" height="51" fill="#F6E4DA"/><rect x="-10" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="5" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="35" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="65" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="95" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="125" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="155" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="185" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="-10" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><ellipse cx="46" cy="45" rx="19" ry="7.5" fill="#2F6FB2" opacity=".5"/><ellipse cx="121" cy="47" rx="26" ry="5.5" fill="#2F6FB2" opacity=".45"/><circle cx="178" cy="45" r="5" fill="#2F6FB2" opacity=".5"/><rect x="46.4" y="52" width="3.2" height="5" rx="1.4" fill="#2F6FB2" opacity=".35"/></svg>
+          <figcaption><b>1 · 도포만 했을 때</b>앰플이 표면에 <b style="display:inline">고르지 않게</b> 남습니다.</figcaption>
+        </figure>
+        <figure class="xp">
+          <svg viewBox="0 0 200 140" role="img" aria-label="스탬핑 중 — 미세 돌출 구조가 표면에 밀착하고 액체가 각질세포 사이 틈을 따라 이동하는 단면 모식도"><rect x="0" y="0" width="200" height="140" fill="#ffffff"/><rect x="0" y="89" width="200" height="51" fill="#F6E4DA"/><rect x="-10" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="5" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="35" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="65" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="95" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="125" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="155" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="185" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="-10" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="34" y="5" width="132" height="24" rx="5" fill="#2B3038"/><rect x="62" y="29" width="76" height="5" fill="#2B3038"/><rect x="38" y="34" width="124" height="9" rx="2" fill="#C8443C"/><rect x="44" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="60" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="76" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="92" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="108" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="124" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="140" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="156" y="43" width="7" height="8" rx="1.5" fill="#C8443C"/><rect x="16.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="46.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="76.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="106.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="136.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="166.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".75"/><rect x="31.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="61.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="91.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="121.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="151.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="181.4" y="65" width="3.2" height="8" rx="1.4" fill="#2F6FB2" opacity=".5"/></svg>
+          <figcaption><b>2 · 스탬핑 중</b>미세 돌출 구조가 <b style="display:inline">고르게 밀착</b>하고, 그 틈에서 생긴 <b style="display:inline">모세관력</b>으로 액체가 스스로 이동합니다.</figcaption>
+        </figure>
+        <figure class="xp">
+          <svg viewBox="0 0 200 140" role="img" aria-label="떼어낸 뒤 — 각질세포 배열이 원래대로 돌아오고 성분이 고르게 남은 단면 모식도"><rect x="0" y="0" width="200" height="140" fill="#ffffff"/><rect x="0" y="89" width="200" height="51" fill="#F6E4DA"/><rect x="-10" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="52" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="5" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="35" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="65" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="95" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="125" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="155" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="185" y="65" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="-10" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="20" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="50" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="80" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="110" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="140" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="170" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="200" y="78" width="26" height="11" rx="2.5" fill="#EBD6C7" stroke="#DCBBA8" stroke-width=".7"/><rect x="0" y="48" width="200" height="3.5" fill="#2F6FB2" opacity=".3"/><rect x="16.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="46.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="76.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="106.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="136.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="166.4" y="52" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="31.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="61.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="91.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="121.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="151.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/><rect x="181.4" y="65" width="3.2" height="11" rx="1.4" fill="#2F6FB2" opacity=".5"/></svg>
+          <figcaption><b>3 · 떼어낸 뒤</b>각질 배열은 곧 <b style="display:inline">원래대로</b>. 성분은 고르게 남고 <b style="display:inline">상처도 출혈도 없습니다.</b></figcaption>
+        </figure>
+      </div>
+      <p class="xnote">※ 피부 가장 바깥층(각질층)을 확대해 그린 모식도입니다. 실제 비율과는 다릅니다.</p>
+
       <div class="mech">
         <div class="m">
           <div class="no">1</div>
@@ -1401,11 +1438,30 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         </div>
       </div>
 
-      <div class="note">
-        <b>안심하셔도 됩니다</b> — 마이크로젝션은 피부를 뚫는 기기가 아니라,
-        <b>이미 바른 앰플이 겉돌지 않고 잘 흡수되도록 돕는 도포용 기기</b>입니다.
-        끝이 평평해 찔리지 않고, 고객님마다 압을 다르게 조절해 사용합니다.
+      <h3 class="blk">관리실에서 받으실 수 있는 이유</h3>
+      <div class="safe">
+        <div class="sf">
+          <div class="lb">화장품</div>
+          <p>닥터배 스킨부스터는 <b>바르는 화장품(앰플)</b>입니다. 의약품이 아닙니다.</p>
+        </div>
+        <div class="sf">
+          <div class="lb">미용기기</div>
+          <p>마이크로젝션은 <b>피부미용업에서 사용하는 미용기기</b>입니다. 의료기기가 아닙니다.</p>
+        </div>
+        <div class="sf">
+          <div class="lb">비침습</div>
+          <p>피부를 <b>뚫지 않습니다.</b> 상처도 출혈도 남지 않습니다.</p>
+        </div>
       </div>
+      <p class="body" style="margin-top:18px;">
+        이 세 가지가 모두 성립하기 때문에, <b>병원이 아닌 관리실에서 전문가에게</b>
+        안심하고 받으실 수 있는 관리입니다.
+      </p>
+      <p class="body">
+        닥터배가 말씀드리는 범위도 딱 여기까지입니다 —
+        <span class="hl">각질층 수준까지 고르게 전달</span>.
+        그 이상은 약속하지 않습니다. <b>과장하지 않는 것이 전문가용 브랜드의 조건</b>이라고 생각합니다.
+      </p>
 
       <h3 class="blk">오늘 이 관리를 받으실 수 있을까요</h3>
       <p class="body">
