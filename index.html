@@ -404,6 +404,43 @@ details.prod > summary::-webkit-details-marker{display:none;}
 .gate .g.hi p{color:#6f6141;}
 .gate .g.hi p b{color:#7a5c18;}
 
+/* ============================== 사진 ============================== */
+figure.shot{margin-top:20px;border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#eef2f6;}
+figure.shot img{width:100%;}
+figure.shot.band img{height:300px;object-fit:cover;object-position:50% 38%;}
+@media(max-width:600px){ figure.shot.band img{height:230px;} }
+.shotcap{margin-top:11px;font-size:.85rem;color:var(--sub);text-align:center;}
+
+/* ============================== 4주 로테이션 ============================== */
+.weeks{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:640px){ .weeks{grid-template-columns:1fr;} }
+.wk{background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px 19px;
+    transition:border-color .2s,box-shadow .2s,transform .2s;}
+.wk:hover{border-color:#cfdcea;box-shadow:0 10px 26px -14px rgba(11,32,56,.3);transform:translateY(-2px);}
+.wk .wl{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+.wk .wn{font-family:var(--serif);font-size:.84rem;font-weight:700;letter-spacing:.14em;color:var(--gold);}
+.wk .off{font-size:.65rem;font-weight:800;letter-spacing:.06em;color:#6b7684;
+         background:#f0f2f5;border:1px solid #dde3ea;border-radius:999px;padding:4px 9px;}
+.wk h4{font-size:1.07rem;font-weight:800;color:var(--navy);margin-bottom:7px;letter-spacing:-.015em;}
+.wk p{font-size:.93rem;color:#5c6775;}
+.wk .ps{display:flex;flex-wrap:wrap;gap:6px;margin-top:13px;}
+.wk .ps span{font-size:.78rem;font-weight:700;color:#41505f;background:#f5f8fb;
+             border:1px solid #e6ecf3;border-radius:9px;padding:6px 11px;
+             display:inline-flex;align-items:center;gap:7px;}
+.wk .ps span i{width:8px;height:8px;border-radius:50%;display:block;flex:0 0 auto;}
+
+/* ============================== 분자 크기 비교 ============================== */
+.mol{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+@media(max-width:720px){ .mol{grid-template-columns:1fr;} }
+.mol .x{border:1px solid var(--line-soft);background:#fafbfd;border-radius:16px;padding:19px 18px;text-align:center;}
+.mol .x.hi{border-color:#cfe0f0;background:#f4f9fd;}
+.mol .x .t{font-size:.8rem;font-weight:800;letter-spacing:.05em;color:#95a0ad;}
+.mol .x.hi .t{color:var(--blue);}
+.mol .x .d{font-family:var(--serif);font-size:1.46rem;font-weight:700;color:var(--navy);margin:9px 0;letter-spacing:-.02em;}
+.mol .x p{font-size:.89rem;color:#8b95a2;}
+.mol .x.hi p{color:var(--body);}
+.mol .x.hi p b{color:var(--navy);font-weight:700;}
+
 /* ============================== FAQ ============================== */
 .faqs{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
 details.faq{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s;}
@@ -493,8 +530,9 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <button type="button" data-go="s1">브랜드</button>
       <button type="button" data-go="s2">왜 스킨부스터</button>
       <button type="button" data-go="s3">제품 6종</button>
-      <button type="button" data-go="s4">마이크로젝션</button>
-      <button type="button" data-go="s5">FAQ</button>
+      <button type="button" data-go="s4">문제성 피부</button>
+      <button type="button" data-go="s5">슬로우에이징</button>
+      <button type="button" data-go="s6">FAQ</button>
     </div>
   </div>
 </nav>
@@ -683,6 +721,9 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         오늘 고객님의 피부 컨디션과 관리 목적에 맞춰 원장님이 골라 사용합니다.
       </p>
 
+      <figure class="shot"><img src="assets/lineup-set.jpg" alt="닥터배 제품 구성 — 에어건, 엑소토카인 에센스겔, 토코포르테 부스터 앰플, 칼리파우더" loading="lazy"></figure>
+      <p class="shotcap">닥터배 제품 구성 — 유리 바이알 부스터와 에센스겔, 에어건</p>
+
       <div class="prods">
 
         <!-- 1 블루 -->
@@ -716,7 +757,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
             <div class="ing">
               <div class="row">
-                <div class="k">시카 엑소좀<em>병풀 유래 세포외소포</em></div>
+                <div class="k">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
                 <div class="v">닥터배 전 라인의 공통 핵심 원료입니다. <b>병풀(시카)에서 얻은 식물 유래</b> 원료로, 대학 연구실이 직접 관리합니다.</div>
               </div>
               <div class="row">
@@ -847,7 +888,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
                 <div class="v">아주 작은 것부터 큰 것까지 <b>크기가 다른 히알루론산 8가지</b>를 함께 담아, 각질을 정돈하는 동안 수분을 층층이 채웁니다.</div>
               </div>
               <div class="row">
-                <div class="k">시카 엑소좀</div>
+                <div class="k">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
                 <div class="v">각질 정돈이 진행되는 동안 <b>진정 · 컨디셔닝 역할</b>을 함께 맡습니다.</div>
               </div>
               <div class="row">
@@ -922,7 +963,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
                 <div class="v">크기가 다른 히알루론산 8가지로 <b>수분 층</b>을 만들어, 마무리 단계에서 촉촉함을 남깁니다.</div>
               </div>
               <div class="row">
-                <div class="k">시카 엑소좀</div>
+                <div class="k">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
                 <div class="v">병풀수와 함께 들어가 <b>피부 컨디션을 정돈</b>하는 역할을 맡습니다.</div>
               </div>
             </div>
@@ -1038,7 +1079,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
             <div class="ing">
               <div class="row">
-                <div class="k">시카 엑소좀</div>
+                <div class="k">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
                 <div class="v">얼굴 라인과 동일한 공통 핵심 원료가 두피용에도 그대로 들어갑니다. <b>두피 컨디션을 정돈</b>하는 중심 역할입니다.</div>
               </div>
               <div class="row">
@@ -1083,19 +1124,151 @@ footer .fs{color:#7796b4;font-size:.82rem;}
   </details>
 
   <!-- ==================== 04 FAQ ==================== -->
-  <!-- ==================== 04 마이크로젝션 ==================== -->
+  <!-- ==================== 04 문제성 피부 관리 ==================== -->
   <details class="sec" id="s4">
     <summary>
       <span class="sec-idx">04</span>
       <span class="sec-t">
-        <span class="eyebrow">Microjection</span>
-        <h2>마이크로젝션 — 흡수를 돕는 기술</h2>
-        <p>뉴스가 소개한 경피 흡수 연구가 기기가 되었습니다</p>
+        <span class="eyebrow">Problem Skin Care</span>
+        <h2>문제성 피부 관리 — 스킨부스터</h2>
+        <p>장벽이 흔들릴 때는, 흡수보다 진정이 먼저입니다</p>
       </span>
       <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
       <div class="divider"></div>
+
+      <figure class="shot"><img src="assets/care-troubled.jpg" alt="닥터배 스킨부스터를 붓으로 도포하는 문제성 피부 관리 장면" loading="lazy"></figure>
+      <p class="shotcap">붓 도포 중심의 순한 운용 — 문제성 피부 관리에는 마이크로젝션을 넣지 않습니다</p>
+
+      <h3 class="blk">이런 피부를 위한 관리입니다</h3>
+      <div class="tags">
+        <span>트러블이 반복되는 피부</span><span>붉은 기와 열감이 잘 오르는 피부</span>
+        <span>각질이 들뜨고 당기는 피부</span><span>자극에 예민해진 피부</span>
+      </div>
+      <p class="body" style="margin-top:18px;">
+        이 단계에서 관리의 목표는 성분을 더 깊이 넣는 것이 아니라,
+        <span class="hl">피부가 스스로 버티는 힘을 되찾도록 정돈하는 것</span>입니다.
+        그래서 이 관리에는 <b>마이크로젝션을 넣지 않습니다.</b>
+        대신 스킨부스터를 붓 도포 · 초음파 · 갈바닉 · LED 같은 <b>순한 방식</b>으로 운용합니다.
+      </p>
+
+      <h3 class="blk">4주 로테이션 — 매주 주인공이 바뀝니다</h3>
+      <p class="body">
+        1~2주 간격으로 오실 때마다 <b>그 주의 주연 제품과 테마가 달라집니다.</b>
+        같은 관리를 반복한다는 느낌 없이, 진정 → 각질·영양 → 장벽 리셋 → 윤광 마무리로
+        <b>차근차근 올라가는 흐름</b>입니다.
+      </p>
+      <div class="weeks">
+        <div class="wk">
+          <div class="wl"><span class="wn">WEEK 01</span></div>
+          <h4>진정 &amp; 장벽 정돈</h4>
+          <p>가장 순한 시작. 흔들린 컨디션을 먼저 가라앉히고 피부를 편안한 상태로 되돌립니다.</p>
+          <div class="ps">
+            <span><i style="background:#22377A"></i>리퀴드 마스크</span>
+            <span><i style="background:#D97B96"></i>피디로엔 핑크</span>
+          </div>
+        </div>
+        <div class="wk">
+          <div class="wl"><span class="wn">WEEK 02</span></div>
+          <h4>각질 정돈 &amp; 집중 영양</h4>
+          <p>PHA로 묵은 각질을 부드럽게 정돈한 뒤, 아미노산 · 펩타이드로 영양을 채웁니다.</p>
+          <div class="ps">
+            <span><i style="background:#2F6FB2"></i>엑소토카인 블루</span>
+            <span><i style="background:#B9B3A3"></i>칼리파우더</span>
+          </div>
+        </div>
+        <div class="wk">
+          <div class="wl"><span class="wn">WEEK 03</span><span class="off">각질 관리 쉬어 가는 주</span></div>
+          <h4>장벽 리셋 &amp; 마이크로바이옴</h4>
+          <p>각질 단계를 건너뛰고 수분 · 진정 · 마이크로바이옴에만 집중합니다. 피부에 쉬는 주를 줍니다.</p>
+          <div class="ps">
+            <span><i style="background:#D97B96"></i>피디로엔 핑크</span>
+            <span><i style="background:#8A6547"></i>토코포르테</span>
+          </div>
+        </div>
+        <div class="wk">
+          <div class="wl"><span class="wn">WEEK 04</span></div>
+          <h4>윤광 &amp; 종합 마무리</h4>
+          <p>비타민과 항산화 원료로 채우고, 한 사이클을 윤기 있게 마무리합니다.</p>
+          <div class="ps">
+            <span><i style="background:#8A6547"></i>토코포르테</span>
+            <span><i style="background:#2F6FB2"></i>엑소토카인 블루</span>
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        4주가 끝나면 자연스럽게 <b>다시 1주차로 돌아갑니다.</b>
+        피부 표면이 새로 정돈되는 주기(약 28~45일)와 맞물리도록 설계된 구성입니다.
+      </div>
+
+      <h3 class="blk">왜 매주 다르게 하나요</h3>
+      <p class="body">
+        같은 성분을 같은 강도로 계속 반복하는 것보다,
+        <span class="hl">리듬을 주는 관리가 피부 반응성을 유지하는 데 유리</span>합니다.
+      </p>
+      <ul class="ck">
+        <li><b>주연 제품이 매주 교체</b>됩니다 — 한 가지 원료에만 계속 노출되지 않도록.</li>
+        <li><b>각질 정돈은 매주가 아니라 리듬 있게</b> — 3주차는 의도적으로 쉬어 갑니다.</li>
+        <li><b>병풀 세포외소포 · 히알루론산 · 센텔라 3종</b>은 4주 내내 공통 축으로 유지됩니다.</li>
+      </ul>
+
+      <h3 class="blk">왜 PHA인가요 — 순한 각질 정돈</h3>
+      <p class="body">
+        각질 정돈에서 중요한 것은 "얼마나 강하게"가 아니라 <b>"어느 층까지 닿는가"</b>입니다.
+        분자가 작을수록 피부 안쪽까지 들어가 자극이 커집니다.
+      </p>
+      <div class="mol">
+        <div class="x">
+          <div class="t">AHA · 글리콜릭</div>
+          <div class="d">~76 Da</div>
+          <p>분자가 작아 각질층을 넘어 안쪽까지 들어갑니다</p>
+        </div>
+        <div class="x">
+          <div class="t">BHA · 살리실릭</div>
+          <div class="d">138 Da</div>
+          <p>기름에 녹는 성질이라 모공 안쪽까지 작용합니다</p>
+        </div>
+        <div class="x hi">
+          <div class="t">PHA · 글루코노락톤</div>
+          <div class="d">~180 Da</div>
+          <p><b>분자가 커서 표면 각질 위주</b>로 작용하고, 항산화 특성도 함께 가집니다</p>
+        </div>
+      </div>
+      <p class="body" style="margin-top:16px;">
+        <b>엑소토카인 리퀴드 마스크</b>는 이 PHA를 10% 담고,
+        씻어내지 않아도 되는 제형에 <b>병풀 세포외소포 · 알란토인 · 감초 유래 원료 · 판테놀</b> 같은
+        진정 원료를 함께 넣었습니다.
+        그래서 <b>장벽이 약해진 피부에도 넣을 수 있는</b> 드문 형태의 각질 정돈 제품입니다.
+      </p>
+
+      <div class="warn">
+        <b>이런 경우에는 병원 진료를 먼저 권해 드립니다</b> —
+        ① 가려움이 심한 경우, ② 등 · 가슴 · 어깨까지 넓게 번져 있는 경우,
+        ③ 크고 깊게 잡히는 트러블이 있는 경우.
+        관리실에서 하는 관리는 <b>화장품 범위의 피부 컨디션 케어</b>이며, 진료를 대신하지 않습니다.
+        치료를 받고 계시다면 <b>함께 받는 보조 관리</b>로 진행합니다.
+      </div>
+
+    </div>
+  </details>
+
+  <!-- ==================== 05 슬로우에이징 · 마이크로젝션 ==================== -->
+  <details class="sec" id="s5">
+    <summary>
+      <span class="sec-idx">05</span>
+      <span class="sec-t">
+        <span class="eyebrow">Slow Aging</span>
+        <h2>슬로우에이징 관리 — 스킨부스터 + 마이크로젝션</h2>
+        <p>장벽이 건강해졌다면, 다음은 흡수를 끌어올릴 차례입니다</p>
+      </span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="sec-body">
+      <div class="divider"></div>
+
+      <figure class="shot band"><img src="assets/care-microjection.jpg" alt="닥터배 엑소토카인 앰플을 결합한 마이크로젝션 더마 스탬프로 이마 부위를 관리하는 모습" loading="lazy"></figure>
+      <p class="shotcap">앰플 바이알에 직접 결합해, 도장을 찍듯 수직으로 눌러 사용합니다</p>
 
       <h3 class="blk">좋은 성분일수록, 결국 흡수가 관건입니다</h3>
       <p class="body">
@@ -1212,6 +1385,10 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         기준은 성분이 아니라 <b>제형의 점도</b> — 헤드에 머무를 만큼의 점성이 있어야
         접촉면 전체에 고르게 전달됩니다.
       </p>
+
+      <figure class="shot"><img src="assets/mjx-stamp.jpg" alt="마이크로젝션 더마 스탬프 3방향 형태와 닥터배 엑소토카인 앰플 결합 예시" loading="lazy"></figure>
+      <p class="shotcap">아크릴 · 플라스틱 소재의 더마 스탬프와, 앰플에 결합한 모습</p>
+
       <ul class="ck">
         <li><b>안티에이징 지향</b>이면 엑소토카인 블루, <b>진정 · 밸런싱 지향</b>이면 피디로엔 핑크를 결합합니다.</li>
         <li><b>칼리파우더</b>를 블루 · 핑크에 녹여 함께 운용하면 한 단계 더 진한 구성이 됩니다.</li>
@@ -1281,10 +1458,10 @@ footer .fs{color:#7796b4;font-size:.82rem;}
     </div>
   </details>
 
-  <!-- ==================== 05 FAQ ==================== -->
-  <details class="sec" id="s5">
+  <!-- ==================== 06 FAQ ==================== -->
+  <details class="sec" id="s6">
     <summary>
-      <span class="sec-idx">05</span>
+      <span class="sec-idx">06</span>
       <span class="sec-t">
         <span class="eyebrow">FAQ</span>
         <h2>고객님들이 자주 물어보시는 것</h2>
