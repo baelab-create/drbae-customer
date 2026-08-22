@@ -258,6 +258,36 @@ ul.ck li::before{
 }
 ul.ck li b{color:var(--navy);font-weight:700;}
 
+/* ============================== 브랜드 정의 ============================== */
+.brandstate{
+  margin-top:4px;padding:32px 26px 30px;text-align:center;
+  background:linear-gradient(180deg,#fdf9f0,#fffdfa);
+  border:1px solid #eadfc6;border-radius:20px;
+}
+.bs-logo{height:38px;width:auto;margin:0 auto 20px;display:block;}
+.bs-line{
+  font-family:var(--serif);font-weight:500;
+  font-size:1.34rem;line-height:1.62;color:var(--navy);letter-spacing:-.025em;
+}
+.bs-line small{
+  display:block;font-family:var(--sans);font-size:.62em;font-weight:600;
+  color:#8a6a2c;letter-spacing:.02em;margin-bottom:9px;
+}
+.bs-line em{
+  font-style:normal;font-weight:700;
+  background:linear-gradient(transparent 56%, #f4e4bd 56%);padding:0 3px;
+}
+.bs-tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:22px;}
+.bs-tags span{
+  font-size:.83rem;font-weight:700;color:#8a6a2c;
+  background:#fff;border:1px solid #e6d7b3;border-radius:999px;padding:8px 15px;
+}
+@media(max-width:600px){
+  .brandstate{padding:26px 18px 24px;}
+  .bs-line{font-size:1.14rem;}
+  .bs-logo{height:32px;margin-bottom:16px;}
+}
+
 /* ============================== 교수 패널 ============================== */
 .prof{
   margin-top:20px;position:relative;overflow:hidden;color:#fff;border-radius:20px;
@@ -628,24 +658,45 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <span class="sec-t">
         <span class="eyebrow">Brand</span>
         <h2>닥터배는 어떤 브랜드인가요</h2>
-        <p>대학 연구실에서 출발한, 연구자가 공개된 브랜드</p>
+        <p>대학에서 시작된 전문가용 스킨부스터 · 흡수 디바이스 브랜드</p>
       </span>
       <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
       <div class="divider"></div>
 
+      <div class="brandstate">
+        <img class="bs-logo" src="assets/logo-drbae.png" alt="Dr. BAE — Nature-inspired Derma Technology">
+        <p class="bs-line">
+          <small>대학에서 시작된</small>
+          <em>전문가용 스킨부스터 &amp; 흡수 디바이스</em> 브랜드
+        </p>
+        <div class="bs-tags">
+          <span>대학 연구실 출발</span>
+          <span>전문가 관리실 전용</span>
+          <span>원료 + 전달 기술</span>
+        </div>
+      </div>
+
       <h3 class="blk">연구실에서 시작해, 그대로 제품이 되었습니다</h3>
       <p class="body">
-        <b>닥터배(DR.BAE)</b>는 ㈜배랩의 전문가용 스킨부스터 브랜드입니다.
-        <b>숭실대학교 의공학 연구실</b>의 연구가, 정부의
-        <span class="hl">실험실 창업 지원 사업('창업선도대학')</span>을 통해
-        <b>연구실 기업(Lab Startup)</b>으로 이어지며 만들어졌습니다.
+        <b>닥터배(DR.BAE)</b>는 ㈜배랩의 브랜드입니다.
+        피부에 바르는 <b>전문가용 스킨부스터</b>와,
+        그것이 피부에 고르게 닿도록 돕는 <b>흡수 디바이스</b>를 <span class="hl">함께 만듭니다.</span>
+        <b>숭실대학교 의공학 연구실</b>의 연구가 정부의
+        <b>실험실 창업 지원 사업('창업선도대학')</b>을 통해
+        <b>연구실 기업(Lab Startup)</b>으로 이어지며 만들어진 브랜드입니다.
       </p>
       <p class="body">
         보통의 화장품은 브랜드가 제조사에 의뢰해 만들어집니다.
         닥터배는 반대로, <b>연구실이 직접 원료를 연구하고 그 기술이 바로 제품이 된 경우</b>입니다.
         그래서 "이 성분이 어디에서 왔고, 누가 만들었는지"를 끝까지 설명할 수 있습니다.
+      </p>
+      <p class="body">
+        <b>원료를 만드는 회사와 기기를 만드는 회사는 보통 다릅니다.</b>
+        성분 회사가 남의 기기를 빌려 쓰거나, 기기 회사가 남의 원료를 담는 구조가 대부분입니다.
+        닥터배는 <span class="hl">두 가지를 같은 연구실에서 함께 개발</span>했습니다 —
+        이것이 브랜드 이름 앞에 '전문가용'을 붙이는 근거입니다.
       </p>
 
       <div class="prof">
