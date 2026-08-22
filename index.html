@@ -356,6 +356,54 @@ details.prod > summary::-webkit-details-marker{display:none;}
 .ing .row .v b{color:var(--navy);font-weight:700;}
 @media(max-width:720px){ .ing{grid-template-columns:1fr;} }
 
+/* ============================== 마이크로젝션 ============================== */
+.formula{
+  margin-top:18px;border-radius:20px;padding:28px 24px;text-align:center;color:#fff;
+  background-color:#0e2a47;
+  background-image:
+    radial-gradient(420px 240px at 50% 0%, rgba(88,150,212,.32) 0%, rgba(88,150,212,0) 72%),
+    linear-gradient(160deg,#0b2038,#17456f);
+}
+.formula .fx{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
+.formula .w b{display:block;font-family:var(--serif);font-size:1.4rem;letter-spacing:.03em;color:#f0e2c2;}
+.formula .w span{display:block;font-size:.79rem;color:#a9c6e2;margin-top:4px;}
+.formula .op{font-family:var(--serif);font-size:1.3rem;color:#7fa0c0;align-self:flex-start;margin-top:8px;}
+.formula .res{margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,.16);font-size:.99rem;color:#cfe0f0;line-height:1.75;}
+.formula .res b{color:#fff;font-weight:700;}
+.formula .no{margin-top:14px;font-size:.89rem;color:#efc9c9;font-weight:700;}
+
+.mech{margin-top:16px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.mech .m{background:#fbfcfe;border:1px solid var(--line-soft);border-radius:16px;padding:20px 18px;}
+.mech .m .no{font-family:var(--serif);font-size:1.55rem;color:var(--gold);line-height:1;}
+.mech .m .en{font-size:.63rem;font-weight:800;letter-spacing:.16em;color:#9aa5b2;margin:10px 0 3px;}
+.mech .m h4{font-size:1.03rem;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.01em;}
+.mech .m p{font-size:.92rem;color:#5c6775;}
+.mech .m p b{color:var(--navy);font-weight:700;}
+@media(max-width:720px){ .mech{grid-template-columns:1fr;} }
+
+.vs,.gate{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:640px){ .vs,.gate{grid-template-columns:1fr;} }
+.vs .c{border-radius:16px;padding:20px 19px;border:1px solid var(--line-soft);background:#fafbfd;}
+.vs .c.ok{border-color:#cfe0f0;background:#f4f9fd;}
+.vs .c h4{font-size:1rem;font-weight:800;margin-bottom:11px;color:#95a0ad;letter-spacing:-.01em;}
+.vs .c.ok h4{color:var(--blue);}
+.vs .c ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+.vs .c li{font-size:.93rem;color:#8b95a2;padding-left:21px;position:relative;}
+.vs .c li::before{content:"\2014";position:absolute;left:0;color:#b6bfc9;}
+.vs .c.ok li{color:var(--body);}
+.vs .c.ok li::before{content:"\2713";color:var(--blue);font-weight:800;}
+.vs .c.ok li b{color:var(--navy);font-weight:700;}
+
+.gate .g{border-radius:16px;padding:21px 19px;border:1px solid var(--line-soft);background:#fafbfd;}
+.gate .g.hi{border-color:#e6d7b3;background:linear-gradient(180deg,#fdf9f0,#fbf5e9);}
+.gate .g .lb{font-size:.67rem;font-weight:800;letter-spacing:.18em;color:#9aa5b2;margin-bottom:9px;}
+.gate .g.hi .lb{color:var(--gold);}
+.gate .g h4{font-size:1.04rem;font-weight:800;color:var(--navy);margin-bottom:7px;letter-spacing:-.01em;}
+.gate .g p{font-size:.94rem;color:#5c6775;}
+.gate .g p b{color:var(--navy);font-weight:700;}
+.gate .g.hi p{color:#6f6141;}
+.gate .g.hi p b{color:#7a5c18;}
+
 /* ============================== FAQ ============================== */
 .faqs{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
 details.faq{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s;}
@@ -445,7 +493,8 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <button type="button" data-go="s1">브랜드</button>
       <button type="button" data-go="s2">왜 스킨부스터</button>
       <button type="button" data-go="s3">제품 6종</button>
-      <button type="button" data-go="s4">자주 묻는 질문</button>
+      <button type="button" data-go="s4">마이크로젝션</button>
+      <button type="button" data-go="s5">FAQ</button>
     </div>
   </div>
 </nav>
@@ -1034,9 +1083,208 @@ footer .fs{color:#7796b4;font-size:.82rem;}
   </details>
 
   <!-- ==================== 04 FAQ ==================== -->
+  <!-- ==================== 04 마이크로젝션 ==================== -->
   <details class="sec" id="s4">
     <summary>
       <span class="sec-idx">04</span>
+      <span class="sec-t">
+        <span class="eyebrow">Microjection</span>
+        <h2>마이크로젝션 — 흡수를 돕는 기술</h2>
+        <p>뉴스가 소개한 경피 흡수 연구가 기기가 되었습니다</p>
+      </span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="sec-body">
+      <div class="divider"></div>
+
+      <h3 class="blk">좋은 성분일수록, 결국 흡수가 관건입니다</h3>
+      <p class="body">
+        세포외소포나 고분자 히알루론산처럼 <b>분자가 크고 구조가 복잡한 원료일수록</b>
+        손으로만 바르면 피부 표면에 머물다 마르거나 닦여 나가기 쉽습니다.
+        좋은 원료를 쓸수록 <span class="hl">'무엇을 바르는가'만큼 '어떻게 닿게 하는가'</span>가
+        중요해지는 이유입니다.
+      </p>
+      <p class="body">
+        닥터배가 원료와 전달 기술을 <b>같은 연구실에서 함께</b> 연구한 이유가 여기에 있습니다.
+        그 전달 연구를 기기로 만든 것이 <b>마이크로젝션</b>입니다.
+      </p>
+
+      <h3 class="blk">이름부터 — 주사(INJECTION)가 아닙니다</h3>
+      <div class="formula">
+        <div class="fx">
+          <span class="w"><b>MICRO</b><span>미세</span></span>
+          <span class="op">+</span>
+          <span class="w"><b>PROJECTION</b><span>돌출 · 투사</span></span>
+          <span class="op">=</span>
+          <span class="w"><b>MICROJECTION</b><span>마이크로젝션</span></span>
+        </div>
+        <p class="res">
+          수백 개의 <b>미세한 돌출 구조</b>로 이미 바른 앰플을
+          피부 표면에 <b>고르게 밀착시켜 흡수를 돕는</b> 도포용 기기입니다.
+        </p>
+        <p class="no">✕ 주사(INJECTION) &nbsp;·&nbsp; ✕ 니들링 &nbsp;·&nbsp; ✕ 주입</p>
+      </div>
+
+      <h3 class="blk">독사의 송곳니에서 출발한 원리</h3>
+      <p class="body">
+        독사의 송곳니는 힘으로 독을 쏘아 넣는 구조가 아니라,
+        <b>표면의 미세한 홈을 따라 액체가 스스로 흘러 들어가는 구조</b>입니다.
+        배원규 교수는 이 구조를 연구해 <b>2019년 국제 학술지 Science Translational Medicine</b>에 발표했고,
+        YTN 사이언스 · JTBC · Arirang News가 이 연구를 소개했습니다.
+        마이크로젝션은 그 원리를 화장품 도포에 옮겨 온 기기입니다.
+      </p>
+
+      <div class="mech">
+        <div class="m">
+          <div class="no">1</div>
+          <div class="en">MICRO-STAMPING</div>
+          <h4>고르게 밀착</h4>
+          <p>수백 개의 미세 돌출 구조가 피부의 굴곡까지 빈틈없이 닿아,
+             앰플이 한쪽에 뭉치지 않고 <b>얼굴 전체에 고르게 퍼지도록</b> 만듭니다.</p>
+        </div>
+        <div class="m">
+          <div class="no">2</div>
+          <div class="en">CAPILLARY GUIDING</div>
+          <h4>모세관력으로 유도</h4>
+          <p>돌출 구조 사이의 미세한 틈에서 <b>모세관력</b>이 생겨 액체가 <b>스스로 이동</b>합니다.
+             밀어 넣는 힘이 아니라, 액체 자체의 성질이 움직이는 힘입니다.</p>
+        </div>
+        <div class="m">
+          <div class="no">3</div>
+          <div class="en">RECOVERING</div>
+          <h4>즉시 회복</h4>
+          <p>기기를 떼면 피부 표면은 <b>곧 원래 상태로</b> 돌아옵니다.
+             상처나 출혈이 남지 않아, 관리 직후 바로 다음 단계로 이어집니다.</p>
+        </div>
+      </div>
+
+      <h3 class="blk">자주 오해하시는 점</h3>
+      <div class="vs">
+        <div class="c">
+          <h4>바늘(니들)을 쓰는 방식</h4>
+          <ul>
+            <li>금속 니들이 피부를 물리적으로 관통합니다</li>
+            <li>미세한 상처가 생깁니다</li>
+            <li>피부를 뚫는 행위로 분류됩니다</li>
+          </ul>
+        </div>
+        <div class="c ok">
+          <h4>마이크로젝션</h4>
+          <ul>
+            <li>아크릴 · 플라스틱 소재에 <b>끝단이 평평하게</b> 가공되어 있습니다</li>
+            <li><b>구조적으로 피부를 뚫을 수 없습니다</b> — 상처도 출혈도 남지 않습니다</li>
+            <li>이미 바른 화장품의 <b>흡수를 돕는 도포 보조 기기</b>입니다</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 class="blk">오늘 이 관리를 받으실 수 있을까요</h3>
+      <p class="body">
+        마이크로젝션을 넣을지는 가격이나 취향으로 정하지 않습니다.
+        <span class="hl">오늘 고객님의 피부 장벽 상태</span> 하나로 정하며,
+        원장님이 상담 단계에서 먼저 확인합니다.
+      </p>
+      <div class="gate">
+        <div class="g">
+          <div class="lb">STEP 1</div>
+          <h4>피부 컨디션이 흔들릴 때</h4>
+          <p>붉은 기 · 따가움이 있거나 트러블이 올라와 있는 상태, 다른 관리를 받은 직후라면
+             마이크로젝션은 넣지 않습니다. 오늘은 <b>진정과 장벽 케어가 먼저</b>입니다.</p>
+        </div>
+        <div class="g hi">
+          <div class="lb">STEP 2</div>
+          <h4>장벽이 안정되었을 때</h4>
+          <p>자극 반응 없이 컨디션이 안정된 피부라면, 이제 <b>슬로우에이징 · 안티에이징</b> 관리로
+             올라갈 단계입니다. <b>닥터배 스킨부스터 + 마이크로젝션</b> 구성이
+             여기에서 값이 가장 분명합니다.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b>거절이 아니라 순서입니다</b> — 오늘 마이크로젝션을 넣지 않는 것은
+        관리를 못 받으신다는 뜻이 아닙니다. 장벽을 먼저 세우고 다음 단계로 올라가는
+        <b>순서를 안내</b>드리는 것입니다.
+      </div>
+
+      <h3 class="blk">닥터배 스킨부스터 + 마이크로젝션</h3>
+      <p class="body">
+        마이크로젝션은 혼자 쓰는 기기가 아니라 <b>앰플과 결합해야 완성되는 기기</b>입니다.
+        닥터배 라인업에서 <b>스탬프에 결합할 수 있는 앰플은 엑소토카인 블루와 피디로엔 핑크 2종</b>입니다.
+        기준은 성분이 아니라 <b>제형의 점도</b> — 헤드에 머무를 만큼의 점성이 있어야
+        접촉면 전체에 고르게 전달됩니다.
+      </p>
+      <ul class="ck">
+        <li><b>안티에이징 지향</b>이면 엑소토카인 블루, <b>진정 · 밸런싱 지향</b>이면 피디로엔 핑크를 결합합니다.</li>
+        <li><b>칼리파우더</b>를 블루 · 핑크에 녹여 함께 운용하면 한 단계 더 진한 구성이 됩니다.</li>
+        <li>스탬프는 <b>1회용</b>입니다. 고객님 앞에서 새 스탬프를 개봉해 사용하고, 세척해 다시 쓰지 않습니다.</li>
+        <li>세기는 기계가 정하지 않습니다. <b>관리사의 손</b>이 부위와 그날의 컨디션에 맞춰
+            실시간으로 조절합니다. 눈가처럼 얇은 부위는 압을 낮춥니다.</li>
+        <li>한 세션에 스탬핑은 <b>한 번</b>입니다. 자극이 겹치지 않도록 반복하지 않습니다.</li>
+      </ul>
+
+      <h3 class="blk">관리는 이렇게 진행됩니다</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <div class="t">
+            <h4>클렌징</h4>
+            <p>메이크업과 표면 노폐물을 정리합니다. 스탬핑 전에는 <b>각질을 과하게 걷어내지 않습니다.</b></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div class="t">
+            <h4>수분 관리 · 매뉴얼 케어</h4>
+            <p>에센스겔을 베이스로 얼굴과 데콜테를 관리하며 각질층을 충분히 수화시킵니다.
+               <b>전달 조건을 만드는 준비 단계</b>입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div class="t">
+            <h4>스탬핑 — 메인 관리</h4>
+            <p>고객님 앞에서 <b>1회용 스탬프를 개봉</b>해 블루(또는 핑크) 바이알에 결합합니다.
+               빠르게 두드리지 않고 <b>한 지점에 천천히 2~3초 머문 뒤</b> 다음 지점으로 옮겨 갑니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div class="t">
+            <h4>진정 — 5~10분</h4>
+            <p>에센스겔을 넉넉히 도포하고 LED 아래에서 진정합니다.
+               관리 직후의 열감과 붉은 기를 가라앉히는 <b>생략하지 않는 단계</b>입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">5</div>
+          <div class="t">
+            <h4>마무리 진정</h4>
+            <p>피디로엔 핑크를 적신 시트팩으로 마무리해, <b>편안한 상태로 귀가</b>하시도록 합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="note">
+        <b>안심하셔도 됩니다</b> — 마이크로젝션은 피부를 뚫는 기기가 아니라,
+        <b>이미 바른 앰플이 겉돌지 않고 잘 흡수되도록 돕는 도포용 기기</b>입니다.
+        끝이 평평해 찔리지 않고, 고객님마다 압을 다르게 조절해 사용합니다.
+      </div>
+
+      <div class="warn">
+        <b>사용 전 확인</b> —
+        ① 마이크로젝션은 <b>장벽이 건강한 피부</b>에만 사용하며,
+        <b>임신 · 수유 중에는 적용하지 않습니다.</b>
+        ② 소프트필(리퀴드 마스크)을 받은 날에는 같은 관리에 함께 넣지 않고 <b>회차를 나눕니다.</b>
+        ③ 관리 직후 <b>일시적으로 붉은 기</b>가 오를 수 있으며 짧은 시간 내에 가라앉습니다.
+        따가움이 계속되면 바로 말씀해 주세요.
+      </div>
+
+    </div>
+  </details>
+
+  <!-- ==================== 05 FAQ ==================== -->
+  <details class="sec" id="s5">
+    <summary>
+      <span class="sec-idx">05</span>
       <span class="sec-t">
         <span class="eyebrow">FAQ</span>
         <h2>고객님들이 자주 물어보시는 것</h2>
@@ -1053,7 +1301,9 @@ footer .fs{color:#7796b4;font-size:.82rem;}
           <div class="faq-body"><div class="divider"></div>
             아닙니다. 닥터배 스킨부스터는 모두 <b>바르는 화장품(앰플)</b>입니다.
             피부에 바른 뒤 초음파 · 갈바닉 · LED · 에어건 같은 미용기기로 고르게 전달하는 방식으로,
-            <b>피부를 뚫거나 주사하지 않습니다.</b></div>
+            <b>피부를 뚫거나 주사하지 않습니다.</b>
+            <b>마이크로젝션</b>을 사용할 때도 끝단이 평평하게 가공되어 있어
+            구조적으로 피부를 뚫지 못하며, 상처나 출혈이 남지 않습니다.</div>
         </details>
 
         <details class="faq">
@@ -1099,6 +1349,14 @@ footer .fs{color:#7796b4;font-size:.82rem;}
           <div class="faq-body"><div class="divider"></div>
             아닙니다. 닥터배 바이알은 <b>단회용 밀봉 제품</b>으로, <b>개봉 당일 소진을 원칙</b>으로 합니다.
             남은 양을 다음 고객이나 다음 회차로 넘겨 쓰지 않습니다.</div>
+        </details>
+
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">관리 직후에 얼굴이 붉어졌어요. 괜찮은가요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            손과 기기가 피부에 닿는 과정이 있으므로, <b>일시적인 붉은 기는 일반적인 반응</b>이며
+            짧은 시간 내에 가라앉습니다. 그래서 닥터배 관리는 <b>진정 단계를 생략하지 않습니다.</b>
+            다만 <b>따가움이나 화끈거림이 계속되거나 붓기가 보이는 경우</b>는 바로 말씀해 주세요.</div>
         </details>
 
         <details class="faq">
