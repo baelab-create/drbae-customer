@@ -5,351 +5,470 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>닥터배 스킨부스터 — 고객 안내</title>
-<meta name="description" content="관리실에서 고객님께 보여드리는 닥터배 브랜드 · 스킨부스터 안내 자료. 대학 연구실에서 시작된 브랜드와 5ml 바이알 스킨부스터 6종을 소개합니다.">
+<meta name="description" content="관리실에서 고객님께 보여드리는 닥터배 브랜드 · 스킨부스터 안내. 대학 연구실에서 시작된 브랜드와 5ml 바이알 스킨부스터 6종.">
 
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="DR.BAE 메디컬 에스테틱">
+<meta property="og:site_name" content="DR.BAE">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:url" content="https://baelab-create.github.io/drbae-customer/">
 <meta property="og:title" content="닥터배 스킨부스터 — 고객 안내">
-<meta property="og:description" content="관리실 태블릿 안내용 — 브랜드 · 왜 스킨부스터인가 · 5ml 바이알 6종">
+<meta property="og:description" content="브랜드 · 왜 스킨부스터인가 · 5ml 바이알 6종">
 <meta property="og:image" content="https://baelab-create.github.io/drbae-customer/assets/og-customer.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a1e33">
 
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap">
 <style>
 :root{
-  --navy:#0e2a47;
-  --navy2:#173c63;
+  --navy:#0b2038;
   --blue:#2f6fb2;
-  --sky:#eaf2fa;
-  --gold:#b98a2e;
-  --gold-ink:#8f6a22;
-  --ink:#1c2027;
-  --sub:#5b6472;
-  --line:#dfe5ec;
-  --bg:#f5f8fb;
-  --card:#ffffff;
+  --blue-soft:#eaf2fa;
+  --gold:#b9944a;
+  --gold-lt:#d9bd80;
+  --gold-pale:#f4ecdb;
+  --body:#414a56;
+  --sub:#7b8593;
+  --line:#e4e9ef;
+  --line-soft:#eef2f6;
+  --paper:#ffffff;
+  --bg:#f4f7fa;
 
-  /* 제품 컬러칩 — 전 자료 공통 정본 */
   --p-blue:#2F6FB2;
   --p-pink:#D97B96;
   --p-liquid:#22377A;
   --p-brown:#8A6547;
-  --p-cali:#8E8B7E;
+  --p-cali:#B9B3A3;
   --p-black:#2B3038;
 
-  /* 태블릿 고정 폭 */
-  --maxw:880px;
+  --serif:"Noto Serif KR","Nanum Myeongjo",serif;
+  --sans:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  --maxw:920px;
+  --r:22px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;}
 body{
-  font-family:"Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
-  background:var(--bg); color:var(--ink);
-  font-size:19px; line-height:1.72;
-  word-break:keep-all; overflow-wrap:break-word;
+  font-family:var(--sans);
+  font-size:19px;line-height:1.75;color:var(--body);
+  background:
+    radial-gradient(900px 620px at 88% -8%, #e9f1f9 0%, rgba(233,241,249,0) 62%),
+    radial-gradient(760px 520px at -12% 34%, #f4efe4 0%, rgba(244,239,228,0) 60%),
+    var(--bg);
+  background-attachment:fixed;
+  word-break:keep-all;overflow-wrap:break-word;
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block;}
-.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 26px;}
 
-/* ===================== HERO ===================== */
-header{
-  background:linear-gradient(158deg,#0a1e33 0%,#14375c 62%,#2b6aab 100%);
-  color:#fff;text-align:center;padding:64px 0 58px;
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;
+  font-size:.7rem;font-weight:800;letter-spacing:.24em;color:var(--gold);
+  text-transform:uppercase;
 }
-.hero-badge{
-  display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.22em;
-  border:1px solid rgba(255,255,255,.42);border-radius:999px;
-  padding:8px 20px;margin-bottom:24px;color:#d7e7f7;
-}
-header h1{font-size:2.5rem;font-weight:800;letter-spacing:-.02em;line-height:1.3;}
-header h1 em{font-style:normal;color:#eccf8e;}
-.hero-rule{width:64px;height:3px;background:var(--gold);margin:22px auto 20px;border-radius:2px;}
-header p{font-size:1.06rem;color:#c3d8ee;font-weight:500;}
-.hero-meta{
-  margin-top:26px;display:inline-flex;flex-wrap:wrap;gap:10px;justify-content:center;
-}
-.hero-meta span{
-  font-size:.82rem;font-weight:600;color:#dbe9f7;
-  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
-  border-radius:999px;padding:7px 15px;
-}
+.eyebrow::before{content:"";width:22px;height:1.5px;background:var(--gold);opacity:.7;}
 
-/* ===================== 사용 안내 ===================== */
-.lead{
-  margin-top:30px;background:#fff;border:1px solid var(--line);
-  border-left:5px solid var(--gold);border-radius:16px;padding:24px 26px;
+/* ============================== HERO ============================== */
+.hero{
+  position:relative;overflow:hidden;color:#fff;
+  background:
+    radial-gradient(680px 420px at 82% 8%, rgba(76,140,205,.42) 0%, rgba(76,140,205,0) 66%),
+    radial-gradient(560px 420px at 8% 92%, rgba(185,148,74,.30) 0%, rgba(185,148,74,0) 62%),
+    linear-gradient(168deg,#081827 0%,#0e2a47 46%,#17456f 100%);
 }
-.lead h2{font-size:1.12rem;font-weight:800;margin-bottom:8px;color:var(--navy);}
-.lead p{font-size:1rem;color:var(--sub);}
-.lead b{color:var(--gold-ink);font-weight:700;}
+.hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:64px 64px;
+  -webkit-mask-image:radial-gradient(120% 90% at 50% 40%, #000 30%, transparent 78%);
+  mask-image:radial-gradient(120% 90% at 50% 40%, #000 30%, transparent 78%);
+}
+.hero-in{
+  position:relative;z-index:1;
+  min-height:min(64vh,540px);
+  display:flex;flex-direction:column;justify-content:center;
+  padding:72px 0 48px;text-align:center;
+}
+.hero .kicker{
+  display:inline-block;margin:0 auto 26px;
+  font-size:.68rem;font-weight:700;letter-spacing:.24em;color:#d9c294;
+  border:1px solid rgba(217,194,148,.42);border-radius:999px;padding:9px 20px;
+  background:rgba(255,255,255,.04);
+}
+.hero h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(2rem,4.6vw,2.9rem);line-height:1.34;letter-spacing:-.03em;
+}
+.hero h1 .l1{display:block;font-size:.6em;font-weight:500;color:#a8c4e0;margin-bottom:12px;letter-spacing:-.01em;}
+.hero h1 .gold{
+  background:linear-gradient(100deg,#f0dcae 0%,#d9bd80 46%,#f5e8c6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero .rule{width:52px;height:2px;background:var(--gold-lt);margin:26px auto 22px;opacity:.85;}
+.hero .lede{font-size:1.02rem;color:#b7cee6;font-weight:500;}
 
-/* ===================== 아코디언 (대분류) ===================== */
-.secs{margin-top:22px;display:flex;flex-direction:column;gap:16px;}
+.stats{
+  margin-top:40px;display:flex;justify-content:center;flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,.14);border-bottom:1px solid rgba(255,255,255,.14);
+  padding:20px 0;
+}
+.stats div{flex:1;min-width:110px;padding:2px 12px;position:relative;}
+.stats div + div::before{
+  content:"";position:absolute;left:0;top:12%;height:76%;width:1px;background:rgba(255,255,255,.14);
+}
+.stats b{display:block;font-family:var(--serif);font-size:1.3rem;color:#f0e2c2;letter-spacing:-.01em;}
+.stats span{display:block;font-size:.72rem;color:#93b1cd;font-weight:600;letter-spacing:.06em;margin-top:3px;}
+
+/* ============================== NAV ============================== */
+.nav{
+  position:sticky;top:0;z-index:60;
+  background:rgba(255,255,255,.86);
+  -webkit-backdrop-filter:saturate(180%) blur(14px);
+  backdrop-filter:saturate(180%) blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.nav-in{display:flex;align-items:center;gap:14px;height:64px;}
+.brandmark{
+  display:flex;align-items:center;gap:8px;flex:0 0 auto;
+  font-weight:800;font-size:.9rem;letter-spacing:.14em;color:var(--navy);
+}
+.brandmark i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block;}
+.nav-links{
+  display:flex;gap:6px;margin-left:auto;overflow-x:auto;scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+.nav-links::-webkit-scrollbar{display:none;}
+.nav-links button{
+  font-family:inherit;font-size:.85rem;font-weight:700;color:#5a6673;
+  background:transparent;border:1px solid transparent;border-radius:999px;
+  padding:9px 15px;cursor:pointer;white-space:nowrap;transition:.16s;
+}
+.nav-links button:hover{color:var(--navy);background:#eef3f8;}
+.nav-links button.on{color:#fff;background:var(--navy);border-color:var(--navy);}
+
+/* ============================== SECTION ============================== */
+.hint{
+  margin:34px 0 18px;text-align:center;font-size:.9rem;color:var(--sub);font-weight:600;
+  display:flex;align-items:center;gap:14px;justify-content:center;
+}
+.hint::before,.hint::after{content:"";height:1px;flex:1;max-width:96px;background:var(--line);}
+
+.secs{display:flex;flex-direction:column;gap:18px;}
 details.sec{
-  background:var(--card);border:1px solid var(--line);border-radius:20px;
-  overflow:hidden;box-shadow:0 1px 3px rgba(14,42,71,.05);
-  transition:box-shadow .2s,border-color .2s;
+  background:var(--paper);border:1px solid var(--line);border-radius:var(--r);
+  box-shadow:0 1px 2px rgba(11,32,56,.04);
+  transition:box-shadow .25s,border-color .25s;overflow:hidden;
 }
-details.sec[open]{box-shadow:0 10px 32px rgba(14,42,71,.11);border-color:#c9d9ea;}
+details.sec[open]{box-shadow:0 18px 46px -18px rgba(11,32,56,.34);border-color:#d3dfec;}
 details.sec > summary{
-  list-style:none;cursor:pointer;display:flex;align-items:center;gap:18px;
-  padding:24px 24px;min-height:92px;-webkit-tap-highlight-color:transparent;
-  transition:background .15s;
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:20px;
+  padding:26px;min-height:98px;-webkit-tap-highlight-color:transparent;transition:background .18s;
 }
 details.sec > summary::-webkit-details-marker{display:none;}
-details.sec > summary:active{background:#f6f9fc;}
-.sec-no{
-  flex:0 0 52px;height:52px;border-radius:15px;background:var(--sky);
-  color:var(--blue);font-weight:800;font-size:1.1rem;
+details.sec > summary:active{background:#f8fafc;}
+.sec-idx{
+  flex:0 0 auto;font-family:var(--serif);font-size:1.5rem;font-weight:700;
+  color:#c3cedb;letter-spacing:-.02em;width:44px;text-align:center;transition:color .2s;
+}
+details.sec[open] .sec-idx{color:var(--gold);}
+.sec-t{flex:1;min-width:0;}
+.sec-t .eyebrow{margin-bottom:7px;}
+.sec-t h2{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.36;}
+.sec-t p{font-size:.93rem;color:var(--sub);margin-top:4px;font-weight:500;}
+.chev{
+  flex:0 0 auto;width:46px;height:46px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;
   display:flex;align-items:center;justify-content:center;
+  transition:transform .3s cubic-bezier(.2,.8,.3,1),background .2s,border-color .2s;
 }
-.sec-meta{flex:1;min-width:0;}
-.sec-meta h2{font-size:1.42rem;font-weight:800;letter-spacing:-.02em;line-height:1.35;}
-.sec-meta p{font-size:.95rem;color:var(--sub);margin-top:3px;font-weight:500;}
-.click{
-  flex:0 0 auto;font-size:.86rem;font-weight:700;
-  color:var(--blue);background:var(--sky);border:1px solid #cfe0f0;
-  border-radius:999px;padding:10px 18px;white-space:nowrap;
-  transition:background .15s,color .15s,border-color .15s;
-}
-.click::before{content:"열기";}
-details[open] > summary .click{color:#6b7684;background:#f0f2f5;border-color:#dde3ea;}
-details[open] > summary .click::before{content:"닫기";}
-.sec-body{padding:6px 26px 30px;border-top:1px solid var(--line);}
+.chev svg{width:17px;height:17px;stroke:#8d99a7;stroke-width:2.2;fill:none;stroke-linecap:round;stroke-linejoin:round;transition:stroke .2s;}
+details[open] > summary .chev{transform:rotate(180deg);background:var(--navy);border-color:var(--navy);}
+details[open] > summary .chev svg{stroke:#fff;}
 
-/* ===================== 공통 요소 ===================== */
+.sec-body{padding:0 30px 34px;}
+details[open] > .sec-body{animation:reveal .42s cubic-bezier(.2,.8,.3,1) both;}
+@keyframes reveal{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:none;}}
+.divider{height:1px;background:var(--line-soft);margin:0 0 26px;}
+
 h3.blk{
-  font-size:1.16rem;font-weight:800;color:var(--navy);
-  margin:28px 0 12px;display:flex;align-items:center;gap:10px;
+  font-family:var(--serif);font-size:1.18rem;font-weight:700;color:var(--navy);
+  letter-spacing:-.02em;margin:34px 0 14px;padding-left:14px;position:relative;line-height:1.5;
 }
-h3.blk::before{content:"";width:5px;height:19px;background:var(--gold);border-radius:3px;}
-p.body{font-size:1.02rem;color:#3b434f;}
-p.body + p.body{margin-top:12px;}
-p.body b{color:var(--navy);font-weight:700;}
-.hl{background:linear-gradient(transparent 58%,#ffe9b8 58%);font-weight:700;color:var(--navy);}
+h3.blk::before{content:"";position:absolute;left:0;top:.28em;bottom:.28em;width:3px;background:var(--gold);border-radius:2px;}
+p.body{font-size:1.02rem;color:var(--body);}
+p.body + p.body{margin-top:13px;}
+p.body b,.mini p b,.step p b{color:var(--navy);font-weight:700;}
+.hl{background:linear-gradient(transparent 56%, #f6e6bf 56%);font-weight:700;color:var(--navy);padding:0 2px;}
 
 .note{
-  margin-top:18px;background:#f7f9fc;border:1px solid #e3eaf2;border-radius:14px;
-  padding:16px 18px;font-size:.94rem;color:var(--sub);
+  margin-top:22px;background:#f7fafc;border:1px solid var(--line-soft);
+  border-radius:16px;padding:18px 20px;font-size:.95rem;color:#5b6774;
 }
-.note b{color:var(--navy);}
-
+.note b{color:var(--navy);font-weight:700;}
 .warn{
-  margin-top:16px;background:#fffaf0;border:1px solid #ecdfc2;
-  border-left:4px solid var(--gold);border-radius:12px;
-  padding:14px 18px;font-size:.94rem;color:#75663f;
+  margin-top:20px;background:linear-gradient(180deg,#fdf9f0,#fbf5e9);
+  border:1px solid #eadfc6;border-radius:16px;padding:17px 20px 17px 22px;
+  font-size:.95rem;color:#6f6141;position:relative;
 }
+.warn::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:3px;background:var(--gold);border-radius:2px;}
 .warn b{color:#7a5c18;font-weight:700;}
 
-/* 카드 그리드 */
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px;}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px;}
 .cards.one{grid-template-columns:1fr;}
 .mini{
-  background:#f8fafd;border:1px solid #e5ecf4;border-radius:15px;padding:18px 19px;
+  background:#fff;border:1px solid var(--line);border-radius:17px;padding:20px 21px;
+  transition:border-color .2s,box-shadow .2s,transform .2s;
 }
-.mini h4{font-size:1.03rem;font-weight:800;color:var(--navy);margin-bottom:6px;}
-.mini p{font-size:.95rem;color:var(--sub);}
+.mini:hover{border-color:#cfdcea;box-shadow:0 10px 26px -14px rgba(11,32,56,.3);transform:translateY(-2px);}
+.mini .ic{
+  width:38px;height:38px;border-radius:11px;background:var(--gold-pale);
+  display:flex;align-items:center;justify-content:center;margin-bottom:13px;
+}
+.mini .ic svg{width:19px;height:19px;stroke:var(--gold);stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round;}
+.mini h4{font-size:1.01rem;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:-.01em;}
+.mini p{font-size:.94rem;color:var(--sub);}
 @media(max-width:700px){ .cards{grid-template-columns:1fr;} }
 
-/* 체크 리스트 */
-ul.ck{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:11px;}
-ul.ck li{
-  position:relative;padding-left:32px;font-size:1.01rem;color:#3b434f;
-}
+ul.ck{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:13px;}
+ul.ck li{position:relative;padding-left:30px;font-size:1.01rem;color:var(--body);}
 ul.ck li::before{
-  content:"";position:absolute;left:0;top:.52em;width:18px;height:18px;
-  border-radius:50%;background:var(--sky);
-  box-shadow:inset 0 0 0 2px var(--blue);
+  content:"";position:absolute;left:2px;top:.62em;width:9px;height:9px;
+  background:var(--gold);transform:rotate(45deg);border-radius:1.5px;
 }
 ul.ck li b{color:var(--navy);font-weight:700;}
 
-/* ===================== 교수 프로필 ===================== */
+/* ============================== 교수 패널 ============================== */
 .prof{
-  margin-top:16px;background:linear-gradient(160deg,#0e2a47,#1c456f);
-  color:#fff;border-radius:18px;padding:26px 26px 24px;
+  margin-top:20px;position:relative;overflow:hidden;color:#fff;border-radius:20px;
+  background-color:#0e2a47;
+  background-image:
+    radial-gradient(520px 300px at 100% 0%, rgba(88,150,212,.34) 0%, rgba(88,150,212,0) 68%),
+    linear-gradient(158deg,#0b2038 0%,#123a5e 42%,#17456f 100%);
+  padding:30px;
 }
+.prof::before{
+  content:"";position:absolute;inset:11px;border:1px solid rgba(217,194,148,.24);border-radius:13px;pointer-events:none;
+}
+.prof-in{position:relative;}
 .prof .tag{
-  display:inline-block;font-size:.76rem;font-weight:700;letter-spacing:.14em;
-  color:#efd6a0;border:1px solid rgba(236,207,142,.5);border-radius:999px;
-  padding:6px 14px;margin-bottom:14px;
+  display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.22em;
+  color:#e2c894;border-bottom:1px solid rgba(226,200,148,.4);padding-bottom:6px;margin-bottom:16px;
 }
-.prof h4{font-size:1.5rem;font-weight:800;letter-spacing:-.02em;}
-.prof h4 small{display:block;font-size:.62em;font-weight:600;color:#a9c6e2;margin-top:7px;letter-spacing:0;}
-.prof .career{
-  margin-top:18px;display:flex;flex-wrap:wrap;gap:9px;
+.prof h4{font-family:var(--serif);font-size:1.68rem;font-weight:700;letter-spacing:-.03em;line-height:1.4;}
+.prof h4 small{display:block;font-family:var(--sans);font-size:.5em;font-weight:600;color:#9fbcd8;margin-top:9px;letter-spacing:0;}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px;}
+.path .n{
+  font-size:.87rem;font-weight:700;color:#eaf2fa;
+  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);
+  border-radius:11px;padding:10px 15px;
 }
-.prof .career span{
-  font-size:.9rem;font-weight:600;color:#e8f1fa;
-  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);
-  border-radius:10px;padding:9px 14px;
-}
-.prof .career span i{font-style:normal;color:#efd6a0;font-weight:700;}
-.prof .desc{margin-top:18px;font-size:.99rem;color:#cfe0f0;line-height:1.75;}
-.prof .desc b{color:#fff;}
+.path .n i{font-style:normal;color:#e8cf9d;}
+.path .ar{color:#6d8dad;font-size:.9rem;}
+.prof .desc{margin-top:20px;font-size:.99rem;color:#c6dbef;line-height:1.8;}
+.prof .desc b{color:#fff;font-weight:700;}
 
-.press{margin-top:16px;}
-.press img{width:100%;border-radius:14px;border:1px solid var(--line);}
-.press .cap{margin-top:9px;font-size:.86rem;color:var(--sub);text-align:center;}
-.press .outlets{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;justify-content:center;}
+.press{margin-top:20px;}
+.press figure{border-radius:18px;overflow:hidden;border:1px solid var(--line);background:#0b2038;}
+.press img{width:100%;}
+.press .outlets{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center;}
 .press .outlets span{
-  font-size:.83rem;font-weight:700;color:var(--navy);
-  background:#eef3f8;border:1px solid #dbe6f0;border-radius:999px;padding:6px 14px;
+  font-size:.79rem;font-weight:800;letter-spacing:.04em;color:var(--navy);
+  background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 16px;
 }
+.press .cap{margin-top:11px;font-size:.85rem;color:var(--sub);text-align:center;}
 
-/* ===================== 왜 스킨부스터 ===================== */
-.steps{margin-top:16px;display:flex;flex-direction:column;gap:12px;}
-.step{
-  display:flex;gap:16px;background:#f8fafd;border:1px solid #e5ecf4;
-  border-radius:16px;padding:19px 20px;
+/* ============================== 타임라인 ============================== */
+.steps{margin-top:20px;position:relative;padding-left:8px;}
+.steps::before{
+  content:"";position:absolute;left:27px;top:22px;bottom:22px;width:1.5px;
+  background:linear-gradient(180deg,var(--gold-lt),#e3e9f0);
 }
+.step{position:relative;display:flex;gap:20px;padding-bottom:24px;}
+.step:last-child{padding-bottom:0;}
 .step .n{
-  flex:0 0 40px;height:40px;border-radius:12px;background:var(--navy);color:#fff;
-  font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;
+  position:relative;z-index:1;flex:0 0 38px;height:38px;border-radius:50%;
+  background:#fff;border:1.5px solid var(--gold-lt);color:var(--gold);
+  font-family:var(--serif);font-weight:700;font-size:1rem;
+  display:flex;align-items:center;justify-content:center;
 }
-.step .t{flex:1;min-width:0;}
-.step h4{font-size:1.09rem;font-weight:800;color:var(--navy);margin-bottom:5px;}
-.step p{font-size:.99rem;color:var(--sub);}
-.step p b{color:#33507a;font-weight:700;}
+.step .t{flex:1;min-width:0;padding-top:2px;}
+.step h4{font-size:1.09rem;font-weight:800;color:var(--navy);margin-bottom:6px;letter-spacing:-.015em;}
+.step p{font-size:.99rem;color:var(--body);}
 
-/* ===================== 제품 아코디언 ===================== */
-.prods{margin-top:18px;display:flex;flex-direction:column;gap:12px;}
+/* ============================== 제품 ============================== */
+.prods{margin-top:22px;display:flex;flex-direction:column;gap:13px;}
 details.prod{
-  background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;
-  transition:box-shadow .2s,border-color .2s;
+  background:#fff;border:1px solid var(--line);border-radius:19px;overflow:hidden;
+  transition:box-shadow .25s,border-color .25s;position:relative;
 }
-details.prod[open]{box-shadow:0 6px 22px rgba(14,42,71,.10);border-color:#cfdcea;}
+details.prod::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--pc);
+  opacity:0;transition:opacity .25s;
+}
+details.prod[open]{box-shadow:0 16px 40px -20px rgba(11,32,56,.4);border-color:#d5e0ec;}
+details.prod[open]::before{opacity:1;}
 details.prod > summary{
-  list-style:none;cursor:pointer;display:flex;align-items:center;gap:15px;
-  padding:19px 20px;min-height:80px;-webkit-tap-highlight-color:transparent;
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;
+  padding:16px 20px;min-height:92px;-webkit-tap-highlight-color:transparent;
 }
 details.prod > summary::-webkit-details-marker{display:none;}
-.dot{flex:0 0 auto;width:20px;height:20px;border-radius:50%;box-shadow:0 0 0 4px rgba(0,0,0,.045);}
+.vial{flex:0 0 auto;width:34px;height:80px;}
 .pm{flex:1;min-width:0;}
-.pm h3{font-size:1.24rem;font-weight:800;letter-spacing:-.02em;line-height:1.35;}
-.pm p{font-size:.93rem;color:var(--sub);margin-top:2px;font-weight:500;}
-.prod-body{padding:4px 22px 26px;border-top:1px solid var(--line);}
+.pm .en{display:block;font-size:.64rem;font-weight:800;letter-spacing:.2em;color:var(--pc);opacity:.85;margin-bottom:5px;}
+.pm h3{font-family:var(--serif);font-size:1.28rem;font-weight:700;color:var(--navy);letter-spacing:-.03em;line-height:1.34;}
+.pm p{font-size:.91rem;color:var(--sub);margin-top:4px;font-weight:500;}
+.chev.sm{width:40px;height:40px;}
+.chev.sm svg{width:15px;height:15px;}
+.prod-body{padding:0 24px 28px;}
+.prod-body .divider{margin:0 0 22px;}
 
 .catch{
-  margin-top:18px;font-size:1.16rem;font-weight:700;color:var(--navy);
-  line-height:1.62;letter-spacing:-.01em;
+  font-family:var(--serif);font-weight:500;
+  font-size:1.22rem;line-height:1.66;color:var(--navy);letter-spacing:-.02em;
+  padding-left:20px;position:relative;
 }
-.pill{
-  display:inline-flex;align-items:center;gap:7px;font-size:.84rem;font-weight:700;
-  background:#f1f5f9;border:1px solid #e0e7ef;border-radius:999px;
-  padding:6px 13px;color:#41505f;margin:0 6px 6px 0;
+.catch::before{
+  content:"";position:absolute;left:0;top:.3em;bottom:.3em;width:3px;
+  background:var(--pc);border-radius:2px;opacity:.55;
+}
+.tags{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;}
+.tags span{
+  font-size:.86rem;font-weight:700;color:#4b5765;
+  background:#f5f8fb;border:1px solid #e6ecf3;border-radius:10px;padding:9px 14px;
 }
 
-.ing{margin-top:14px;display:flex;flex-direction:column;gap:10px;}
-.ing .row{
-  display:flex;gap:14px;align-items:flex-start;
-  background:#f8fafd;border:1px solid #e5ecf4;border-radius:14px;padding:15px 17px;
-}
+.ing{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.ing .row{background:#fbfcfe;border:1px solid var(--line-soft);border-radius:15px;padding:18px 19px;}
 .ing .row .k{
-  flex:0 0 34%;font-size:.99rem;font-weight:800;color:var(--navy);line-height:1.5;
+  font-size:1rem;font-weight:800;color:var(--navy);line-height:1.5;letter-spacing:-.01em;
+  margin-bottom:9px;padding-bottom:9px;border-bottom:1px solid var(--line-soft);
 }
-.ing .row .v{flex:1;font-size:.96rem;color:var(--sub);}
-@media(max-width:640px){
-  .ing .row{flex-direction:column;gap:5px;}
-  .ing .row .k{flex:none;}
-}
+.ing .row .k em{display:block;font-style:normal;font-size:.79rem;font-weight:600;color:#98a2b0;margin-top:3px;}
+.ing .row .v{font-size:.94rem;color:#5c6775;}
+.ing .row .v b{color:var(--navy);font-weight:700;}
+@media(max-width:720px){ .ing{grid-template-columns:1fr;} }
 
-/* ===================== FAQ ===================== */
-details.faq{
-  background:#fff;border:1px solid var(--line);border-radius:15px;overflow:hidden;
-}
-details.faq + details.faq{margin-top:10px;}
+/* ============================== FAQ ============================== */
+.faqs{margin-top:20px;display:flex;flex-direction:column;gap:10px;}
+details.faq{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s;}
+details.faq[open]{border-color:#d5e0ec;}
 details.faq > summary{
-  list-style:none;cursor:pointer;display:flex;align-items:center;gap:13px;
-  padding:18px 20px;min-height:70px;font-size:1.05rem;font-weight:700;color:var(--navy);
-  -webkit-tap-highlight-color:transparent;
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:14px;
+  padding:19px 20px;min-height:74px;-webkit-tap-highlight-color:transparent;
 }
 details.faq > summary::-webkit-details-marker{display:none;}
 details.faq .q{
-  flex:0 0 32px;height:32px;border-radius:9px;background:var(--sky);color:var(--blue);
-  font-weight:800;font-size:.95rem;display:flex;align-items:center;justify-content:center;
+  flex:0 0 32px;height:32px;border-radius:9px;background:var(--blue-soft);color:var(--blue);
+  font-family:var(--serif);font-weight:700;font-size:.95rem;
+  display:flex;align-items:center;justify-content:center;
 }
-details.faq .qt{flex:1;min-width:0;}
-.faq-body{padding:2px 20px 22px 65px;border-top:1px solid var(--line);
-  font-size:1rem;color:#3b434f;}
-.faq-body b{color:var(--navy);}
-@media(max-width:640px){ .faq-body{padding-left:20px;} }
+details.faq .qt{flex:1;min-width:0;font-size:1.03rem;font-weight:700;color:var(--navy);letter-spacing:-.015em;}
+.faq-body{padding:0 22px 22px 66px;font-size:1rem;color:var(--body);}
+.faq-body .divider{margin:0 0 16px;}
+.faq-body b{color:var(--navy);font-weight:700;}
+@media(max-width:640px){ .faq-body{padding-left:22px;} }
 
-/* ===================== FOOTER ===================== */
+/* ============================== FOOTER ============================== */
 footer{
-  margin-top:56px;background:var(--navy);color:#a9c3da;
-  padding:40px 0 46px;text-align:center;font-size:.9rem;line-height:1.8;
+  margin-top:64px;color:#93aec9;text-align:center;
+  background-color:#0b2038;
+  background-image:
+    radial-gradient(600px 300px at 50% 0%, rgba(76,140,205,.2) 0%, rgba(76,140,205,0) 70%),
+    linear-gradient(180deg,#0b2038,#081625);
+  padding:48px 0 52px;font-size:.9rem;line-height:1.85;
 }
-footer .ft{color:#fff;font-weight:800;font-size:1.1rem;letter-spacing:.02em;margin-bottom:10px;}
-footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
-  border-top:1px solid rgba(255,255,255,.14);}
-
-@media(prefers-reduced-motion:reduce){ *{transition:none !important;} html{scroll-behavior:auto;} }
-
-/* 아이패드 가로 — 폭 고정 유지, 여백만 확보 */
-@media(min-width:1000px){
-  body{font-size:19.5px;}
-  .wrap{padding:0 20px;}
+footer .fm{
+  display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:1.02rem;
+  letter-spacing:.16em;color:#fff;margin-bottom:12px;
 }
-/* 좁은 화면(휴대폰) 보정 */
-@media(max-width:560px){
+footer .fm i{width:7px;height:7px;border-radius:50%;background:var(--gold-lt);display:block;}
+footer .fl{width:40px;height:1px;background:rgba(255,255,255,.2);margin:20px auto;}
+footer .fs{color:#7796b4;font-size:.82rem;}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}html{scroll-behavior:auto;}}
+
+@media(max-width:600px){
   body{font-size:17.5px;}
-  header{padding:48px 0 44px;}
-  header h1{font-size:1.95rem;}
-  .wrap{padding:0 16px;}
-  details.sec > summary{padding:19px 17px;gap:13px;min-height:82px;}
-  .sec-no{flex:0 0 44px;height:44px;border-radius:13px;font-size:1rem;}
-  .sec-meta h2{font-size:1.2rem;}
-  .sec-body{padding:6px 17px 26px;}
-  .prod-body{padding:4px 17px 24px;}
-  .prof{padding:22px 19px;}
+  .wrap{padding:0 17px;}
+  .hero-in{padding:60px 0 52px;min-height:auto;}
+  .stats div{min-width:50%;flex:0 0 50%;padding:10px 8px;}
+  .stats div + div::before{display:none;}
+  details.sec > summary{padding:20px 18px;gap:14px;min-height:88px;}
+  .sec-idx{width:30px;font-size:1.25rem;}
+  .sec-t h2{font-size:1.26rem;}
+  .sec-body{padding:0 18px 28px;}
+  .prod-body{padding:0 17px 24px;}
+  .prof{padding:24px 20px;}
+  .prof h4{font-size:1.4rem;}
+  .chev{width:40px;height:40px;}
+  .vial{width:28px;height:66px;}
+  .pm h3{font-size:1.13rem;}
+  .catch{font-size:1.09rem;}
 }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <span class="hero-badge">DR. BAE MEDICAL AESTHETIC</span>
-    <h1>대학 연구실에서 시작된<br><em>닥터배 스킨부스터</em></h1>
-    <div class="hero-rule"></div>
-    <p>오늘 고객님의 관리에 사용되는 제품을 소개해 드립니다.</p>
-    <div class="hero-meta">
-      <span>㈜배랩 · 숭실대학교 의공학 연구실</span>
-      <span>5ml 유리 바이알 · 단회용</span>
-      <span>전문가 전용 라인</span>
+<!-- ============================== HERO ============================== -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <span class="kicker">SOONGSIL UNIV. BIOMEDICAL LAB &nbsp;×&nbsp; BAELAB</span>
+    <h1>
+      <span class="l1">대학 연구실에서 시작된</span>
+      <span class="gold">닥터배 스킨부스터</span>
+    </h1>
+    <div class="rule"></div>
+    <p class="lede">오늘 고객님의 관리에 사용되는 제품을 소개해 드립니다.</p>
+
+    <div class="stats">
+      <div><b>6종</b><span>SKIN BOOSTER</span></div>
+      <div><b>5ml</b><span>GLASS VIAL</span></div>
+      <div><b>단회용</b><span>SINGLE USE</span></div>
+      <div><b>8년</b><span>SINCE LAUNCH</span></div>
     </div>
   </div>
-</header>
+</section>
+
+<!-- ============================== NAV ============================== -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <span class="brandmark"><i></i>DR.BAE</span>
+    <div class="nav-links">
+      <button type="button" data-go="s1">브랜드</button>
+      <button type="button" data-go="s2">왜 스킨부스터</button>
+      <button type="button" data-go="s3">제품 6종</button>
+      <button type="button" data-go="s4">자주 묻는 질문</button>
+    </div>
+  </div>
+</nav>
 
 <main class="wrap">
 
-  <div class="lead">
-    <h2>보고 싶은 항목을 눌러서 펼쳐 보세요</h2>
-    <p>
-      닥터배가 <b>어떤 브랜드인지</b>, <b>스킨부스터가 왜 필요한지</b>,
-      그리고 <b>오늘 사용되는 제품 6종</b>을 순서대로 정리했습니다.
-    </p>
-  </div>
+  <p class="hint">항목을 눌러 펼쳐 보세요</p>
 
   <div class="secs">
 
-  <!-- ============================================================ 01 브랜드 -->
-  <details class="sec">
+  <!-- ==================== 01 브랜드 ==================== -->
+  <details class="sec" id="s1">
     <summary>
-      <span class="sec-no">01</span>
-      <span class="sec-meta">
+      <span class="sec-idx">01</span>
+      <span class="sec-t">
+        <span class="eyebrow">Brand</span>
         <h2>닥터배는 어떤 브랜드인가요</h2>
         <p>대학 연구실에서 출발한, 연구자가 공개된 브랜드</p>
       </span>
-      <span class="click"></span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
+      <div class="divider"></div>
 
       <h3 class="blk">연구실에서 시작해, 그대로 제품이 되었습니다</h3>
       <p class="body">
@@ -365,72 +484,79 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
       </p>
 
       <div class="prof">
-        <span class="tag">FOUNDER &amp; DEVELOPER</span>
-        <h4>배원규 교수
-          <small>㈜배랩 창업자 · 기술 개발자 &nbsp;|&nbsp; 숭실대학교 의공학 연구실</small>
-        </h4>
-        <div class="career">
-          <span><i>서울대학교</i> 의과대학</span>
-          <span><i>Stanford</i> University</span>
-          <span>현 <i>숭실대학교</i> 재직</span>
+        <div class="prof-in">
+          <span class="tag">FOUNDER &amp; DEVELOPER</span>
+          <h4>배원규 교수
+            <small>㈜배랩 창업자 · 기술 개발자 &nbsp;|&nbsp; 숭실대학교 의공학 연구실</small>
+          </h4>
+          <div class="path">
+            <span class="n"><i>서울대학교</i> 의과대학</span>
+            <span class="ar">→</span>
+            <span class="n"><i>Stanford</i> University</span>
+            <span class="ar">→</span>
+            <span class="n">현 <i>숭실대학교</i> 재직</span>
+          </div>
+          <p class="desc">
+            피부에 성분이 어떻게 흡수되는지를 연구하는 <b>경피(經皮) 전달</b> 분야에서
+            <b>국제적으로 인정받는 연구자</b>입니다.
+            <b>독사의 송곳니가 독을 흘려보내는 구조</b>에서 착안한 연구를
+            <b>제1저자로 국제 학술지에 발표</b>했고, 이 원리가 닥터배의 전달 기술로 이어졌습니다.
+          </p>
         </div>
-        <p class="desc">
-          피부에 성분이 어떻게 흡수되는지를 연구하는 <b>경피(經皮) 전달</b> 분야에서
-          <b>국제적으로 인정받는 연구자</b>입니다.
-          <b>독사의 송곳니가 독을 흘려보내는 구조</b>에서 착안한 연구를
-          <b>제1저자로 국제 학술지에 발표</b>했고, 이 원리가 닥터배의 전달 기술로 이어졌습니다.
-        </p>
       </div>
 
       <div class="press">
-        <img src="assets/news-press.jpg" alt="배원규 교수 방송 인터뷰 화면 — YTN 사이언스, JTBC, Arirang News 보도" loading="lazy">
-        <div class="outlets">
-          <span>YTN 사이언스</span><span>JTBC</span><span>Arirang News</span>
-        </div>
+        <figure><img src="assets/news-press.jpg" alt="배원규 교수 방송 인터뷰 화면 — YTN 사이언스, JTBC, Arirang News 보도" loading="lazy"></figure>
+        <div class="outlets"><span>YTN 사이언스</span><span>JTBC</span><span>Arirang News</span></div>
         <p class="cap">국내외 주요 방송이 소개한 배원규 교수의 경피 전달 연구</p>
       </div>
 
       <h3 class="blk">고객님이 확인하실 수 있는 것들</h3>
       <div class="cards">
         <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/></svg></div>
           <h4>연구자가 공개되어 있습니다</h4>
           <p>누가 개발했는지, 어느 연구실에서 나왔는지가 브랜드에 그대로 적혀 있습니다.</p>
         </div>
         <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20c0-8 6-13 16-13 0 10-5 15-13 15"/><path d="M4 20c3-4 6-6 10-7.5"/></svg></div>
           <h4>식물에서 얻은 원료</h4>
           <p>핵심 원료인 세포외소포(EV)는 <b>병풀(시카)에서 얻은 식물 유래</b> 원료입니다. 사람이나 동물에서 얻은 원료가 아닙니다.</p>
         </div>
         <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l7.5 3v5.5c0 4.6-3.1 8.2-7.5 9.5-4.4-1.3-7.5-4.9-7.5-9.5V6z"/><polyline points="9 12 11 14 15 10"/></svg></div>
           <h4>온라인 공동구매를 하지 않습니다</h4>
           <p>전문가 관리실에만 공급하는 라인으로, 8년간 가격과 유통 질서를 지켜 왔습니다.</p>
         </div>
         <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.4 2.6 3.6 5.5 3.6 8.5s-1.2 5.9-3.6 8.5c-2.4-2.6-3.6-5.5-3.6-8.5S9.6 6.1 12 3.5z"/></svg></div>
           <h4>해외 시장에도 공급합니다</h4>
           <p>유럽 등 해외 메디컬 에스테틱 시장에도 수출되고 있습니다.</p>
         </div>
       </div>
 
       <div class="note">
-        <b>참고</b> — 배원규 교수는 ㈜배랩의 <b>창업자이자 기술 개발자</b>이며,
-        연구·개발을 맡고 있습니다.
+        <b>참고</b> — 배원규 교수는 ㈜배랩의 <b>창업자이자 기술 개발자</b>이며, 연구·개발을 맡고 있습니다.
       </div>
 
     </div>
   </details>
 
-  <!-- ============================================================ 02 왜 스킨부스터 -->
-  <details class="sec">
+  <!-- ==================== 02 왜 스킨부스터 ==================== -->
+  <details class="sec" id="s2">
     <summary>
-      <span class="sec-no">02</span>
-      <span class="sec-meta">
+      <span class="sec-idx">02</span>
+      <span class="sec-t">
+        <span class="eyebrow">Why Skin Booster</span>
         <h2>왜 스킨부스터인가요</h2>
         <p>좋은 성분보다, 고르게 닿는 것이 먼저입니다</p>
       </span>
-      <span class="click"></span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
+      <div class="divider"></div>
 
-      <p class="body" style="margin-top:20px;">
+      <p class="body">
         집에서 쓰는 화장품과 관리실의 스킨부스터는 <b>성분의 농도</b>도 다르지만,
         더 큰 차이는 <span class="hl">어떻게 전달하느냐</span>에 있습니다.
       </p>
@@ -489,19 +615,21 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
     </div>
   </details>
 
-  <!-- ============================================================ 03 라인업 -->
-  <details class="sec">
+  <!-- ==================== 03 제품 6종 ==================== -->
+  <details class="sec" id="s3">
     <summary>
-      <span class="sec-no">03</span>
-      <span class="sec-meta">
+      <span class="sec-idx">03</span>
+      <span class="sec-t">
+        <span class="eyebrow">Line-up</span>
         <h2>닥터배 스킨부스터 6종</h2>
         <p>5ml 유리 바이알 · 제품을 눌러 확인해 보세요</p>
       </span>
-      <span class="click"></span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
+      <div class="divider"></div>
 
-      <p class="body" style="margin-top:20px;">
+      <p class="body">
         6종은 각각 <b>맡은 역할이 다릅니다.</b>
         오늘 고객님의 피부 컨디션과 관리 목적에 맞춰 원장님이 골라 사용합니다.
       </p>
@@ -509,29 +637,37 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
       <div class="prods">
 
         <!-- 1 블루 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#2F6FB2">
           <summary>
-            <span class="dot" style="background:var(--p-blue)"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 50h22v42c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#2F6FB2" opacity=".82"/>
+              <rect x="11" y="62" width="22" height="19" fill="#fff" opacity=".92"/>
+              <rect x="14" y="68" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="73" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="54" width="2.6" height="34" rx="1.3" fill="#fff" opacity=".4"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#2F6FB2"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".18"/>
+            </svg>
             <span class="pm">
+              <span class="en">EXOTOKINE BLUE</span>
               <h3>엑소토카인 블루</h3>
               <p>얼굴 관리의 중심이 되는 메인 앰플</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"오늘 관리의 주인공.<br>푸석하고 지친 피부에 영양과 수분을 한 번에."</p>
+            <div class="divider"></div>
+            <p class="catch">오늘 관리의 주인공.<br>푸석하고 지친 피부에 영양과 수분을 한 번에.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">건조하고 푸석한 피부</span>
-              <span class="pill">결이 거칠게 느껴질 때</span>
-              <span class="pill">화장이 잘 안 먹을 때</span>
-              <span class="pill">생기 없어 보이는 피부</span>
+            <div class="tags">
+              <span>건조하고 푸석한 피부</span><span>결이 거칠게 느껴질 때</span>
+              <span>화장이 잘 안 먹을 때</span><span>생기 없어 보이는 피부</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
             <div class="ing">
               <div class="row">
-                <div class="k">시카 엑소좀<br><span style="font-weight:600;font-size:.86rem;color:#8a94a2;">병풀 유래 세포외소포</span></div>
+                <div class="k">시카 엑소좀<em>병풀 유래 세포외소포</em></div>
                 <div class="v">닥터배 전 라인의 공통 핵심 원료입니다. <b>병풀(시카)에서 얻은 식물 유래</b> 원료로, 대학 연구실이 직접 관리합니다.</div>
               </div>
               <div class="row">
@@ -556,30 +692,36 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
               <li>관리 후 <b>피부결이 정돈되고 촉촉한 마무리</b>로 이어집니다.</li>
             </ul>
 
-            <div class="warn">
-              <b>사용 안내</b> — 5ml 단회용 유리 바이알로, 오늘 관리에서 개봉해 사용합니다.
-            </div>
+            <div class="warn"><b>사용 안내</b> — 5ml 단회용 유리 바이알로, 오늘 관리에서 개봉해 사용합니다.</div>
           </div>
         </details>
 
         <!-- 2 핑크 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#D97B96">
           <summary>
-            <span class="dot" style="background:var(--p-pink)"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 50h22v42c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#D97B96" opacity=".82"/>
+              <rect x="11" y="62" width="22" height="19" fill="#fff" opacity=".92"/>
+              <rect x="14" y="68" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="73" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="54" width="2.6" height="34" rx="1.3" fill="#fff" opacity=".4"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#D97B96"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".18"/>
+            </svg>
             <span class="pm">
+              <span class="en">PIDIROENNE PINK</span>
               <h3>피디로엔 핑크</h3>
               <p>예민해진 피부를 차분하게 — 진정 앰플</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"붉어지고 예민해지는 피부,<br>관리의 마지막을 편안하게 닫아 줍니다."</p>
+            <div class="divider"></div>
+            <p class="catch">붉어지고 예민해지는 피부,<br>관리의 마지막을 편안하게 닫아 줍니다.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">쉽게 붉어지는 피부</span>
-              <span class="pill">환절기마다 따가운 피부</span>
-              <span class="pill">트러블이 잦은 피부</span>
-              <span class="pill">자극이 걱정되는 분</span>
+            <div class="tags">
+              <span>쉽게 붉어지는 피부</span><span>환절기마다 따가운 피부</span>
+              <span>트러블이 잦은 피부</span><span>자극이 걱정되는 분</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
@@ -589,7 +731,7 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
                 <div class="v"><b>전성분 1번</b>이 락토바실러스 발효 원료입니다. 유익균의 발효 성분을 바탕으로 피부 컨디션을 정돈합니다.</div>
               </div>
               <div class="row">
-                <div class="k">저분자 콜라겐 +<br>DNA 유래 보습 원료</div>
+                <div class="k">저분자 콜라겐<em>+ DNA 유래 보습 원료</em></div>
                 <div class="v"><b>전성분 2번</b>이 잘게 쪼갠 콜라겐입니다. 여기에 DNA에서 유래한 화장품 등급 보습 원료가 더해집니다.</div>
               </div>
               <div class="row">
@@ -597,7 +739,7 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
                 <div class="v">프로폴리스 · 오레가노 · 마데카소사이드(병풀 성분). <b>성격이 다른 세 갈래</b>의 진정 원료를 겹쳐 담았습니다.</div>
               </div>
               <div class="row">
-                <div class="k">판테놀 · 알란토인<br>베타인 · 트레할로오스</div>
+                <div class="k">판테놀 · 알란토인<em>베타인 · 트레할로오스</em></div>
                 <div class="v">수분을 붙잡아 주는 보습 원료들이 함께 들어가, 진정과 동시에 <b>촉촉함을 채워</b> 줍니다.</div>
               </div>
             </div>
@@ -618,29 +760,37 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
         </details>
 
         <!-- 3 리퀴드 마스크 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#22377A">
           <summary>
-            <span class="dot" style="background:var(--p-liquid)"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 50h22v42c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#22377A" opacity=".82"/>
+              <rect x="11" y="62" width="22" height="19" fill="#fff" opacity=".92"/>
+              <rect x="14" y="68" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="73" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="54" width="2.6" height="34" rx="1.3" fill="#fff" opacity=".4"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#22377A"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".18"/>
+            </svg>
             <span class="pm">
+              <span class="en">LIQUID MASK</span>
               <h3>엑소토카인 리퀴드 마스크</h3>
               <p>씻어내지 않는 소프트필 — 각질 정돈 &amp; 속광</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"묵은 각질을 부드럽게 걷어내고,<br>속에서 올라오는 윤기로 마무리합니다."</p>
+            <div class="divider"></div>
+            <p class="catch">묵은 각질을 부드럽게 걷어내고,<br>속에서 올라오는 윤기로 마무리합니다.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">칙칙하고 화장이 들뜨는 피부</span>
-              <span class="pill">각질로 오돌토돌한 피부</span>
-              <span class="pill">따가운 필링이 부담스러운 분</span>
-              <span class="pill">중요한 일정 전</span>
+            <div class="tags">
+              <span>칙칙하고 화장이 들뜨는 피부</span><span>각질로 오돌토돌한 피부</span>
+              <span>따가운 필링이 부담스러운 분</span><span>중요한 일정 전</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
             <div class="ing">
               <div class="row">
-                <div class="k">PHA 10%<br><span style="font-weight:600;font-size:.86rem;color:#8a94a2;">글루코노락톤</span></div>
+                <div class="k">PHA 10%<em>글루코노락톤</em></div>
                 <div class="v">각질 정돈 성분 중 <b>분자가 큰 편</b>이라 표면 각질 위주로 부드럽게 작용합니다. 원료 자체가 항산화 특성을 함께 가지고 있습니다.</div>
               </div>
               <div class="row">
@@ -681,29 +831,37 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
         </details>
 
         <!-- 4 토코포르테 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#8A6547">
           <summary>
-            <span class="dot" style="background:var(--p-brown)"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 50h22v42c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#8A6547" opacity=".82"/>
+              <rect x="11" y="62" width="22" height="19" fill="#fff" opacity=".92"/>
+              <rect x="14" y="68" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="73" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="54" width="2.6" height="34" rx="1.3" fill="#fff" opacity=".4"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#8A6547"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".18"/>
+            </svg>
             <span class="pm">
+              <span class="en">TOCOFORTE BROWN</span>
               <h3>토코포르테 브라운</h3>
               <p>비타민 쿨링 — 관리의 마지막을 시원하게</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"열이 오른 피부를 시원하게 식히며<br>비타민으로 마무리합니다."</p>
+            <div class="divider"></div>
+            <p class="catch">열이 오른 피부를 시원하게 식히며<br>비타민으로 마무리합니다.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">얼굴에 열이 잘 오르는 분</span>
-              <span class="pill">붉은 기가 신경 쓰이는 분</span>
-              <span class="pill">여름철 · 야외 활동이 많은 분</span>
-              <span class="pill">두피까지 함께 관리받는 분</span>
+            <div class="tags">
+              <span>얼굴에 열이 잘 오르는 분</span><span>붉은 기가 신경 쓰이는 분</span>
+              <span>여름철 · 야외 활동이 많은 분</span><span>두피까지 함께 관리받는 분</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
             <div class="ing">
               <div class="row">
-                <div class="k">비타민 11종<br>+ 유사 원료 3종</div>
+                <div class="k">비타민 11종<em>+ 유사 원료 3종</em></div>
                 <div class="v">비타민 <b>B군 7종 · C 2가지 형태 · E · K</b>에 이노시톨 · 카르니틴 · 퀘세틴을 더했습니다. 한 병에 담긴 비타민 종류가 많은 편입니다.</div>
               </div>
               <div class="row">
@@ -736,22 +894,32 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
         </details>
 
         <!-- 5 칼리파우더 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#B9B3A3">
           <summary>
-            <span class="dot" style="background:var(--p-cali);box-shadow:0 0 0 4px rgba(0,0,0,.045), inset 0 0 0 3px #fff;"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 74h22v18c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#f3f1ea"/>
+              <path d="M11 74h22v3.4H11z" fill="#e2ded1"/>
+              <rect x="11" y="55" width="22" height="16" fill="#fff" opacity=".92"/>
+              <rect x="14" y="60" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="65" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="40" width="2.6" height="30" rx="1.3" fill="#fff" opacity=".55"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#B9B3A3"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".18"/>
+            </svg>
             <span class="pm">
+              <span class="en">CALI POWDER</span>
               <h3>칼리파우더</h3>
               <p>눈앞에서 녹여 쓰는 동결건조 부스팅 파우더</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"오늘 관리에 한 단계 더.<br>고객님 앞에서 녹여 바로 사용합니다."</p>
+            <div class="divider"></div>
+            <p class="catch">오늘 관리에 한 단계 더.<br>고객님 앞에서 녹여 바로 사용합니다.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">늘 받던 관리에 한 단계 더</span>
-              <span class="pill">중요한 일정을 앞두고</span>
-              <span class="pill">방부제가 신경 쓰이는 분</span>
+            <div class="tags">
+              <span>늘 받던 관리에 한 단계 더</span><span>중요한 일정을 앞두고</span>
+              <span>방부제가 신경 쓰이는 분</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
@@ -767,6 +935,10 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
               <div class="row">
                 <div class="k">히알루론산 + 만니톨</div>
                 <div class="v">수분을 채우는 히알루론산에, 동결건조 상태를 안정적으로 지켜 주는 만니톨이 함께 들어갑니다.</div>
+              </div>
+              <div class="row">
+                <div class="k">전성분 5가지</div>
+                <div class="v">정제수 · 히알루론산 · 만니톨 · 저분자 콜라겐 · 칼슘판토테네이트. <b>그 외에는 아무것도 넣지 않았습니다.</b></div>
               </div>
             </div>
 
@@ -787,23 +959,31 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
         </details>
 
         <!-- 6 블랙 -->
-        <details class="prod">
+        <details class="prod" style="--pc:#2B3038">
           <summary>
-            <span class="dot" style="background:var(--p-black)"></span>
+            <svg class="vial" viewBox="0 0 44 108" aria-hidden="true">
+              <path d="M17 20v7c-4 2.5-6 6-6 11v54c0 5.5 4 9.5 9.5 9.5h3c5.5 0 9.5-4 9.5-9.5V38c0-5-2-8.5-6-11v-7z" fill="#eff4f9" stroke="#dae3ed" stroke-width="1.2"/>
+              <path d="M11 50h22v42c0 5.5-4 9.5-9.5 9.5h-3c-5.5 0-9.5-4-9.5-9.5z" fill="#2B3038" opacity=".88"/>
+              <rect x="11" y="62" width="22" height="19" fill="#fff" opacity=".92"/>
+              <rect x="14" y="68" width="16" height="1.6" fill="#c2ccd8"/><rect x="14" y="73" width="11" height="1.6" fill="#d5dde6"/>
+              <rect x="14.5" y="54" width="2.6" height="34" rx="1.3" fill="#fff" opacity=".3"/>
+              <rect x="14" y="5" width="16" height="13" rx="3.5" fill="#2B3038"/>
+              <rect x="14" y="16" width="16" height="3.4" fill="#000" opacity=".25"/>
+            </svg>
             <span class="pm">
+              <span class="en">BLACK FOR SCALP</span>
               <h3>엑소토카인 블랙 포 스칼프</h3>
               <p>두피 전용 부스터 — 얼굴처럼 두피도</p>
             </span>
-            <span class="click"></span>
+            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
           </summary>
           <div class="prod-body">
-            <p class="catch">"두피도 피부입니다.<br>얼굴처럼 관리받는 두피 전용 앰플."</p>
+            <div class="divider"></div>
+            <p class="catch">두피도 피부입니다.<br>얼굴처럼 관리받는 두피 전용 앰플.</p>
 
-            <div style="margin-top:16px;">
-              <span class="pill">두피 각질이 신경 쓰이는 분</span>
-              <span class="pill">유분으로 답답한 두피</span>
-              <span class="pill">출산 후 예민해진 두피</span>
-              <span class="pill">얼굴과 두피를 함께</span>
+            <div class="tags">
+              <span>두피 각질이 신경 쓰이는 분</span><span>유분으로 답답한 두피</span>
+              <span>출산 후 예민해진 두피</span><span>얼굴과 두피를 함께</span>
             </div>
 
             <h3 class="blk">어떤 원료가 들어 있나요</h3>
@@ -813,15 +993,15 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
                 <div class="v">얼굴 라인과 동일한 공통 핵심 원료가 두피용에도 그대로 들어갑니다. <b>두피 컨디션을 정돈</b>하는 중심 역할입니다.</div>
               </div>
               <div class="row">
-                <div class="k">펩타이드 9종<br><span style="font-weight:600;font-size:.86rem;color:#8a94a2;">구리 펩타이드 포함</span></div>
+                <div class="k">펩타이드 9종<em>구리 펩타이드 포함</em></div>
                 <div class="v">서로 다른 구조의 펩타이드 9가지를 함께 담았습니다. <b>구리(카퍼) 펩타이드</b>가 포함된 구성입니다.</div>
               </div>
               <div class="row">
-                <div class="k">카페인 · 바이오틴<br>덱스판테놀</div>
+                <div class="k">카페인 · 바이오틴<em>덱스판테놀</em></div>
                 <div class="v">두피 · 모발 케어에 오래 쓰여 온 원료 조합으로, <b>두피에 활력감</b>을 더하는 층을 만듭니다.</div>
               </div>
               <div class="row">
-                <div class="k">살리실산 + 멘톨<br>+ 식물 추출물 7종</div>
+                <div class="k">살리실산 + 멘톨<em>+ 식물 추출물 7종</em></div>
                 <div class="v">두피 각질을 정돈하는 성분에 <b>시원한 멘톨</b>과 병풀잎 · 다시마 · 약모밀 등 식물 추출물을 더했습니다.</div>
               </div>
             </div>
@@ -853,73 +1033,82 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
     </div>
   </details>
 
-  <!-- ============================================================ 04 FAQ -->
-  <details class="sec">
+  <!-- ==================== 04 FAQ ==================== -->
+  <details class="sec" id="s4">
     <summary>
-      <span class="sec-no">04</span>
-      <span class="sec-meta">
+      <span class="sec-idx">04</span>
+      <span class="sec-t">
+        <span class="eyebrow">FAQ</span>
         <h2>고객님들이 자주 물어보시는 것</h2>
         <p>관리 전에 궁금하신 점을 모았습니다</p>
       </span>
-      <span class="click"></span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
     <div class="sec-body">
-      <div style="margin-top:20px;"></div>
+      <div class="divider"></div>
+      <div class="faqs">
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">주사처럼 아픈 관리인가요?</span><span class="click"></span></summary>
-        <div class="faq-body">아닙니다. 닥터배 스킨부스터는 모두 <b>바르는 화장품(앰플)</b>입니다.
-          피부에 바른 뒤 초음파 · 갈바닉 · LED · 에어건 같은 미용기기로 고르게 전달하는 방식으로,
-          <b>피부를 뚫거나 주사하지 않습니다.</b></div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">주사처럼 아픈 관리인가요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            아닙니다. 닥터배 스킨부스터는 모두 <b>바르는 화장품(앰플)</b>입니다.
+            피부에 바른 뒤 초음파 · 갈바닉 · LED · 에어건 같은 미용기기로 고르게 전달하는 방식으로,
+            <b>피부를 뚫거나 주사하지 않습니다.</b></div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">엑소좀이라고 하던데, 사람에게서 얻은 원료인가요?</span><span class="click"></span></summary>
-        <div class="faq-body">아닙니다. 닥터배의 핵심 원료는 <b>병풀(시카)에서 얻은 식물 유래 세포외소포</b>입니다.
-          사람이나 동물에서 얻은 원료가 아니며, <b>대학 연구실에서 원료 연구부터 직접 관리</b>합니다.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">엑소좀이라고 하던데, 사람에게서 얻은 원료인가요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            아닙니다. 닥터배의 핵심 원료는 <b>병풀(시카)에서 얻은 식물 유래 세포외소포</b>입니다.
+            사람이나 동물에서 얻은 원료가 아니며, <b>대학 연구실에서 원료 연구부터 직접 관리</b>합니다.</div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">몇 번이나 받아야 하나요?</span><span class="click"></span></summary>
-        <div class="faq-body">정해진 횟수는 없습니다. 피부 컨디션과 원하시는 방향에 따라 달라지므로,
-          <b>원장님과 상담하신 뒤 관리 주기를 함께 정하시는 것</b>을 권해 드립니다.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">몇 번이나 받아야 하나요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            정해진 횟수는 없습니다. 피부 컨디션과 원하시는 방향에 따라 달라지므로,
+            <b>원장님과 상담하신 뒤 관리 주기를 함께 정하시는 것</b>을 권해 드립니다.</div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">임신 중 · 수유 중인데 받아도 될까요?</span><span class="click"></span></summary>
-        <div class="faq-body">제품에 따라 다릅니다. <b>토코포르테 브라운(비타민 K 함유)</b>과
-          <b>블랙 포 스칼프(에탄올 · 멘톨 · 로얄젤리 함유)</b>는 보류하며,
-          일부 기기도 사용하지 않습니다.
-          <b>임신 · 수유 중이시라면 관리 전에 반드시 말씀해 주세요.</b></div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">임신 중 · 수유 중인데 받아도 될까요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            제품에 따라 다릅니다. <b>토코포르테 브라운(비타민 K 함유)</b>과
+            <b>블랙 포 스칼프(에탄올 · 멘톨 · 로얄젤리 함유)</b>는 보류하며, 일부 기기도 사용하지 않습니다.
+            <b>임신 · 수유 중이시라면 관리 전에 반드시 말씀해 주세요.</b></div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">알레르기가 있는데 괜찮을까요?</span><span class="click"></span></summary>
-        <div class="faq-body"><b>피디로엔 핑크</b>에는 프로폴리스, <b>블랙 포 스칼프</b>에는 로얄젤리가 들어 있습니다.
-          <b>벌 제품 알레르기</b>가 있으셨다면 미리 알려 주세요.
-          <b>리퀴드 마스크</b>에는 향료가 들어 있어, 향에 예민하신 경우에도 말씀해 주시면 좋습니다.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">알레르기가 있는데 괜찮을까요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            <b>피디로엔 핑크</b>에는 프로폴리스, <b>블랙 포 스칼프</b>에는 로얄젤리가 들어 있습니다.
+            <b>벌 제품 알레르기</b>가 있으셨다면 미리 알려 주세요.
+            <b>리퀴드 마스크</b>에는 향료가 들어 있어, 향에 예민하신 경우에도 말씀해 주시면 좋습니다.</div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">집에서도 이어서 쓸 수 있나요?</span><span class="click"></span></summary>
-        <div class="faq-body">네, 가능합니다. <b>엑소토카인 리퀴드 마스크</b>는
-          저녁에 반 병 → 다음 날 아침에 남은 반 병을 바르는 홈케어 루틴으로 안내해 드립니다.
-          자세한 것은 원장님께 문의해 주세요.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">집에서도 이어서 쓸 수 있나요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            네, 가능합니다. <b>엑소토카인 리퀴드 마스크</b>는
+            저녁에 반 병 → 다음 날 아침에 남은 반 병을 바르는 홈케어 루틴으로 안내해 드립니다.
+            자세한 것은 원장님께 문의해 주세요.</div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">한 병을 다 못 쓰면 다음에 쓰나요?</span><span class="click"></span></summary>
-        <div class="faq-body">아닙니다. 닥터배 바이알은 <b>단회용 밀봉 제품</b>으로,
-          <b>개봉 당일 소진을 원칙</b>으로 합니다.
-          남은 양을 다음 고객이나 다음 회차로 넘겨 쓰지 않습니다.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">한 병을 다 못 쓰면 다음에 쓰나요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            아닙니다. 닥터배 바이알은 <b>단회용 밀봉 제품</b>으로, <b>개봉 당일 소진을 원칙</b>으로 합니다.
+            남은 양을 다음 고객이나 다음 회차로 넘겨 쓰지 않습니다.</div>
+        </details>
 
-      <details class="faq">
-        <summary><span class="q">Q</span><span class="qt">이 제품은 어디서 살 수 있나요?</span><span class="click"></span></summary>
-        <div class="faq-body">닥터배는 <b>전문가 관리실에만 공급하는 라인</b>입니다.
-          온라인 공동구매를 진행하지 않으며, 관리를 받으시는 샵을 통해서만 안내해 드립니다.</div>
-      </details>
+        <details class="faq">
+          <summary><span class="q">Q</span><span class="qt">이 제품은 어디서 살 수 있나요?</span><span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span></summary>
+          <div class="faq-body"><div class="divider"></div>
+            닥터배는 <b>전문가 관리실에만 공급하는 라인</b>입니다.
+            온라인 공동구매를 진행하지 않으며, 관리를 받으시는 샵을 통해서만 안내해 드립니다.</div>
+        </details>
 
+      </div>
     </div>
   </details>
 
@@ -928,8 +1117,9 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
 
 <footer>
   <div class="wrap">
-    <p class="ft">DR. BAE MEDICAL AESTHETIC</p>
+    <span class="fm"><i></i>DR. BAE</span>
     <p>㈜배랩 &nbsp;·&nbsp; 숭실대학교 의공학 연구실 (배원규 교수)</p>
+    <div class="fl"></div>
     <p class="fs">
       본 자료는 관리실 방문 고객 안내용으로 제작되었습니다.<br>
       화장품 표시 · 광고법을 준수하여 작성되었으며, 의약품적 효능 · 효과를 표방하지 않습니다.<br>
@@ -939,17 +1129,48 @@ footer .fs{color:#8fabc7;font-size:.83rem;margin-top:14px;padding-top:14px;
 </footer>
 
 <script>
-/* 한 번에 하나의 대분류만 열리도록 — 목차가 계속 보이게 유지 */
 (function(){
-  var secs = document.querySelectorAll('details.sec');
+  var secs = Array.prototype.slice.call(document.querySelectorAll('details.sec'));
+  var navBtns = Array.prototype.slice.call(document.querySelectorAll('.nav-links button'));
+  var navH = 64;
+
+  function scrollToSec(d){
+    setTimeout(function(){
+      var y = d.getBoundingClientRect().top + window.pageYOffset - navH - 10;
+      window.scrollTo({top:y, behavior:'smooth'});
+    }, 70);
+  }
+  function syncNav(){
+    var openSec = null;
+    for(var i=0;i<secs.length;i++){ if(secs[i].open){ openSec = secs[i]; break; } }
+    navBtns.forEach(function(b){
+      b.classList.toggle('on', !!openSec && b.getAttribute('data-go') === openSec.id);
+    });
+  }
+
   secs.forEach(function(d){
     d.addEventListener('toggle', function(){
-      if(!d.open) return;
-      secs.forEach(function(o){ if(o !== d) o.open = false; });
-      setTimeout(function(){
-        var y = d.getBoundingClientRect().top + window.pageYOffset - 12;
-        window.scrollTo({top:y, behavior:'smooth'});
-      }, 60);
+      if(d.open){
+        secs.forEach(function(o){ if(o !== d) o.open = false; });
+        scrollToSec(d);
+      }
+      syncNav();
+    });
+  });
+
+  navBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var d = document.getElementById(b.getAttribute('data-go'));
+      if(!d) return;
+      if(d.open){ scrollToSec(d); } else { d.open = true; }
+    });
+  });
+
+  var prods = Array.prototype.slice.call(document.querySelectorAll('details.prod'));
+  prods.forEach(function(p){
+    p.addEventListener('toggle', function(){
+      if(!p.open) return;
+      prods.forEach(function(o){ if(o !== p) o.open = false; });
     });
   });
 })();
