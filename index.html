@@ -97,6 +97,8 @@ img{max-width:100%;display:block;}
   display:flex;flex-direction:column;justify-content:center;
   padding:72px 0 48px;text-align:center;
 }
+.hero-logo{height:46px;width:auto;margin:0 auto 24px;opacity:.97;}
+@media(max-width:600px){ .hero-logo{height:38px;margin-bottom:20px;} }
 .hero .kicker{
   display:inline-block;margin:0 auto 26px;
   font-size:.68rem;font-weight:700;letter-spacing:.24em;color:#d9c294;
@@ -136,22 +138,23 @@ img{max-width:100%;display:block;}
   border-bottom:1px solid var(--line);
 }
 .nav-in{display:flex;align-items:center;gap:14px;height:64px;}
-.brandmark{
-  display:flex;align-items:center;gap:8px;flex:0 0 auto;
-  font-weight:800;font-size:.95rem;letter-spacing:.01em;color:var(--navy);
-}
-.brandmark i{width:7px;height:7px;border-radius:50%;background:var(--gold);display:block;}
+.brandmark{display:flex;align-items:center;flex:0 0 auto;}
+.brandmark img{height:19px;width:auto;display:block;}
+@media(max-width:600px){ .brandmark img{height:16px;} }
 .nav-links{
   display:flex;gap:6px;margin-left:auto;overflow-x:auto;scrollbar-width:none;
   -webkit-overflow-scrolling:touch;
 }
 .nav-links::-webkit-scrollbar{display:none;}
+/* 태블릿 이하 — 스티키 바는 내비 전용으로(로고는 히어로·푸터에 있음) */
 @media(max-width:900px){
-  .nav-links{gap:4px;}
-  .nav-links button{padding:9px 11px;font-size:.83rem;}
+  .brandmark{display:none;}
+  .nav-links{margin-left:0;width:100%;justify-content:space-between;gap:2px;}
+  .nav-links button{padding:9px 10px;font-size:.83rem;}
 }
-@media(max-width:800px){
+@media(max-width:720px){
   .nav-links{
+    justify-content:flex-start;gap:4px;
     -webkit-mask-image:linear-gradient(to right,#000 92%,transparent 100%);
     mask-image:linear-gradient(to right,#000 92%,transparent 100%);
   }
@@ -516,11 +519,9 @@ footer{
     linear-gradient(180deg,#0b2038,#081625);
   padding:48px 0 52px;font-size:.9rem;line-height:1.85;
 }
-footer .fm{
-  display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:1.08rem;
-  letter-spacing:.02em;color:#fff;margin-bottom:12px;
-}
-footer .fm i{width:7px;height:7px;border-radius:50%;background:var(--gold-lt);display:block;}
+footer .fm{display:inline-flex;align-items:center;margin-bottom:16px;}
+footer .fm img{height:40px;width:auto;display:block;opacity:.96;}
+@media(max-width:600px){ footer .fm img{height:33px;} }
 footer .fl{width:40px;height:1px;background:rgba(255,255,255,.2);margin:20px auto;}
 footer .fs{color:#7796b4;font-size:.82rem;}
 
@@ -551,6 +552,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 <!-- ============================== HERO ============================== -->
 <section class="hero">
   <div class="wrap hero-in">
+    <img class="hero-logo" src="assets/logo-drbae-w.png" alt="Dr. BAE — Nature-inspired Derma Technology">
     <span class="kicker">SOONGSIL UNIV. BIOMEDICAL LAB &nbsp;×&nbsp; BAELAB</span>
     <h1>
       <span class="l1">대학 연구실에서 시작된</span>
@@ -571,7 +573,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 <!-- ============================== NAV ============================== -->
 <nav class="nav">
   <div class="wrap nav-in">
-    <span class="brandmark"><i></i>닥터배</span>
+    <span class="brandmark"><img src="assets/logo-drbae-mark.png" alt="Dr. BAE"></span>
     <div class="nav-links">
       <button type="button" data-go="s1">브랜드</button>
       <button type="button" data-go="s2">왜 스킨부스터</button>
@@ -1735,7 +1737,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 
 <footer>
   <div class="wrap">
-    <span class="fm"><i></i>닥터배 스킨부스터</span>
+    <span class="fm"><img src="assets/logo-drbae-w.png" alt="Dr. BAE — Nature-inspired Derma Technology"></span>
     <p>㈜배랩 &nbsp;·&nbsp; 숭실대학교 의공학 연구실 (배원규 교수)</p>
     <div class="fl"></div>
     <p class="fs">
