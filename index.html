@@ -270,7 +270,24 @@ ul.ck li b{color:var(--navy);font-weight:700;}
 .prof::before{
   content:"";position:absolute;inset:11px;border:1px solid rgba(217,194,148,.24);border-radius:13px;pointer-events:none;
 }
-.prof-in{position:relative;}
+.prof-in{
+  position:relative;display:grid;gap:26px;align-items:center;
+  grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
+}
+@media(max-width:700px){ .prof-in{grid-template-columns:1fr;gap:20px;} }
+.prof-ph{margin:0;}
+.prof-ph img{
+  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:44% 26%;
+  display:block;border-radius:14px;border:1px solid rgba(217,194,148,.34);
+}
+@media(max-width:700px){ .prof-ph img{aspect-ratio:16/10;object-position:44% 24%;} }
+.prof-ph figcaption{margin-top:9px;font-size:.75rem;color:#8fabc7;text-align:center;line-height:1.5;}
+.creds{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px;}
+.creds span{
+  font-size:.77rem;font-weight:700;color:#efd6a0;
+  background:rgba(236,207,142,.12);border:1px solid rgba(236,207,142,.3);
+  border-radius:8px;padding:7px 11px;
+}
 .prof .tag{
   display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.22em;
   color:#e2c894;border-bottom:1px solid rgba(226,200,148,.4);padding-bottom:6px;margin-bottom:16px;
@@ -633,25 +650,44 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 
       <div class="prof">
         <div class="prof-in">
-          <span class="tag">FOUNDER &amp; DEVELOPER</span>
-          <h4>배원규 교수
-            <small>㈜배랩 창업자 · 기술 개발자 &nbsp;|&nbsp; 숭실대학교 의공학 연구실</small>
-          </h4>
-          <div class="path">
-            <span class="n"><i>서울대학교</i> 의과대학</span>
-            <span class="ar">→</span>
-            <span class="n"><i>Stanford</i> University</span>
-            <span class="ar">→</span>
-            <span class="n">현 <i>숭실대학교</i> 재직</span>
+          <figure class="prof-ph">
+            <img src="assets/prof-bae.jpg" alt="숭실대학교 연구실의 배원규 교수 — 뒤편 화면에 독사 어금니 구조 연구 자료가 보인다" loading="lazy">
+            <figcaption>배원규 교수 · 숭실대학교 연구실 ⓒ포브스코리아</figcaption>
+          </figure>
+          <div class="prof-tx">
+            <span class="tag">FOUNDER &amp; DEVELOPER</span>
+            <h4>배원규 교수
+              <small>㈜배랩 창업자 · 기술 개발자 &nbsp;|&nbsp; 숭실대학교 의공학 연구실</small>
+            </h4>
+            <div class="path">
+              <span class="n"><i>서울대학교</i> 의과대학</span>
+              <span class="ar">→</span>
+              <span class="n"><i>Stanford</i> University</span>
+              <span class="ar">→</span>
+              <span class="n">현 <i>숭실대학교</i> 재직</span>
+            </div>
+            <p class="desc">
+              피부에 성분이 어떻게 흡수되는지를 연구하는 <b>경피(經皮) 전달</b> 분야에서
+              <b>국제적으로 인정받는 연구자</b>입니다.
+              <b>독사의 송곳니가 독을 흘려보내는 구조</b>에서 착안한 연구는
+              2019년 8월 국제 학술지 <b>Science Translational Medicine</b>에
+              <b>표지 논문</b>으로 실렸고, 이 원리가 닥터배의 전달 기술로 이어졌습니다.
+            </p>
+            <div class="creds">
+              <span>Science Translational Medicine 표지 · 2019</span>
+              <span>Forbes Korea 인터뷰 · 2021</span>
+            </div>
           </div>
-          <p class="desc">
-            피부에 성분이 어떻게 흡수되는지를 연구하는 <b>경피(經皮) 전달</b> 분야에서
-            <b>국제적으로 인정받는 연구자</b>입니다.
-            <b>독사의 송곳니가 독을 흘려보내는 구조</b>에서 착안한 연구를
-            <b>제1저자로 국제 학술지에 발표</b>했고, 이 원리가 닥터배의 전달 기술로 이어졌습니다.
-          </p>
         </div>
       </div>
+
+      <p class="body" style="margin-top:22px;">
+        2018년, 배원규 교수는 <b>대학 실험실에서 ㈜배랩을 창업</b>했습니다.
+        이듬해 <b>독사의 어금니 구조에서 착안한 경피 전달 기술</b>이
+        국제 학술지 표지에 실리며 학계의 주목을 받았고,
+        <span class="hl">2021년에는 경제지 포브스코리아가 그의 연구를 조명</span>했습니다.
+        논문 속 원천기술을 실제로 대량생산하는 데 성공한 뒤, 해외로 나아가고 있습니다.
+      </p>
 
       <h3 class="blk">정부가 뽑은 '딥사이언스 기업'</h3>
       <p class="body">
