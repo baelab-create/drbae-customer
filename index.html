@@ -324,14 +324,22 @@ ul.ck li b{color:var(--navy);font-weight:700;}
 }
 .prof h4{font-family:var(--serif);font-size:1.68rem;font-weight:700;letter-spacing:-.03em;line-height:1.4;}
 .prof h4 small{display:block;font-family:var(--sans);font-size:.5em;font-weight:600;color:#9fbcd8;margin-top:9px;letter-spacing:0;}
-.path{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:20px;}
-.path .n{
-  font-size:.87rem;font-weight:700;color:#eaf2fa;
-  background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.17);
-  border-radius:11px;padding:10px 15px;
+.career{list-style:none;margin-top:20px;position:relative;padding-left:19px;}
+.career::before{
+  content:"";position:absolute;left:4.5px;top:9px;bottom:9px;width:1.5px;
+  background:linear-gradient(180deg,rgba(232,207,157,.55),rgba(232,207,157,.12));
 }
-.path .n i{font-style:normal;color:#e8cf9d;}
-.path .ar{color:#6d8dad;font-size:.9rem;}
+.career li{
+  position:relative;font-size:.9rem;font-weight:600;color:#dbe9f7;
+  padding:6px 0;line-height:1.55;
+}
+.career li::before{
+  content:"";position:absolute;left:-19px;top:14px;width:9px;height:9px;border-radius:50%;
+  background:#0e2a47;border:1.6px solid rgba(232,207,157,.6);
+}
+.career li:last-child::before{background:#e8cf9d;border-color:#e8cf9d;}
+.career li b{color:#fff;font-weight:800;}
+.career li span{color:#9fbcd8;font-weight:600;}
 .prof .desc{margin-top:20px;font-size:.99rem;color:#c6dbef;line-height:1.8;}
 .prof .desc b{color:#fff;font-weight:700;}
 
@@ -710,13 +718,12 @@ footer .fs{color:#7796b4;font-size:.82rem;}
             <h4>배원규 교수
               <small>㈜배랩 창업자 · 기술 개발자 &nbsp;|&nbsp; 숭실대학교 의공학 연구실</small>
             </h4>
-            <div class="path">
-              <span class="n"><i>서울대학교</i> 의공학 박사</span>
-              <span class="ar">→</span>
-              <span class="n"><i>Stanford</i> 박사후연구원</span>
-              <span class="ar">→</span>
-              <span class="n">현 <i>숭실대학교</i> 교수</span>
-            </div>
+            <ul class="career">
+              <li><b>서울대학교</b> 의공학 박사</li>
+              <li><b>서울대학교</b> 의과대학</li>
+              <li><b>Stanford University</b> <span>박사후연구원</span></li>
+              <li>현 <b>숭실대학교 부교수</b> <span>· 재직 11년차</span></li>
+            </ul>
             <p class="desc">
               피부에 성분이 어떻게 흡수되는지를 연구하는 <b>경피(經皮) 전달</b> 분야에서
               <b>국제적으로 인정받는 연구자</b>입니다.
