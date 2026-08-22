@@ -297,6 +297,29 @@ ul.ck li b{color:var(--navy);font-weight:700;}
   .bs-logo{height:32px;margin-bottom:16px;}
 }
 
+/* ============================== 2단 미디어 카드 ============================== */
+.duo{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:680px){ .duo{grid-template-columns:1fr;} }
+.dcard{
+  margin:0;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:border-color .2s,box-shadow .2s,transform .2s;
+}
+.dcard:hover{border-color:#cfdcea;box-shadow:0 12px 30px -16px rgba(11,32,56,.34);transform:translateY(-2px);}
+.dcard img{width:100%;height:196px;object-fit:cover;display:block;background:#eef2f6;}
+.dcard.pos-c img{object-position:50% 32%;}
+.dcard figcaption{padding:18px 19px 20px;}
+.dlabel{
+  display:inline-block;font-size:.66rem;font-weight:800;letter-spacing:.16em;
+  color:#fff;background:var(--navy);border-radius:6px;padding:5px 10px;margin-bottom:11px;
+}
+.dcard.gold .dlabel{background:#8a6a2c;}
+.dcard h4{font-size:1.05rem;font-weight:800;color:var(--navy);letter-spacing:-.015em;line-height:1.45;margin-bottom:7px;}
+.dcard p{font-size:.92rem;color:#5c6775;}
+.dcard p b{color:var(--navy);font-weight:700;}
+.dcard .src{margin-top:11px;font-size:.78rem;color:#98a2b0;}
+@media(max-width:680px){ .dcard img{height:216px;} }
+
 /* ============================== 교수 패널 ============================== */
 .prof{
   margin-top:20px;position:relative;overflow:hidden;color:#fff;border-radius:20px;
@@ -747,8 +770,8 @@ footer .fs{color:#7796b4;font-size:.82rem;}
             </h4>
             <ul class="career">
               <li><b>서울대학교</b> 의공학 박사</li>
-              <li><b>서울대학교</b> 의과대학</li>
-              <li><b>Stanford University</b> <span>박사후연구원</span></li>
+              <li><b>서울대학교 의과대학</b> <span>박사후 과정</span></li>
+              <li><b>Stanford University</b> <span>박사후 과정</span></li>
               <li>현 <b>숭실대학교 부교수</b> <span>· 재직 11년차</span></li>
             </ul>
             <p class="desc">
@@ -770,54 +793,47 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         2018년, 배원규 교수는 <b>대학 실험실에서 ㈜배랩을 창업</b>했습니다.
         교육부 · 과학기술정보통신부와 숭실대학교가 함께 지원한 <b>실험실 창업 사업</b>으로 출발한 회사입니다.
         이듬해 <b>독사의 어금니 구조에서 착안한 경피 전달 기술</b>이
-        국제 학술지 표지에 실리며 학계의 주목을 받았고,
-        <span class="hl">2021년에는 경제지 포브스코리아가 그의 연구를 조명</span>했습니다.
-        논문 속 원천기술을 실제로 대량생산하는 데 성공한 뒤, 해외로 나아가고 있습니다.
+        <span class="hl">국제 학술지 표지에 실리며</span> 학계의 주목을 받았습니다.
       </p>
 
-      <h3 class="blk">국가가 인정한 연구</h3>
+      <h3 class="blk">국가와 언론이 주목했습니다</h3>
       <p class="body">
         배원규 교수의 연구는 회사 안에서만 좋은 평가를 받은 것이 아닙니다.
-        <span class="hl">국가 차원의 연구 성과 평가에서 두 번 이름을 올렸습니다.</span>
+        <span class="hl">국가 차원의 선정과 언론 보도로 두 번 확인</span>되었습니다.
       </p>
-      <div class="gate">
-        <div class="g hi">
-          <div class="lb">2019</div>
-          <h4>'언론이 주목한 10대 기초연구 지원성과' 선정</h4>
-          <p>그해 국가 기초연구 성과 가운데 <b>대표 10건</b>에 뽑혔습니다.
-             독사의 어금니에서 착안한 <b>경피 전달 기술</b>이 그중 하나였습니다.</p>
-        </div>
-        <div class="g hi">
-          <div class="lb">2023</div>
-          <h4>대한민국 과학기술대전 '딥사이언스 기업' 선정</h4>
-          <p>'세상을 바꿀 대한민국 과학기술'을 주제로 열린 행사에서,
-             정부와 한국연구재단의 지원으로 성과를 낸
-             <b>딥사이언스 기업 5곳</b>에 ㈜배랩이 포함됐습니다.</p>
-        </div>
+
+      <div class="duo">
+
+        <figure class="dcard pos-c">
+          <img src="assets/press-forbes.jpg" alt="숭실대학교 연구실의 배원규 교수 — 포브스코리아 인터뷰" loading="lazy">
+          <figcaption>
+            <span class="dlabel">FORBES KOREA · 2021</span>
+            <h4>경제지 포브스코리아가 조명</h4>
+            <p>독사의 어금니 구조에서 착안한 <b>경피 전달 연구</b>를 인터뷰로 다뤘습니다.
+               2018년 대학 실험실에서 창업해, 논문 속 원천기술을 <b>실제 생산까지 이어낸 과정</b>이 함께 소개됐습니다.</p>
+            <p class="src">ⓒ포브스코리아</p>
+          </figcaption>
+        </figure>
+
+        <figure class="dcard gold">
+          <img src="assets/baelab-fair.jpg" alt="2023 대한민국 과학기술대전 ㈜배랩 부스" loading="lazy">
+          <figcaption>
+            <span class="dlabel">DEEP SCIENCE · 2023</span>
+            <h4>대한민국 과학기술대전 '딥사이언스 기업' 선정</h4>
+            <p>'세상을 바꿀 대한민국 과학기술'을 주제로 열린 행사에서,
+               정부와 한국연구재단의 지원으로 성과를 낸 <b>딥사이언스 기업 5곳</b>에 ㈜배랩이 포함됐습니다.
+               <b>연구 결과가 먼저 있고 그 위에 세워진 회사</b>에 주어지는 이름입니다.</p>
+            <p class="src">ⓒ배랩 · 숭실대학교 · 한국연구재단 · 국가과학기술연구회</p>
+          </figcaption>
+        </figure>
+
       </div>
 
       <div class="note">
-        <b>'딥사이언스 창업'이란</b> — 오랜 과학적 연구 성과나 R&amp;D를 바탕으로 한 창업을 말합니다.
-        아이디어가 먼저인 회사가 아니라,
-        <b>연구 결과가 먼저 있고 그 위에 세워진 회사</b>라는 뜻입니다.
+        <b>2019 · '언론이 주목한 10대 기초연구 지원성과' 선정</b> —
+        그해 국가 기초연구 성과 가운데 <b>대표 10건</b>에 뽑혔습니다.
+        독사의 어금니에서 착안한 경피 전달 기술이 그중 하나였습니다.
       </div>
-
-      <div class="press">
-        <figure style="max-width:620px;margin-left:auto;margin-right:auto;">
-          <img src="assets/baelab-fair.jpg" alt="2023 대한민국 과학기술대전 ㈜배랩 부스에서 연구원들이 스킨부스터와 경피 전달 기술을 소개하는 모습" loading="lazy">
-        </figure>
-        <div class="outlets">
-          <span>㈜배랩</span><span>숭실대학교</span><span>한국연구재단</span><span>국가과학기술연구회</span>
-        </div>
-        <p class="cap">
-          2023 대한민국 과학기술대전 ㈜배랩 부스 — 연구원들이 스킨부스터와 경피 전달 기술을 소개하고 있습니다. ⓒ배랩
-        </p>
-      </div>
-
-      <p class="body" style="margin-top:20px;">
-        당시 언론은 배랩의 기술을 <b>"혁신적인 '경피전달 플랫폼'"</b>이라고 소개했습니다.
-        <span style="color:var(--sub);font-size:.92rem;">— 더케이뷰티사이언스, 2023년 11월 12일</span>
-      </p>
 
       <h3 class="blk">고객님이 확인하실 수 있는 것들</h3>
       <div class="cards">
