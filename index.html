@@ -146,6 +146,16 @@ img{max-width:100%;display:block;}
   -webkit-overflow-scrolling:touch;
 }
 .nav-links::-webkit-scrollbar{display:none;}
+@media(max-width:900px){
+  .nav-links{gap:4px;}
+  .nav-links button{padding:9px 11px;font-size:.83rem;}
+}
+@media(max-width:800px){
+  .nav-links{
+    -webkit-mask-image:linear-gradient(to right,#000 92%,transparent 100%);
+    mask-image:linear-gradient(to right,#000 92%,transparent 100%);
+  }
+}
 .nav-links button{
   font-family:inherit;font-size:.85rem;font-weight:700;color:#5a6673;
   background:transparent;border:1px solid transparent;border-radius:999px;
@@ -567,8 +577,10 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <button type="button" data-go="s2">왜 스킨부스터</button>
       <button type="button" data-go="s3">제품 6종</button>
       <button type="button" data-go="s4">문제성 피부</button>
-      <button type="button" data-go="s5">슬로우에이징</button>
-      <button type="button" data-go="s6">FAQ</button>
+      <button type="button" data-go="s5">마이크로젝션</button>
+      <button type="button" data-go="s6">스킨케어</button>
+      <button type="button" data-go="s7">두피케어</button>
+      <button type="button" data-go="s8">FAQ</button>
     </div>
   </div>
 </nav>
@@ -1294,9 +1306,9 @@ footer .fs{color:#7796b4;font-size:.82rem;}
     <summary>
       <span class="sec-idx">05</span>
       <span class="sec-t">
-        <span class="eyebrow">Slow Aging</span>
-        <h2>슬로우에이징 관리 — 스킨부스터 + 마이크로젝션</h2>
-        <p>장벽이 건강해졌다면, 다음은 흡수를 끌어올릴 차례입니다</p>
+        <span class="eyebrow">Microjection</span>
+        <h2>마이크로젝션 — 흡수를 돕는 기술</h2>
+        <p>뉴스가 소개한 경피 흡수 연구가 기기가 되었습니다</p>
       </span>
       <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
     </summary>
@@ -1330,6 +1342,9 @@ footer .fs{color:#7796b4;font-size:.82rem;}
         </p>
         <p class="no">✕ 주사(INJECTION) &nbsp;·&nbsp; ✕ 니들링 &nbsp;·&nbsp; ✕ 주입</p>
       </div>
+
+      <figure class="shot"><img src="assets/mjx-stamp.jpg" alt="마이크로젝션 더마 스탬프 3방향 형태와 닥터배 엑소토카인 앰플 결합 예시" loading="lazy"></figure>
+      <p class="shotcap">아크릴 · 플라스틱 소재의 더마 스탬프 — 얼굴용 · 두피용 앰플 모두 같은 방식으로 결합합니다</p>
 
       <h3 class="blk">독사의 송곳니에서 출발한 원리</h3>
       <p class="body">
@@ -1420,192 +1435,22 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <h3 class="blk">두 가지 슬로우에이징 관리</h3>
       <p class="body">
         마이크로젝션은 혼자 쓰는 기기가 아니라 <b>앰플과 결합해야 완성되는 기기</b>입니다.
-        어느 부위를 관리하느냐에 따라 <b>결합하는 앰플과 순서가 달라집니다.</b>
-        보고 싶은 관리를 눌러 확인해 보세요.
+        <span class="hl">어느 부위를 관리하느냐에 따라 결합하는 앰플과 순서가 달라집니다.</span>
       </p>
-
-      <div class="tracks">
-
-        <!-- ---------- 트랙 A · 스킨케어 ---------- -->
-        <details class="track" style="--tc:#2F6FB2;--tc-soft:#eaf2fa">
-          <summary>
-            <span class="tk-ic">
-              <svg viewBox="0 0 24 24"><path d="M12 3c4 0 6.6 2.6 6.6 6.4 0 4.6-3 10.6-6.6 10.6S5.4 14 5.4 9.4C5.4 5.6 8 3 12 3z"/><path d="M9.4 10.2h.01M14.6 10.2h.01"/><path d="M10 15.2c1.3.8 2.7.8 4 0"/></svg>
-            </span>
-            <span class="tk">
-              <span class="en">SLOW AGING · SKIN CARE</span>
-              <h3>슬로우에이징 · 스킨케어</h3>
-              <p>스킨부스터 + 마이크로젝션 — 얼굴</p>
-            </span>
-            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
-          </summary>
-          <div class="track-body">
-            <div class="divider"></div>
-
-            <figure class="shot band"><img src="assets/care-microjection.jpg" alt="닥터배 엑소토카인 앰플을 결합한 마이크로젝션 더마 스탬프로 이마 부위를 관리하는 모습" loading="lazy"></figure>
-            <p class="shotcap">앰플 바이알에 직접 결합해, 도장을 찍듯 수직으로 눌러 사용합니다</p>
-
-            <div class="tags" style="margin-top:22px;">
-              <span>결 · 탄력이 신경 쓰이기 시작할 때</span><span>관리 효과를 더 끌어올리고 싶을 때</span>
-              <span>정기적으로 관리받는 분</span><span>피부 컨디션이 안정된 분</span>
-            </div>
-
-            <h3 class="blk">어떤 앰플과 결합하나요</h3>
-            <p class="body">
-              닥터배 라인업에서 <b>스탬프에 결합할 수 있는 앰플은 엑소토카인 블루와 피디로엔 핑크 2종</b>입니다.
-              기준은 성분이 아니라 <b>제형의 점도</b> — 헤드에 머무를 만큼의 점성이 있어야
-              접촉면 전체에 고르게 전달됩니다.
-            </p>
-
-            <figure class="shot"><img src="assets/mjx-stamp.jpg" alt="마이크로젝션 더마 스탬프 3방향 형태와 닥터배 엑소토카인 앰플 결합 예시" loading="lazy"></figure>
-            <p class="shotcap">아크릴 · 플라스틱 소재의 더마 스탬프와, 앰플에 결합한 모습</p>
-
-            <ul class="ck">
-              <li><b>안티에이징 지향</b>이면 엑소토카인 블루, <b>진정 · 밸런싱 지향</b>이면 피디로엔 핑크를 결합합니다.</li>
-              <li><b>칼리파우더</b>를 블루 · 핑크에 녹여 함께 운용하면 한 단계 더 진한 구성이 됩니다.</li>
-              <li>세기는 기계가 정하지 않습니다. <b>관리사의 손</b>이 부위와 그날의 컨디션에 맞춰
-                  실시간으로 조절합니다. 눈가처럼 얇은 부위는 압을 낮춥니다.</li>
-            </ul>
-
-            <h3 class="blk">관리는 이렇게 진행됩니다</h3>
-            <div class="steps">
-              <div class="step">
-                <div class="n">1</div>
-                <div class="t">
-                  <h4>클렌징</h4>
-                  <p>메이크업과 표면 노폐물을 정리합니다. 스탬핑 전에는 <b>각질을 과하게 걷어내지 않습니다.</b></p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">2</div>
-                <div class="t">
-                  <h4>수분 관리 · 매뉴얼 케어</h4>
-                  <p>에센스겔을 베이스로 얼굴과 데콜테를 관리하며 각질층을 충분히 수화시킵니다.
-                     <b>전달 조건을 만드는 준비 단계</b>입니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">3</div>
-                <div class="t">
-                  <h4>스탬핑 — 메인 관리</h4>
-                  <p>고객님 앞에서 <b>1회용 스탬프를 개봉</b>해 블루(또는 핑크) 바이알에 결합합니다.
-                     빠르게 두드리지 않고 <b>한 지점에 천천히 2~3초 머문 뒤</b> 다음 지점으로 옮겨 갑니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">4</div>
-                <div class="t">
-                  <h4>진정 — 5~10분</h4>
-                  <p>에센스겔을 넉넉히 도포하고 LED 아래에서 진정합니다.
-                     관리 직후의 열감과 붉은 기를 가라앉히는 <b>생략하지 않는 단계</b>입니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">5</div>
-                <div class="t">
-                  <h4>마무리 진정</h4>
-                  <p>피디로엔 핑크를 적신 시트팩으로 마무리해, <b>편안한 상태로 귀가</b>하시도록 합니다.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="warn">
-              <b>이 관리의 원칙</b> —
-              ① 한 세션에 <b>스탬핑은 한 번</b>입니다. 자극이 겹치지 않도록 반복하지 않습니다.
-              ② <b>소프트필(리퀴드 마스크)</b>을 받은 날에는 같은 관리에 함께 넣지 않고 <b>회차를 나눕니다.</b>
-              ③ 스탬핑 뒤의 <b>진정 단계는 생략하지 않습니다.</b>
-            </div>
-          </div>
-        </details>
-
-        <!-- ---------- 트랙 B · 두피케어 ---------- -->
-        <details class="track" style="--tc:#2B3038;--tc-soft:#eef0f3">
-          <summary>
-            <span class="tk-ic">
-              <svg viewBox="0 0 24 24"><path d="M4.6 19.5c-.6-2.2-.9-4.3-.9-6.2C3.7 7.6 7.4 3.6 12 3.6s8.3 4 8.3 9.7c0 1.9-.3 4-.9 6.2"/><path d="M7.6 12.4c1.1-1.6 2.6-2.4 4.4-2.4s3.3.8 4.4 2.4"/><path d="M9.6 16.6c.7-.9 1.5-1.4 2.4-1.4s1.7.5 2.4 1.4"/></svg>
-            </span>
-            <span class="tk">
-              <span class="en">SLOW AGING · SCALP CARE</span>
-              <h3>슬로우에이징 · 두피케어</h3>
-              <p>스킨부스터 + 마이크로젝션 — 두피</p>
-            </span>
-            <span class="chev sm"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
-          </summary>
-          <div class="track-body">
-            <div class="divider"></div>
-
-            <figure class="shot band"><img src="assets/care-scalp.jpg" alt="닥터배 엑소토카인 앰플을 결합한 마이크로젝션으로 헤어라인 두피를 관리하는 모습" loading="lazy"></figure>
-            <p class="shotcap">가르마와 헤어라인을 따라, 얼굴과 같은 방식으로 두피를 관리합니다</p>
-
-            <p class="body" style="margin-top:22px;">
-              두피도 피부입니다. 얼굴에 쓰는 것과 <b>같은 기기, 같은 원리</b>로 두피를 관리합니다.
-              다만 결합하는 앰플이 <span class="hl">두피 전용 엑소토카인 블랙 포 스칼프</span>로 바뀝니다.
-            </p>
-
-            <div class="tags" style="margin-top:20px;">
-              <span>두피 각질 · 유분이 신경 쓰이는 분</span><span>두피가 답답하고 예민한 분</span>
-              <span>출산 후 두피 관리를 시작하는 분</span><span>얼굴과 두피를 함께 관리하고 싶은 분</span>
-            </div>
-
-            <h3 class="blk">관리는 이렇게 진행됩니다</h3>
-            <div class="steps">
-              <div class="step">
-                <div class="n">1</div>
-                <div class="t">
-                  <h4>프리워시 — 스칼프 샴푸</h4>
-                  <p>엑소토카인 스칼프 샴푸로 두피와 모발을 먼저 정리합니다.
-                     황산염 계면활성제를 넣지 않은 순한 세정 구성입니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">2</div>
-                <div class="t">
-                  <h4>스티머 — 두피 각질 정돈</h4>
-                  <p>스칼프 부스터를 스티머에 넣어 <b>수증기 형태로 두피 전반에 도포</b>합니다.
-                     따뜻한 김과 함께 각질과 유분을 정돈하는, 준비 단계입니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">3</div>
-                <div class="t">
-                  <h4>블랙 포 스칼프 개봉 + 스탬핑</h4>
-                  <p>고객님 앞에서 <b>5ml 유리 바이알을 개봉</b>해 가르마 라인을 따라 도포하고,
-                     1회용 스탬프를 결합해 <b>가르마 · 옆머리 · 뒷머리 순서로</b> 부드럽게 눌러 갑니다.</p>
-                </div>
-              </div>
-              <div class="step">
-                <div class="n">4</div>
-                <div class="t">
-                  <h4>토코포르테 에어건 — 쿨링 마무리</h4>
-                  <p>두피 전체와 목 · 이마 헤어라인까지 안개처럼 분사합니다.
-                     <b>기화열로 열감을 식히고</b> 히알루론산으로 촉촉하게 닫습니다.</p>
-                </div>
-              </div>
-            </div>
-
-            <h3 class="blk">한 단계 더 올리는 구성</h3>
-            <ul class="ck">
-              <li><b>칼리파우더</b>를 블랙 포 스칼프에 녹여 함께 운용하면, 한 번의 관리에
-                  <b>유리 바이알 세 병</b>이 열리는 구성이 됩니다.</li>
-              <li><b>에센스겔 근막 롤링</b> — 뒷목 · 승모근 · 두개골 라인까지 이어서 관리하면
-                  두피의 뻐근함까지 함께 정돈됩니다.</li>
-              <li>얼굴 관리와 <b>같은 날 이어서</b> 받으실 수 있습니다. 토코포르테는 얼굴과 두피 모두 사용 가능합니다.</li>
-            </ul>
-
-            <div class="note">
-              <b>집에서 이어 가는 방법</b> — 두피는 <b>스칼프 샴푸 + 블랙 포 스칼프</b> 두 가지로 압축해
-              안내해 드립니다. 샵에서 쓰는 것과 같은 제품이라 루틴이 그대로 이어집니다.
-              (스칼프 부스터 500ml는 스티머 전용이라 샵에서만 사용합니다.)
-            </div>
-
-            <div class="warn">
-              <b>사용 전 확인</b> — 엑소토카인 블랙 포 스칼프는 <b>두피 전용 제품으로 얼굴에는 사용하지 않습니다.</b>
-              에탄올 · 멘톨 · 로얄젤리가 들어 있어, 알코올에 예민하시거나
-              <b>벌 제품 알레르기</b>가 있으신 분, <b>임신 · 수유 중</b>이신 분은 관리 전에 꼭 말씀해 주세요.
-            </div>
-          </div>
-        </details>
-
+      <div class="cards">
+        <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3c4 0 6.6 2.6 6.6 6.4 0 4.6-3 10.6-6.6 10.6S5.4 14 5.4 9.4C5.4 5.6 8 3 12 3z"/><path d="M9.4 10.2h.01M14.6 10.2h.01"/><path d="M10 15.2c1.3.8 2.7.8 4 0"/></svg></div>
+          <h4>06 · 슬로우에이징 · 스킨케어</h4>
+          <p>얼굴 — <b>엑소토카인 블루</b> 또는 <b>피디로엔 핑크</b>와 결합합니다.</p>
+        </div>
+        <div class="mini">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M4.6 19.5c-.6-2.2-.9-4.3-.9-6.2C3.7 7.6 7.4 3.6 12 3.6s8.3 4 8.3 9.7c0 1.9-.3 4-.9 6.2"/><path d="M7.6 12.4c1.1-1.6 2.6-2.4 4.4-2.4s3.3.8 4.4 2.4"/><path d="M9.6 16.6c.7-.9 1.5-1.4 2.4-1.4s1.7.5 2.4 1.4"/></svg></div>
+          <h4>07 · 슬로우에이징 · 두피케어</h4>
+          <p>두피 — <b>엑소토카인 블랙 포 스칼프</b>와 결합합니다.</p>
+        </div>
+      </div>
+      <div class="note">
+        아래 <b>06 · 07 섹션</b>에서 각 관리의 순서를 확인하실 수 있습니다.
       </div>
 
       <div class="warn">
@@ -1620,10 +1465,186 @@ footer .fs{color:#7796b4;font-size:.82rem;}
     </div>
   </details>
 
-  <!-- ==================== 06 FAQ ==================== -->
+  <!-- ==================== 06 슬로우에이징 · 스킨케어 ==================== -->
   <details class="sec" id="s6">
     <summary>
       <span class="sec-idx">06</span>
+      <span class="sec-t">
+        <span class="eyebrow">Slow Aging · Skin Care</span>
+        <h2>슬로우에이징 · 스킨케어</h2>
+        <p>스킨부스터 + 마이크로젝션 — 얼굴</p>
+      </span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="sec-body">
+      <div class="divider"></div>
+
+      <figure class="shot band"><img src="assets/care-microjection.jpg" alt="닥터배 엑소토카인 앰플을 결합한 마이크로젝션 더마 스탬프로 이마 부위를 관리하는 모습" loading="lazy"></figure>
+      <p class="shotcap">앰플 바이알에 직접 결합해, 도장을 찍듯 수직으로 눌러 사용합니다</p>
+
+      <div class="tags" style="margin-top:22px;">
+        <span>결 · 탄력이 신경 쓰이기 시작할 때</span><span>관리 효과를 더 끌어올리고 싶을 때</span>
+        <span>정기적으로 관리받는 분</span><span>피부 컨디션이 안정된 분</span>
+      </div>
+
+      <h3 class="blk">어떤 앰플과 결합하나요</h3>
+      <p class="body">
+        닥터배 라인업에서 <b>스탬프에 결합할 수 있는 앰플은 엑소토카인 블루와 피디로엔 핑크 2종</b>입니다.
+        기준은 성분이 아니라 <b>제형의 점도</b> — 헤드에 머무를 만큼의 점성이 있어야
+        접촉면 전체에 고르게 전달됩니다.
+      </p>
+
+
+      <ul class="ck">
+        <li><b>안티에이징 지향</b>이면 엑소토카인 블루, <b>진정 · 밸런싱 지향</b>이면 피디로엔 핑크를 결합합니다.</li>
+        <li><b>칼리파우더</b>를 블루 · 핑크에 녹여 함께 운용하면 한 단계 더 진한 구성이 됩니다.</li>
+        <li>세기는 기계가 정하지 않습니다. <b>관리사의 손</b>이 부위와 그날의 컨디션에 맞춰
+            실시간으로 조절합니다. 눈가처럼 얇은 부위는 압을 낮춥니다.</li>
+      </ul>
+
+      <h3 class="blk">관리는 이렇게 진행됩니다</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <div class="t">
+            <h4>클렌징</h4>
+            <p>메이크업과 표면 노폐물을 정리합니다. 스탬핑 전에는 <b>각질을 과하게 걷어내지 않습니다.</b></p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div class="t">
+            <h4>수분 관리 · 매뉴얼 케어</h4>
+            <p>에센스겔을 베이스로 얼굴과 데콜테를 관리하며 각질층을 충분히 수화시킵니다.
+               <b>전달 조건을 만드는 준비 단계</b>입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div class="t">
+            <h4>스탬핑 — 메인 관리</h4>
+            <p>고객님 앞에서 <b>1회용 스탬프를 개봉</b>해 블루(또는 핑크) 바이알에 결합합니다.
+               빠르게 두드리지 않고 <b>한 지점에 천천히 2~3초 머문 뒤</b> 다음 지점으로 옮겨 갑니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div class="t">
+            <h4>진정 — 5~10분</h4>
+            <p>에센스겔을 넉넉히 도포하고 LED 아래에서 진정합니다.
+               관리 직후의 열감과 붉은 기를 가라앉히는 <b>생략하지 않는 단계</b>입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">5</div>
+          <div class="t">
+            <h4>마무리 진정</h4>
+            <p>피디로엔 핑크를 적신 시트팩으로 마무리해, <b>편안한 상태로 귀가</b>하시도록 합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="warn">
+        <b>이 관리의 원칙</b> —
+        ① 한 세션에 <b>스탬핑은 한 번</b>입니다. 자극이 겹치지 않도록 반복하지 않습니다.
+        ② <b>소프트필(리퀴드 마스크)</b>을 받은 날에는 같은 관리에 함께 넣지 않고 <b>회차를 나눕니다.</b>
+        ③ 스탬핑 뒤의 <b>진정 단계는 생략하지 않습니다.</b>
+      </div>
+    
+    </div>
+  </details>
+
+  <!-- ==================== 07 슬로우에이징 · 두피케어 ==================== -->
+  <details class="sec" id="s7">
+    <summary>
+      <span class="sec-idx">07</span>
+      <span class="sec-t">
+        <span class="eyebrow">Slow Aging · Scalp Care</span>
+        <h2>슬로우에이징 · 두피케어</h2>
+        <p>스킨부스터 + 마이크로젝션 — 두피</p>
+      </span>
+      <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></span>
+    </summary>
+    <div class="sec-body">
+      <div class="divider"></div>
+
+      <figure class="shot band"><img src="assets/care-scalp.jpg" alt="닥터배 엑소토카인 앰플을 결합한 마이크로젝션으로 헤어라인 두피를 관리하는 모습" loading="lazy"></figure>
+      <p class="shotcap">가르마와 헤어라인을 따라, 얼굴과 같은 방식으로 두피를 관리합니다</p>
+
+      <p class="body" style="margin-top:22px;">
+        두피도 피부입니다. 얼굴에 쓰는 것과 <b>같은 기기, 같은 원리</b>로 두피를 관리합니다.
+        다만 결합하는 앰플이 <span class="hl">두피 전용 엑소토카인 블랙 포 스칼프</span>로 바뀝니다.
+      </p>
+
+      <div class="tags" style="margin-top:20px;">
+        <span>두피 각질 · 유분이 신경 쓰이는 분</span><span>두피가 답답하고 예민한 분</span>
+        <span>출산 후 두피 관리를 시작하는 분</span><span>얼굴과 두피를 함께 관리하고 싶은 분</span>
+      </div>
+
+      <h3 class="blk">관리는 이렇게 진행됩니다</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="n">1</div>
+          <div class="t">
+            <h4>프리워시 — 스칼프 샴푸</h4>
+            <p>엑소토카인 스칼프 샴푸로 두피와 모발을 먼저 정리합니다.
+               황산염 계면활성제를 넣지 않은 순한 세정 구성입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">2</div>
+          <div class="t">
+            <h4>스티머 — 두피 각질 정돈</h4>
+            <p>스칼프 부스터를 스티머에 넣어 <b>수증기 형태로 두피 전반에 도포</b>합니다.
+               따뜻한 김과 함께 각질과 유분을 정돈하는, 준비 단계입니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">3</div>
+          <div class="t">
+            <h4>블랙 포 스칼프 개봉 + 스탬핑</h4>
+            <p>고객님 앞에서 <b>5ml 유리 바이알을 개봉</b>해 가르마 라인을 따라 도포하고,
+               1회용 스탬프를 결합해 <b>가르마 · 옆머리 · 뒷머리 순서로</b> 부드럽게 눌러 갑니다.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="n">4</div>
+          <div class="t">
+            <h4>토코포르테 에어건 — 쿨링 마무리</h4>
+            <p>두피 전체와 목 · 이마 헤어라인까지 안개처럼 분사합니다.
+               <b>기화열로 열감을 식히고</b> 히알루론산으로 촉촉하게 닫습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="blk">한 단계 더 올리는 구성</h3>
+      <ul class="ck">
+        <li><b>칼리파우더</b>를 블랙 포 스칼프에 녹여 함께 운용하면, 한 번의 관리에
+            <b>유리 바이알 세 병</b>이 열리는 구성이 됩니다.</li>
+        <li><b>에센스겔 근막 롤링</b> — 뒷목 · 승모근 · 두개골 라인까지 이어서 관리하면
+            두피의 뻐근함까지 함께 정돈됩니다.</li>
+        <li>얼굴 관리와 <b>같은 날 이어서</b> 받으실 수 있습니다. 토코포르테는 얼굴과 두피 모두 사용 가능합니다.</li>
+      </ul>
+
+      <div class="note">
+        <b>집에서 이어 가는 방법</b> — 두피는 <b>스칼프 샴푸 + 블랙 포 스칼프</b> 두 가지로 압축해
+        안내해 드립니다. 샵에서 쓰는 것과 같은 제품이라 루틴이 그대로 이어집니다.
+        (스칼프 부스터 500ml는 스티머 전용이라 샵에서만 사용합니다.)
+      </div>
+
+      <div class="warn">
+        <b>사용 전 확인</b> — 엑소토카인 블랙 포 스칼프는 <b>두피 전용 제품으로 얼굴에는 사용하지 않습니다.</b>
+        에탄올 · 멘톨 · 로얄젤리가 들어 있어, 알코올에 예민하시거나
+        <b>벌 제품 알레르기</b>가 있으신 분, <b>임신 · 수유 중</b>이신 분은 관리 전에 꼭 말씀해 주세요.
+      </div>
+    
+    </div>
+  </details>
+
+  <!-- ==================== 08 FAQ ==================== -->
+  <details class="sec" id="s8">
+    <summary>
+      <span class="sec-idx">08</span>
       <span class="sec-t">
         <span class="eyebrow">FAQ</span>
         <h2>고객님들이 자주 물어보시는 것</h2>
