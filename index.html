@@ -264,7 +264,16 @@ ul.ck li b{color:var(--navy);font-weight:700;}
   background:linear-gradient(180deg,#fdf9f0,#fffdfa);
   border:1px solid #eadfc6;border-radius:20px;
 }
-.bs-logo{height:38px;width:auto;margin:0 auto 20px;display:block;}
+.bs-logos{display:flex;align-items:flex-start;justify-content:center;gap:22px;flex-wrap:wrap;margin-bottom:24px;}
+.bs-logos figure{margin:0;text-align:center;}
+.bs-logos img{height:34px;width:auto;display:block;margin:0 auto;}
+.bs-logos figcaption{margin-top:9px;font-size:.72rem;font-weight:700;letter-spacing:.03em;color:#a08a5e;}
+.bs-arrow{color:#c3a769;font-size:1.05rem;line-height:34px;flex:0 0 auto;}
+@media(max-width:520px){
+  .bs-logos{gap:14px;}
+  .bs-logos img{height:26px;}
+  .bs-arrow{transform:rotate(90deg);line-height:26px;}
+}
 .bs-line{
   font-family:var(--serif);font-weight:500;
   font-size:1.34rem;line-height:1.62;color:var(--navy);letter-spacing:-.025em;
@@ -305,12 +314,17 @@ ul.ck li b{color:var(--navy);font-weight:700;}
   grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);
 }
 @media(max-width:700px){ .prof-in{grid-template-columns:1fr;gap:20px;} }
-.prof-ph{margin:0;}
-.prof-ph img{
-  width:100%;aspect-ratio:4/5;object-fit:cover;object-position:44% 26%;
-  display:block;border-radius:14px;border:1px solid rgba(217,194,148,.34);
+.prof-ph{margin:0;position:relative;}
+.prof-ph::before{
+  content:"";position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);
+  width:100%;aspect-ratio:1/1;border-radius:50%;pointer-events:none;
+  background:radial-gradient(circle, rgba(126,180,228,.30) 0%, rgba(126,180,228,0) 66%);
 }
-@media(max-width:700px){ .prof-ph img{aspect-ratio:16/10;object-position:44% 24%;} }
+.prof-ph img{
+  position:relative;width:100%;aspect-ratio:4/5;
+  object-fit:contain;object-position:center bottom;display:block;
+}
+@media(max-width:700px){ .prof-ph img{aspect-ratio:5/4;} .prof-ph::before{width:74%;} }
 .prof-ph figcaption{margin-top:9px;font-size:.75rem;color:#8fabc7;text-align:center;line-height:1.5;}
 .creds{display:flex;flex-wrap:wrap;gap:7px;margin-top:17px;}
 .creds span{
@@ -432,6 +446,8 @@ details.prod > summary::-webkit-details-marker{display:none;}
     radial-gradient(420px 240px at 50% 0%, rgba(88,150,212,.32) 0%, rgba(88,150,212,0) 72%),
     linear-gradient(160deg,#0b2038,#17456f);
 }
+.formula .fmark{height:44px;width:auto;margin:0 auto 22px;display:block;opacity:.97;}
+@media(max-width:600px){ .formula .fmark{height:34px;margin-bottom:18px;} }
 .formula .fx{display:flex;align-items:center;justify-content:center;gap:14px;flex-wrap:wrap;}
 .formula .w b{display:block;font-family:var(--serif);font-size:1.4rem;letter-spacing:.03em;color:#f0e2c2;}
 .formula .w span{display:block;font-size:.79rem;color:#a9c6e2;margin-top:4px;}
@@ -585,9 +601,10 @@ footer{
     linear-gradient(180deg,#0b2038,#081625);
   padding:48px 0 52px;font-size:.9rem;line-height:1.85;
 }
-footer .fm{display:inline-flex;align-items:center;margin-bottom:16px;}
-footer .fm img{height:40px;width:auto;display:block;opacity:.96;}
-@media(max-width:600px){ footer .fm img{height:33px;} }
+footer .fm{display:inline-flex;align-items:center;justify-content:center;gap:26px;flex-wrap:wrap;margin-bottom:18px;}
+footer .fm img{height:38px;width:auto;display:block;opacity:.94;}
+footer .fm img.sm{height:32px;}
+@media(max-width:600px){ footer .fm{gap:18px;} footer .fm img{height:30px;} footer .fm img.sm{height:26px;} }
 footer .fl{width:40px;height:1px;background:rgba(255,255,255,.2);margin:20px auto;}
 footer .fs{color:#7796b4;font-size:.82rem;}
 
@@ -674,7 +691,17 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <div class="divider"></div>
 
       <div class="brandstate">
-        <img class="bs-logo" src="assets/logo-drbae.png" alt="Dr. BAE — Nature-inspired Derma Technology">
+        <div class="bs-logos">
+          <figure>
+            <img src="assets/logo-baelab.png" alt="BAE LAB — Bio-inspired Architectural Engineering">
+            <figcaption>연구실에서 출발한 회사</figcaption>
+          </figure>
+          <span class="bs-arrow">→</span>
+          <figure>
+            <img src="assets/logo-drbae.png" alt="Dr. BAE — Nature-inspired Derma Technology">
+            <figcaption>전문가용 브랜드</figcaption>
+          </figure>
+        </div>
         <p class="bs-line">
           <small>대학에서 시작된</small>
           <em>전문가용 스킨부스터 &amp; 흡수 디바이스</em> 브랜드
@@ -710,8 +737,8 @@ footer .fs{color:#7796b4;font-size:.82rem;}
       <div class="prof">
         <div class="prof-in">
           <figure class="prof-ph">
-            <img src="assets/prof-bae.jpg" alt="숭실대학교 연구실의 배원규 교수 — 뒤편 화면에 독사 어금니 구조 연구 자료가 보인다" loading="lazy">
-            <figcaption>배원규 교수 · 숭실대학교 연구실 ⓒ포브스코리아</figcaption>
+            <img src="assets/prof-bae.png" alt="배원규 교수 — ㈜배랩 창업자이자 기술 개발자" loading="lazy">
+            <figcaption>배원규 교수 · ㈜배랩 창업자 · 기술 개발자</figcaption>
           </figure>
           <div class="prof-tx">
             <span class="tag">FOUNDER &amp; DEVELOPER</span>
@@ -1551,6 +1578,7 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 
       <h3 class="blk">이름부터 — 주사(INJECTION)가 아닙니다</h3>
       <div class="formula">
+        <img class="fmark" src="assets/logo-sfmjx-w.png" alt="SF-MICROJECTION — Snake Fang Inspired Transdermal Delivery Tech.">
         <div class="fx">
           <span class="w"><b>MICRO</b><span>미세</span></span>
           <span class="op">+</span>
@@ -2025,7 +2053,10 @@ footer .fs{color:#7796b4;font-size:.82rem;}
 
 <footer>
   <div class="wrap">
-    <span class="fm"><img src="assets/logo-drbae-w.png" alt="Dr. BAE — Nature-inspired Derma Technology"></span>
+    <span class="fm">
+      <img class="sm" src="assets/logo-baelab-w.png" alt="BAE LAB">
+      <img src="assets/logo-drbae-w.png" alt="Dr. BAE — Nature-inspired Derma Technology">
+    </span>
     <p>㈜배랩 &nbsp;·&nbsp; 숭실대학교 의공학 연구실 (배원규 교수)</p>
     <div class="fl"></div>
     <p class="fs">
