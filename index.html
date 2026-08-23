@@ -144,13 +144,15 @@ img{max-width:100%;display:block;}
 }
 .nav-links::-webkit-scrollbar{display:none;}
 /* 태블릿 이하 — 스티키 바는 내비 전용으로(로고는 히어로·푸터에 있음) */
-@media(max-width:900px){
-  .brandmark{display:none;}
-  .nav-links{margin-left:0;width:100%;justify-content:space-between;gap:2px;}
-  .nav-links button{
+.nav-links button{
   font-family:inherit;font-size:.84rem;font-weight:700;color:var(--sub);
   background:transparent;border:1px solid transparent;border-radius:5px;
   padding:9px 13px;cursor:pointer;white-space:nowrap;transition:.15s;
+}
+@media(max-width:900px){
+  .brandmark{display:none;}
+  .nav-links{margin-left:0;width:100%;justify-content:space-between;gap:2px;}
+  .nav-links button{padding:9px 10px;font-size:.83rem;}
 }
 @media(max-width:720px){
   .nav-links{
@@ -158,11 +160,6 @@ img{max-width:100%;display:block;}
     -webkit-mask-image:linear-gradient(to right,#000 92%,transparent 100%);
     mask-image:linear-gradient(to right,#000 92%,transparent 100%);
   }
-}
-.nav-links button{
-  font-family:inherit;font-size:.85rem;font-weight:700;color:#5a6673;
-  background:transparent;border:1px solid transparent;border-radius:999px;
-  padding:9px 15px;cursor:pointer;white-space:nowrap;transition:.16s;
 }
 .nav-links button:hover{color:var(--navy);background:var(--sandl);}
 .nav-links button.on{color:#fff;background:var(--navy);border-color:var(--navy);}
