@@ -2009,20 +2009,16 @@ footer .fs{color:#8FA3B6;font-size:.8rem;}
   }
 
   secs.forEach(function(d){
-    d.addEventListener('toggle', function(){
-      if(d.open){
-        secs.forEach(function(o){ if(o !== d) o.open = false; });
-        scrollToSec(d);
-      }
-      syncNav();
-    });
+    /* 열어 둔 다른 섹션은 그대로 두고, 강제 스크롤도 하지 않는다 */
+    d.addEventListener('toggle', function(){ syncNav(); });
   });
 
   navBtns.forEach(function(b){
     b.addEventListener('click', function(){
       var d = document.getElementById(b.getAttribute('data-go'));
       if(!d) return;
-      if(d.open){ scrollToSec(d); } else { d.open = true; }
+      if(!d.open) d.open = true;
+      scrollToSec(d);
     });
   });
 
@@ -2031,12 +2027,38 @@ footer .fs{color:#8FA3B6;font-size:.8rem;}
     group.forEach(function(g){
       g.addEventListener('toggle', function(){
         if(!g.open) return;
-        group.forEach(function(o){ if(o !== g) o.open = false; });
       });
     });
   });
 })();
 </script>
 
+<script id="drbae-anchor">
+/* 아코디언을 눌렀을 때 방금 누른 헤더가 화면에서 움직이지 않도록 스크롤 보정 */
+(function(){
+  var SEL = 'details > summary, .acc-head, .acc-h, .ri-h, a.seclink';
+  function hold(h){
+    var before = h.getBoundingClientRect().top;
+    requestAnimationFrame(function(){
+      requestAnimationFrame(function(){
+        var diff = h.getBoundingClientRect().top - before;
+        if(Math.abs(diff) < 1) return;
+        var root = document.documentElement;
+        var prev = root.style.scrollBehavior;
+        root.style.scrollBehavior = 'auto';      /* 부드러운 스크롤과 충돌 방지 */
+        window.scrollBy(0, diff);
+        root.style.scrollBehavior = prev;
+      });
+    });
+  }
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    if(!t || !t.closest) return;
+    var h = t.closest(SEL);
+    if(!h || h.tagName === 'A') return;          /* 링크 이동은 보정하지 않음 */
+    hold(h);
+  }, true);
+})();
+</script>
 </body>
 </html>
