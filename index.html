@@ -237,6 +237,8 @@ p.body b,.mini p b,.step p b{color:var(--navy);font-weight:700;}
   border-radius:8px;padding:18px 20px;font-size:.95rem;color:#5b6774;
 }
 .note b{color:var(--navy);font-weight:700;}
+/* 효능 범위를 한정하는 문구 — 부록으로 접지 않고 항상 보인다 */
+.note.keep{background:#FBF9F4;border-color:var(--hair);color:#5A5344;}
 .warn{
   margin-top:20px;background:var(--warnbg);
   border:1px solid var(--warnln);border-radius:7px;padding:16px 20px;
@@ -719,6 +721,63 @@ html:not([data-lang="ko"]) .stats span{letter-spacing:.06em;}
 html[data-lang="fr"] .hero h1,html[data-lang="en"] .hero h1{letter-spacing:-.02em;}
 html:not([data-lang="ko"]) .wk .wn,html:not([data-lang="ko"]) .wk .off{letter-spacing:.02em;}
 html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{letter-spacing:0;}
+
+/* ============================================================
+   프레젠테이션 모드 — 이 페이지는 아이패드 · 갤럭시탭 · PC 화면에서
+   고객에게 보여주며 설명하는 용도다. 휴대폰은 대상이 아니다.
+   ============================================================ */
+
+/* --- 태블릿 · PC 에서 글자와 여백을 키운다 (rem 기준값을 올려 전체가 함께 커진다) --- */
+@media(min-width:900px){
+  html{font-size:17.5px;}
+  body{font-size:21px;}
+  .sec-idx{font-size:1.2rem;width:40px;}
+  .sec-t h2{font-size:1.62rem;}
+  .sec-t p{font-size:1rem;margin-top:6px;}
+  .sec-body{padding:0 38px 40px;}
+  h3.blk{font-size:1.24rem;margin:38px 0 14px;}
+  p.body{font-size:1.06rem;line-height:1.78;}
+  ul.ck li{font-size:1.06rem;}
+  ul.ck{gap:14px;}
+  .note,.warn{font-size:1rem;}
+  .hero .lede{font-size:1.14rem;}
+  .secs{gap:22px;}
+}
+@media(min-width:1200px){
+  :root{--maxw:1080px;}
+  html{font-size:18.5px;}
+  body{font-size:22px;}
+  .sec-t h2{font-size:1.7rem;}
+}
+
+/* --- 부록 — 긴 산문과 부연 설명은 기본 화면에서 접어 둔다(삭제 아님).
+       섹션 상단의 버튼으로 언제든 펼칠 수 있다. --- */
+.sec-body:not(.show-detail) .detail{display:none;}
+.detail-bar{display:flex;justify-content:flex-end;margin:-8px 0 20px;}
+.detail-btn{
+  font-family:var(--sans);font-size:.8rem;font-weight:800;letter-spacing:.01em;
+  color:var(--sub);background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:8px 16px;cursor:pointer;transition:.15s;
+  -webkit-tap-highlight-color:transparent;
+}
+.detail-btn:hover{color:var(--navy);border-color:var(--lblue);}
+.detail-btn.on{color:#fff;background:var(--navy);border-color:var(--navy);}
+.detail-btn::before{content:"자세히 +";}
+.detail-btn.on::before{content:"간단히 \2212";}
+html[data-lang="en"] .detail-btn::before{content:"Details +";}
+html[data-lang="en"] .detail-btn.on::before{content:"Less \2212";}
+html[data-lang="ja"] .detail-btn::before{content:"\8A73\3057\304F +";}
+html[data-lang="ja"] .detail-btn.on::before{content:"\7C21\5358\306B \2212";}
+html[data-lang="fr"] .detail-btn::before{content:"D\00E9tails +";}
+html[data-lang="fr"] .detail-btn.on::before{content:"Moins \2212";}
+
+/* --- 외국어 화면에서만 한국어 섹션명을 옅은 회색으로 함께 표시 —
+       관리사가 섹션을 빨리 찾기 위한 표식 --- */
+.ko-ref{display:none;}
+html:not([data-lang="ko"]) .ko-ref{
+  display:block;margin-top:5px;
+  font-size:.86rem;font-weight:600;color:#ABA598;letter-spacing:-.01em;line-height:1.4;
+}
 </style>
 </head>
 <body>
@@ -770,6 +829,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Brand</span>
 <h2 data-i18n="t014">닥터배는 어떤 브랜드인가요</h2>
 <p data-i18n="t015">대학에서 시작된 전문가용 스킨부스터 · 도포 보조 디바이스 브랜드</p>
+<span class="ko-ref" aria-hidden="true">닥터배는 어떤 브랜드인가요</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -897,6 +957,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Why Skin Booster</span>
 <h2 data-i18n="t042">왜 스킨부스터인가요</h2>
 <p data-i18n="t043">한 번에 크게보다, 좋은 컨디션을 길게 — 스킨 롱제비티</p>
+<span class="ko-ref" aria-hidden="true">왜 스킨부스터인가요</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -935,7 +996,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <li data-i18n="t056"><b>정제된 원료</b> — 핵심 원료인 병풀 세포외소포를 <b>연구실이 직접 분리 · 정제</b>합니다.</li>
 <li data-i18n="t057"><b>싱글 유즈</b> — <b>5ml 유리 바이알에 단회용 밀봉</b>. 오늘 고객님을 위해 새 병을 엽니다.</li>
 </ul>
-<div class="note" data-i18n="t058">
+<div class="note keep" data-i18n="t058">
         화장품법에 '스킨부스터'라는 유형이 따로 있는 것은 아닙니다.
         업계에서 <b>피부 목적에 맞게 원료를 한 단계 끌어올린 전문가용 앰플</b>을 그렇게 부릅니다.
       </div>
@@ -949,6 +1010,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Line-up</span>
 <h2 data-i18n="t059">닥터배 스킨부스터 6종</h2>
 <p data-i18n="t060">5ml 유리 바이알 · 제품을 눌러 확인해 보세요</p>
+<span class="ko-ref" aria-hidden="true">닥터배 스킨부스터 6종</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -1284,6 +1346,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Problem Skin Care</span>
 <h2 data-i18n="t181">문제성 피부 관리 — 스킨부스터</h2>
 <p data-i18n="t182">장벽이 흔들릴 때는, 부스팅보다 진정이 먼저입니다</p>
+<span class="ko-ref" aria-hidden="true">문제성 피부 관리 — 스킨부스터</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -1442,6 +1505,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Microjection</span>
 <h2 data-i18n="t222">마이크로젝션 — 고른 도포를 돕는 기술</h2>
 <p data-i18n="t223">뉴스가 소개한 모세관 구조 연구가 기기가 되었습니다</p>
+<span class="ko-ref" aria-hidden="true">마이크로젝션 — 고른 도포를 돕는 기술</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -1616,7 +1680,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <div class="outlets" data-i18n="t275"><span>YTN 사이언스</span><span>JTBC</span><span>Arirang News</span></div>
 <p class="cap" data-i18n="t276">독사 송곳니의 모세관 구조 연구를 소개한 방송 화면</p>
 </div>
-<div class="note" data-i18n="t277">
+<div class="note keep" data-i18n="t277">
 <b>어디까지가 검증된 것인가</b> — 논문이 보증하는 것은
         <b>'어떻게 전달되는가'라는 원리</b>입니다.
         화장품으로서 말씀드릴 수 있는 범위는 <b>각질층 수준까지</b>이며,
@@ -1661,6 +1725,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Slow Aging · Skin Care</span>
 <h2 data-i18n="t286">슬로우에이징 · 스킨케어</h2>
 <p data-i18n="t287">스킨부스터 + 마이크로젝션 — 얼굴</p>
+<span class="ko-ref" aria-hidden="true">슬로우에이징 · 스킨케어</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -1741,6 +1806,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">Slow Aging · Scalp Care</span>
 <h2 data-i18n="t307">슬로우에이징 · 두피케어</h2>
 <p data-i18n="t308">스킨부스터 + 마이크로젝션 — 두피</p>
+<span class="ko-ref" aria-hidden="true">슬로우에이징 · 두피케어</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -1756,7 +1822,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span>두피 각질 · 유분이 신경 쓰이는 분</span><span>두피가 답답하고 예민한 분</span>
 <span>출산 후 두피 관리를 시작하는 분</span><span>얼굴과 두피를 함께 관리하고 싶은 분</span>
 </div>
-<div class="note" data-i18n="t312">
+<div class="note keep" data-i18n="t312">
 <b>"머리카락이 자라나요?"</b> — 자주 받는 질문입니다.
         닥터배 두피 제품은 <b>화장품</b>이며, <b>발모나 탈모 치료를 목적으로 하지 않습니다.</b>
         다만 <b>두피도 얼굴과 같은 피부</b>입니다.
@@ -1864,6 +1930,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <span class="eyebrow">FAQ</span>
 <h2 data-i18n="t332">고객님들이 자주 물어보시는 것</h2>
 <p data-i18n="t333">관리 전에 궁금하신 점을 모았습니다</p>
+<span class="ko-ref" aria-hidden="true">고객님들이 자주 물어보시는 것</span>
 </span>
 <span class="chev"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg></span>
 </summary>
@@ -2041,5 +2108,39 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <script src="i18n/ja.js"></script>
 <script src="i18n/fr.js"></script>
 <script src="i18n/i18n.js"></script>
+<script id="drbae-brief">
+/* 부록 토글 — 각 섹션에서 긴 산문(.sec-body 직계 p.body)과 부연 설명(.sec-body 직계 .note)을
+   기본 화면에서 접어 둔다. 내용은 지우지 않고 '자세히' 버튼으로 펼친다.
+   안전 안내(.warn)와 사진 · 표 · 카드 · 단계 블록은 항상 보인다.
+   JS 가 실패하면 접지 않고 전부 보이므로 내용이 사라질 일은 없다. */
+(function () {
+  Array.prototype.forEach.call(document.querySelectorAll('.sec-body'), function (body) {
+    var items = Array.prototype.filter.call(body.children, function (el) {
+      if (el.classList.contains('keep')) return false;   /* 효능·표시광고 한정 문구는 항상 보이게 */
+      return (el.tagName === 'P' && el.classList.contains('body')) || el.classList.contains('note');
+    });
+    if (!items.length) return;
+    items.forEach(function (el) { el.classList.add('detail'); });
+
+    var bar = document.createElement('div');
+    bar.className = 'detail-bar';
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'detail-btn';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', '자세한 설명 펼치기');
+    btn.addEventListener('click', function () {
+      var on = body.classList.toggle('show-detail');
+      btn.classList.toggle('on', on);
+      btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+      btn.setAttribute('aria-label', on ? '자세한 설명 접기' : '자세한 설명 펼치기');
+    });
+    bar.appendChild(btn);
+    var divider = body.querySelector('.divider');
+    if (divider && divider.nextSibling) body.insertBefore(bar, divider.nextSibling);
+    else body.insertBefore(bar, body.firstChild);
+  });
+})();
+</script>
 </body>
 </html>
