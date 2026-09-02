@@ -8,7 +8,70 @@
    ========================================================================== */
 (function () {
   var LANGS = { ko: 'KO', en: 'EN', ja: 'JA', fr: 'FR' };
-  var FLAGS = { ko: '\uD83C\uDDF0\uD83C\uDDF7', en: '\uD83C\uDDFA\uD83C\uDDF8', ja: '\uD83C\uDDEF\uD83C\uDDF5', fr: '\uD83C\uDDEB\uD83C\uDDF7' }; // 🇰🇷 🇺🇸 🇯🇵 🇫🇷
+  /* 국기 — 이모지(KR/US/JP/FR 리저널 인디케이터)는 Windows의 Segoe UI Emoji에
+     국기 글리프가 없어 'KR' 같은 문자 두 개로 깨져 보인다.
+     모든 기기에서 같게 보이도록 인라인 SVG로 그린다. 좌표계는 36×24 (3:2). */
+  function svg(inner) {
+    return '<svg viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">' + inner + '</svg>';
+  }
+  function star(cx, cy, r) {
+    var d = '', i, a, rr;
+    for (i = 0; i < 10; i++) {
+      a = -Math.PI / 2 + i * Math.PI / 5;
+      rr = (i % 2 === 0) ? r : r * 0.382;
+      d += (i ? 'L' : 'M') + (cx + rr * Math.cos(a)).toFixed(2) + ',' + (cy + rr * Math.sin(a)).toFixed(2);
+    }
+    return d + 'Z';
+  }
+  /* 성조기 별 50개 — 6개 행과 5개 행이 번갈아 9줄 */
+  function usStars() {
+    var CW = 14.4, CH = 12.92, d = '', row, i, six, n;
+    for (row = 0; row < 9; row++) {
+      six = row % 2 === 0; n = six ? 6 : 5;
+      for (i = 0; i < n; i++) {
+        d += star(CW * ((six ? 1 + i * 2 : 2 + i * 2) / 12), CH * ((row + 1) / 10), 0.55);
+      }
+    }
+    return d;
+  }
+  var FLAGS = {
+    /* 태극기 — 위키미디어 공용 Flag_of_South_Korea.svg(퍼블릭 도메인)의 도형을
+       그대로 옮겨 36×24 안에 축척했다. 원본 좌표계는 144×96(중심 0,0).
+       4괘는 시계방향으로 건(좌상)·감(우상)·곤(우하)·리(좌하) */
+    ko: svg(
+      '<rect width="36" height="24" fill="#fff"/>' +
+      '<g transform="translate(18 12) scale(.25)">' +
+        '<g fill="none" stroke="#000" stroke-width="4">' +
+          '<path transform="rotate(33.69006752598)" d="M-50-12v24m6 0v-24m6 0v24m76 0V1m0-2v-11m6 0v11m0 2v11m6 0V1m0-2v-11"/>' +
+          '<path transform="rotate(-33.69006752598)" d="M-50-12v24m6 0V1m0-2v-11m6 0v24m76 0V1m0-2v-11m6 0v24m6 0V1m0-2v-11"/>' +
+        '</g>' +
+        '<g transform="rotate(33.69006752598)">' +
+          '<path fill="#cd2e3a" d="M12 0a18 18 0 11-36 0 24 24 0 1148 0"/>' +
+          '<path fill="#0047a0" d="M-24 0a24 24 0 1048 0A12 12 0 100 0a12 12 0 11-24 0"/>' +
+        '</g>' +
+      '</g>'
+    ),
+    /* 성조기 — 13줄 무늬 + 유니온(별 50개) */
+    en: svg(
+      '<rect width="36" height="24" fill="#fff"/>' +
+      '<g fill="#b22234">' +
+        '<rect width="36" height="1.846" y="0"/><rect width="36" height="1.846" y="3.692"/>' +
+        '<rect width="36" height="1.846" y="7.385"/><rect width="36" height="1.846" y="11.077"/>' +
+        '<rect width="36" height="1.846" y="14.769"/><rect width="36" height="1.846" y="18.462"/>' +
+        '<rect width="36" height="1.846" y="22.154"/>' +
+      '</g>' +
+      '<rect width="14.4" height="12.92" fill="#3c3b6e"/>' +
+      '<path fill="#fff" d="' + usStars() + '"/>'
+    ),
+    /* 일장기 — 붉은 원 지름은 세로의 3/5 */
+    ja: svg('<rect width="36" height="24" fill="#fff"/><circle cx="18" cy="12" r="7.2" fill="#bc002d"/>'),
+    /* 삼색기 */
+    fr: svg(
+      '<rect width="12" height="24" fill="#002395"/>' +
+      '<rect width="12" height="24" x="12" fill="#fff"/>' +
+      '<rect width="12" height="24" x="24" fill="#ed2939"/>'
+    )
+  };
   var LABEL = { ko: '한국어', en: 'English', ja: '日本語', fr: 'Français' };
   var STORE = 'drbae.lang';
   var FONTS = {
