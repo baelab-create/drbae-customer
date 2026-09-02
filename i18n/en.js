@@ -4,9 +4,6 @@ window.I18N = window.I18N || {};
 window.I18N.en = {
  "t001": "<span class=\"l1\">Born in a university laboratory</span> <span class=\"gold\">Dr. BAE Skin Boosters</span>",
  "t002": "An introduction to the products used in your treatment today.",
- "t003": "<b>6</b><span>SKIN BOOSTERS</span>",
- "t004": "<b>Single</b><span>USE ONLY</span>",
- "t005": "<b>8 yrs</b><span>SINCE LAUNCH</span>",
  "t006": "Brand",
  "t007": "Why Boosters",
  "t008": "6 Products",

@@ -4,9 +4,6 @@ window.I18N = window.I18N || {};
 window.I18N.fr = {
  "t001": "<span class=\"l1\">Nés dans un laboratoire universitaire</span> <span class=\"gold\">Skin boosters Dr. BAE</span>",
  "t002": "Voici les produits utilisés pour votre soin d'aujourd'hui.",
- "t003": "<b>6</b><span>SKIN BOOSTERS</span>",
- "t004": "<b>Usage</b><span>UNIQUE</span>",
- "t005": "<b>8 ans</b><span>DEPUIS LE LANCEMENT</span>",
  "t006": "La marque",
  "t007": "Pourquoi",
  "t008": "6 produits",

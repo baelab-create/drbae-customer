@@ -4,9 +4,6 @@ window.I18N = window.I18N || {};
 window.I18N.ja = {
  "t001": "<span class=\"l1\">大学の研究室から生まれた</span> <span class=\"gold\">Dr. BAE スキンブースター</span>",
  "t002": "本日のお手入れに使用する製品をご紹介します。",
- "t003": "<b>6種</b><span>SKIN BOOSTER</span>",
- "t004": "<b>使い切り</b><span>SINGLE USE</span>",
- "t005": "<b>8年</b><span>SINCE LAUNCH</span>",
  "t006": "ブランド",
  "t007": "なぜブースター",
  "t008": "製品6種",

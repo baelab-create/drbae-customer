@@ -123,17 +123,6 @@ img{max-width:100%;display:block;}
 .hero .rule{width:40px;height:2px;background:var(--taupe);margin:24px auto 20px;}
 .hero .lede{font-size:1rem;color:var(--slate);font-weight:500;}
 
-.stats{
-  margin-top:38px;display:flex;justify-content:center;flex-wrap:wrap;
-  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:20px 0;
-}
-.stats div{flex:1;min-width:110px;padding:2px 12px;position:relative;}
-.stats div + div::before{
-  content:"";position:absolute;left:0;top:14%;height:72%;width:1px;background:var(--hair);
-}
-.stats b{display:block;font-size:1.32rem;font-weight:800;color:var(--navy);letter-spacing:-.02em;}
-.stats span{display:block;font-size:.7rem;color:var(--taupe);font-weight:800;letter-spacing:.12em;margin-top:5px;}
-
 /* ============================== NAV ============================== */
 .nav{
   position:sticky;top:0;z-index:60;
@@ -668,8 +657,6 @@ footer .fs{color:#8FA3B6;font-size:.8rem;}
   body{font-size:17.5px;}
   .wrap{padding:0 17px;}
   .hero-in{padding:60px 0 52px;min-height:auto;}
-  .stats div{min-width:50%;flex:0 0 50%;padding:10px 8px;}
-  .stats div + div::before{display:none;}
   details.sec > summary{padding:20px 18px;gap:14px;min-height:88px;}
   .sec-idx{width:30px;font-size:1.25rem;}
   .sec-t h2{font-size:1.26rem;}
@@ -716,8 +703,6 @@ html[data-lang="ja"] .hero h1,html[data-lang="ja"] h2,html[data-lang="ja"] .prof
 html[data-lang="en"] .nav-links button,html[data-lang="fr"] .nav-links button,html[data-lang="ja"] .nav-links button{font-size:.76rem;padding:9px 9px;letter-spacing:-.01em;}
 html[data-lang="ja"] .nav-links button{padding:9px 7px;letter-spacing:0;}
 @media(max-width:900px){ html:not([data-lang="ko"]) .nav-links button{font-size:.74rem;padding:9px 7px;} }
-html:not([data-lang="ko"]) .stats b{font-size:1.1rem;}
-html:not([data-lang="ko"]) .stats span{letter-spacing:.06em;}
 html[data-lang="fr"] .hero h1,html[data-lang="en"] .hero h1{letter-spacing:-.02em;}
 html:not([data-lang="ko"]) .wk .wn,html:not([data-lang="ko"]) .wk .off{letter-spacing:.02em;}
 html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{letter-spacing:0;}
@@ -742,6 +727,8 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
   .note,.warn{font-size:1rem;}
   .hero .lede{font-size:1.14rem;}
   .secs{gap:22px;}
+  /* 상단 바는 콘텐츠가 아니라 도구 막대 — 본문만 커지고 여기는 컴팩트하게 유지한다 */
+  .nav-links button{font-size:.74rem;padding:9px 10px;}
 }
 @media(min-width:1200px){
   :root{--maxw:1080px;}
@@ -793,12 +780,6 @@ html:not([data-lang="ko"]) .ko-ref{
 </h1>
 <div class="rule"></div>
 <p class="lede" data-i18n="t002">오늘 고객님의 관리에 사용되는 제품을 소개해 드립니다.</p>
-<div class="stats">
-<div data-i18n="t003"><b>6종</b><span>SKIN BOOSTER</span></div>
-<div><b>5ml</b><span>GLASS VIAL</span></div>
-<div data-i18n="t004"><b>단회용</b><span>SINGLE USE</span></div>
-<div data-i18n="t005"><b>8년</b><span>SINCE LAUNCH</span></div>
-</div>
 </div>
 </section>
 <!-- ============================== NAV ============================== -->

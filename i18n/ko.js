@@ -4,9 +4,6 @@ window.I18N = window.I18N || {};
 window.I18N.ko = {
  "t001": "<span class=\"l1\">대학 연구실에서 시작된</span> <span class=\"gold\">닥터배 스킨부스터</span>",
  "t002": "오늘 고객님의 관리에 사용되는 제품을 소개해 드립니다.",
- "t003": "<b>6종</b><span>SKIN BOOSTER</span>",
- "t004": "<b>단회용</b><span>SINGLE USE</span>",
- "t005": "<b>8년</b><span>SINCE LAUNCH</span>",
  "t006": "브랜드",
  "t007": "왜 스킨부스터",
  "t008": "제품 6종",
