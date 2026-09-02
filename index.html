@@ -588,6 +588,14 @@ details.track > summary::-webkit-details-marker{display:none;}
 /* ============================== 관리 전 · 후 ============================== */
 .baba{margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:600px){ .baba{grid-template-columns:1fr;} }
+/* 두피 전후 — 세로 구도라 4:3 가로 슬롯에 넣으면 정수리가 잘려 나간다.
+   원본(633x863) 비율 그대로 두고, 사례를 세로로 쌓는다 */
+.ba-set{margin-top:16px;display:flex;flex-direction:column;gap:26px;}
+.ba-set .baba{margin-top:0;}
+.baba.baba-p{max-width:640px;margin-left:auto;margin-right:auto;}
+.baba.baba-p .ph{aspect-ratio:33/45;border-style:solid;border-color:var(--line);}
+/* 전후는 나란히 봐야 의미가 있으므로 좁은 화면에서도 2열 유지 */
+@media(max-width:600px){ .baba.baba-p{grid-template-columns:1fr 1fr;max-width:none;gap:8px;} .ba-set{gap:20px;} }
 .baba figure{margin:0;}
 .baba .ph{
   aspect-ratio:4/3;border:1px dashed var(--sandd);background:var(--sandl);
@@ -1759,15 +1767,37 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 </div>
 </div>
 <h3 class="blk" data-i18n="t322">관리 전 · 후</h3>
-<div class="baba">
+<div class="ba-set">
+<div class="baba baba-p">
 <figure>
-<div class="ph">PHOTO</div>
+<div class="ph"><img src="assets/scalp-ba-1-before.jpg" alt="두피 관리 전 — 사례 1, 정수리 가르마" data-i18n-alt="t382" loading="lazy" width="635" height="864"/></div>
 <figcaption data-i18n="t323">관리 전<span>BEFORE</span></figcaption>
 </figure>
 <figure>
-<div class="ph">PHOTO</div>
+<div class="ph"><img src="assets/scalp-ba-1-after.jpg" alt="두피 관리 후 — 사례 1, 같은 부위" data-i18n-alt="t383" loading="lazy" width="634" height="862"/></div>
 <figcaption data-i18n="t324">관리 후<span>AFTER</span></figcaption>
 </figure>
+</div>
+<div class="baba baba-p">
+<figure>
+<div class="ph"><img src="assets/scalp-ba-2-before.jpg" alt="두피 관리 전 — 사례 2, 정수리" data-i18n-alt="t384" loading="lazy" width="633" height="863"/></div>
+<figcaption data-i18n="t323">관리 전<span>BEFORE</span></figcaption>
+</figure>
+<figure>
+<div class="ph"><img src="assets/scalp-ba-2-after.jpg" alt="두피 관리 후 — 사례 2, 같은 부위" data-i18n-alt="t385" loading="lazy" width="634" height="863"/></div>
+<figcaption data-i18n="t324">관리 후<span>AFTER</span></figcaption>
+</figure>
+</div>
+<div class="baba baba-p">
+<figure>
+<div class="ph"><img src="assets/scalp-ba-3-before.jpg" alt="두피 관리 전 — 사례 3, 이마 헤어라인" data-i18n-alt="t386" loading="lazy" width="633" height="863"/></div>
+<figcaption data-i18n="t323">관리 전<span>BEFORE</span></figcaption>
+</figure>
+<figure>
+<div class="ph"><img src="assets/scalp-ba-3-after.jpg" alt="두피 관리 후 — 사례 3, 같은 부위" data-i18n-alt="t387" loading="lazy" width="633" height="863"/></div>
+<figcaption data-i18n="t324">관리 후<span>AFTER</span></figcaption>
+</figure>
+</div>
 </div>
 <p class="baba-note" data-i18n="t325">
         같은 조명 · 같은 각도 · 화장하지 않은 상태에서 촬영한 사진입니다.<br/>

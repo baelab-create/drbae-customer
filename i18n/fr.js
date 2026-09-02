@@ -382,5 +382,11 @@ window.I18N.fr = {
  "meta_og_description": "La marque · Pourquoi un skin booster · Six flacons de 5 ml",
  "meta_og_image_alt": "Les 6 skin boosters Dr. BAE — flacons en verre de 5 ml",
  "meta_twitter_title": "Skin boosters Dr. BAE — Guide client",
- "meta_twitter_description": "La marque · Pourquoi un skin booster · Six flacons de 5 ml"
+ "meta_twitter_description": "La marque · Pourquoi un skin booster · Six flacons de 5 ml",
+ "t382": "Avant le soin du cuir chevelu — cas 1, la raie au sommet du crâne",
+ "t383": "Après le soin du cuir chevelu — cas 1, la même zone",
+ "t384": "Avant le soin du cuir chevelu — cas 2, le sommet du crâne",
+ "t385": "Après le soin du cuir chevelu — cas 2, la même zone",
+ "t386": "Avant le soin du cuir chevelu — cas 3, la ligne frontale",
+ "t387": "Après le soin du cuir chevelu — cas 3, la même zone"
 };

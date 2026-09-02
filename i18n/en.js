@@ -382,5 +382,11 @@ window.I18N.en = {
  "meta_og_description": "Brand · Why skin boosters · Six 5 ml vials",
  "meta_og_image_alt": "The 6 Dr. BAE Skin Boosters — 5 ml glass vials",
  "meta_twitter_title": "Dr. BAE Skin Boosters — Client Guide",
- "meta_twitter_description": "Brand · Why skin boosters · Six 5 ml vials"
+ "meta_twitter_description": "Brand · Why skin boosters · Six 5 ml vials",
+ "t382": "Before scalp care — case 1, the crown parting",
+ "t383": "After scalp care — case 1, the same area",
+ "t384": "Before scalp care — case 2, the crown",
+ "t385": "After scalp care — case 2, the same area",
+ "t386": "Before scalp care — case 3, the front hairline",
+ "t387": "After scalp care — case 3, the same area"
 };
