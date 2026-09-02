@@ -388,5 +388,11 @@ window.I18N.fr = {
  "t384": "Avant le soin du cuir chevelu — cas 2, le sommet du crâne",
  "t385": "Après le soin du cuir chevelu — cas 2, la même zone",
  "t386": "Avant le soin du cuir chevelu — cas 3, la ligne frontale",
- "t387": "Après le soin du cuir chevelu — cas 3, la même zone"
+ "t387": "Après le soin du cuir chevelu — cas 3, la même zone",
+ "t388": "Avant le soin des peaux à problèmes — cas 1, la joue",
+ "t389": "Après le soin des peaux à problèmes — cas 1, la même zone",
+ "t390": "Avant le soin des peaux à problèmes — cas 2, la joue",
+ "t391": "Après le soin des peaux à problèmes — cas 2, la même zone",
+ "t392": "Avant le soin des peaux à problèmes — cas 3, la joue",
+ "t393": "Après le soin des peaux à problèmes — cas 3, la même zone"
 };

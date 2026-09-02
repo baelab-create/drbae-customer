@@ -388,5 +388,11 @@ window.I18N.en = {
  "t384": "Before scalp care — case 2, the crown",
  "t385": "After scalp care — case 2, the same area",
  "t386": "Before scalp care — case 3, the front hairline",
- "t387": "After scalp care — case 3, the same area"
+ "t387": "After scalp care — case 3, the same area",
+ "t388": "Before care for problem skin — case 1, the cheek",
+ "t389": "After care for problem skin — case 1, the same area",
+ "t390": "Before care for problem skin — case 2, the cheek",
+ "t391": "After care for problem skin — case 2, the same area",
+ "t392": "Before care for problem skin — case 3, the cheek",
+ "t393": "After care for problem skin — case 3, the same area"
 };

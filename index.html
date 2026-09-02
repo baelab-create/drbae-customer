@@ -593,6 +593,8 @@ details.track > summary::-webkit-details-marker{display:none;}
 .ba-set{margin-top:16px;display:flex;flex-direction:column;gap:26px;}
 .ba-set .baba{margin-top:0;}
 .baba.baba-p{max-width:640px;margin-left:auto;margin-right:auto;}
+/* 04 문제성 피부 사진은 원본이 212x295 라 확대하지 않도록 폭을 더 줄인다 */
+.ba-set-sm .baba.baba-p{max-width:460px;}
 .baba.baba-p .ph{aspect-ratio:33/45;border-style:solid;border-color:var(--line);}
 /* 전후는 나란히 봐야 의미가 있으므로 좁은 화면에서도 2열 유지 */
 @media(max-width:600px){ .baba.baba-p{grid-template-columns:1fr 1fr;max-width:none;gap:8px;} .ba-set{gap:20px;} }
@@ -1378,15 +1380,37 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
         그래서 <b>장벽이 약해진 피부에도 넣을 수 있는</b> 드문 형태의 각질 정돈 제품입니다.
       </p>
 <h3 class="blk" data-i18n="t217">관리 전 · 후</h3>
-<div class="baba">
+<div class="ba-set ba-set-sm">
+<div class="baba baba-p">
 <figure>
-<div class="ph">PHOTO</div>
+<div class="ph"><img src="assets/skin-ba-1-before.jpg" alt="문제성 피부 관리 전 — 사례 1, 볼" data-i18n-alt="t388" loading="lazy" width="212" height="295"/></div>
 <figcaption data-i18n="t218">관리 전<span>BEFORE</span></figcaption>
 </figure>
 <figure>
-<div class="ph">PHOTO</div>
+<div class="ph"><img src="assets/skin-ba-1-after.jpg" alt="문제성 피부 관리 후 — 사례 1, 같은 부위" data-i18n-alt="t389" loading="lazy" width="212" height="295"/></div>
 <figcaption data-i18n="t219">관리 후<span>AFTER</span></figcaption>
 </figure>
+</div>
+<div class="baba baba-p">
+<figure>
+<div class="ph"><img src="assets/skin-ba-2-before.jpg" alt="문제성 피부 관리 전 — 사례 2, 볼" data-i18n-alt="t390" loading="lazy" width="211" height="295"/></div>
+<figcaption data-i18n="t218">관리 전<span>BEFORE</span></figcaption>
+</figure>
+<figure>
+<div class="ph"><img src="assets/skin-ba-2-after.jpg" alt="문제성 피부 관리 후 — 사례 2, 같은 부위" data-i18n-alt="t391" loading="lazy" width="210" height="295"/></div>
+<figcaption data-i18n="t219">관리 후<span>AFTER</span></figcaption>
+</figure>
+</div>
+<div class="baba baba-p">
+<figure>
+<div class="ph"><img src="assets/skin-ba-3-before.jpg" alt="문제성 피부 관리 전 — 사례 3, 볼" data-i18n-alt="t392" loading="lazy" width="212" height="294"/></div>
+<figcaption data-i18n="t218">관리 전<span>BEFORE</span></figcaption>
+</figure>
+<figure>
+<div class="ph"><img src="assets/skin-ba-3-after.jpg" alt="문제성 피부 관리 후 — 사례 3, 같은 부위" data-i18n-alt="t393" loading="lazy" width="212" height="294"/></div>
+<figcaption data-i18n="t219">관리 후<span>AFTER</span></figcaption>
+</figure>
+</div>
 </div>
 <p class="baba-note" data-i18n="t220">
         같은 조명 · 같은 각도 · 화장하지 않은 상태에서 촬영한 사진입니다.<br/>
