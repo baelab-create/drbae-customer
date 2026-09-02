@@ -57,6 +57,9 @@
   --gold-lt:#C9BEA9;
   --gold-pale:#F3F0EB;
 
+  /* 핵심 성분 배지 */
+  --key:#B3281E;
+
   --warn:#8C5A3C;
   --warnbg:#FBF3E4;
   --warnln:#E2CFA8;
@@ -222,6 +225,12 @@ p.body{font-size:1.02rem;color:var(--body);}
 p.body + p.body{margin-top:13px;}
 p.body b,.mini p b,.step p b{color:var(--navy);font-weight:700;}
 .hl{font-weight:700;color:var(--navy);box-shadow:inset 0 -0.42em 0 #E7EEF5;padding:0 2px;}
+/* 핵심 성분 강조 — 레드 배지. 4개 언어 사전에도 같은 span 이 들어 있다 */
+.kw{
+ display:inline-block;background:var(--key);color:#fff;
+ font-weight:800;line-height:1.3;letter-spacing:0;
+ padding:2px 7px;border-radius:4px;white-space:nowrap;
+}
 
 .note{
   margin-top:22px;background:#f7fafc;border:1px solid var(--line-soft);
@@ -973,7 +982,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <h3 class="blk" data-i18n="t067">어떤 원료가 들어 있나요</h3>
 <div class="ing">
 <div class="row">
-<div class="k" data-i18n="t068">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
+<div class="k" data-i18n="t068">병풀 세포외소포<em><span class="kw">식물 엑소좀</span> · <span class="kw">시카 EV</span></em></div>
 <div class="v" data-i18n="t069">닥터배 전 라인의 공통 핵심 원료입니다. <b>병풀(시카)에서 얻은 식물 유래</b> 원료로, 대학 연구실이 직접 관리합니다.</div>
 </div>
 <div class="row">
@@ -1078,7 +1087,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <div class="v" data-i18n="t109">아주 작은 것부터 큰 것까지 <b>크기가 다른 히알루론산 8가지</b>를 함께 담아, 각질을 정돈하는 동안 수분을 층층이 채웁니다.</div>
 </div>
 <div class="row">
-<div class="k" data-i18n="t110">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
+<div class="k" data-i18n="t110">병풀 세포외소포<em><span class="kw">식물 엑소좀</span> · <span class="kw">시카 EV</span></em></div>
 <div class="v" data-i18n="t111">각질 정돈이 진행되는 동안 <b>진정 · 컨디셔닝 역할</b>을 함께 맡습니다.</div>
 </div>
 <div class="row">
@@ -1139,7 +1148,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <div class="v" data-i18n="t133">크기가 다른 히알루론산 8가지로 <b>수분 층</b>을 만들어, 마무리 단계에서 촉촉함을 남깁니다.</div>
 </div>
 <div class="row">
-<div class="k" data-i18n="t134">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
+<div class="k" data-i18n="t134">병풀 세포외소포<em><span class="kw">식물 엑소좀</span> · <span class="kw">시카 EV</span></em></div>
 <div class="v" data-i18n="t135">병풀수와 함께 들어가 <b>피부 컨디션을 정돈</b>하는 역할을 맡습니다.</div>
 </div>
 </div>
@@ -1228,7 +1237,7 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 <h3 class="blk" data-i18n="t165">어떤 원료가 들어 있나요</h3>
 <div class="ing">
 <div class="row">
-<div class="k" data-i18n="t166">병풀 세포외소포<em>식물 엑소좀 · 시카 EV</em></div>
+<div class="k" data-i18n="t166">병풀 세포외소포<em><span class="kw">식물 엑소좀</span> · <span class="kw">시카 EV</span></em></div>
 <div class="v" data-i18n="t167">얼굴 라인과 동일한 공통 핵심 원료가 두피용에도 그대로 들어갑니다. <b>두피 컨디션을 정돈</b>하는 중심 역할입니다.</div>
 </div>
 <div class="row">
