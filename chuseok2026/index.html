@@ -254,23 +254,6 @@ footer{
 footer .flogo{height:26px;width:auto;margin:0 auto 14px;opacity:.72}
 footer p{font-size:.8rem;line-height:1.7;color:var(--sub)}
 footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--sandd)}
-
-/* ============================== STICKY BAR ============================== */
-.sticky{
-  position:fixed;left:0;right:0;bottom:0;z-index:40;
-  display:none;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
-  background:rgba(251,250,248,.94);backdrop-filter:blur(8px);
-  border-top:1px solid var(--hair);box-shadow:0 -6px 20px rgba(38,38,36,.07);
-  transform:translateY(120%);transition:transform .26s cubic-bezier(.22,.8,.3,1);
-}
-.sticky .btn{padding:14px 10px;font-size:.88rem}
-.sticky .btn .nlogo{width:17px;height:17px;font-size:.66rem}
-@media(max-width:760px){
-  .sticky{display:flex}
-  .sticky.on{transform:none}
-  body.has-sticky{padding-bottom:80px}
-}
-@media(prefers-reduced-motion:reduce){ .sticky{transition:none} }
 </style>
 </head>
 <body>
@@ -495,11 +478,6 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
   </div>
 </footer>
 
-<nav class="sticky" id="sticky" aria-label="스마트스토어 바로가기">
-  <a class="btn" id="stickyBooster" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="nlogo">N</span><span class="label">스킨부스터 6종</span></a>
-  <a class="btn" id="stickyDaily" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="nlogo">N</span><span class="label">샴푸 · 에센스겔</span></a>
-</nav>
-
 <script>
 /* ===================================================================
    여기만 고치면 됩니다.
@@ -528,31 +506,11 @@ var CONFIG = {
 
   var okBooster = activate($("btnBooster"), CONFIG.boosterUrl, "스마트스토어에서 구매하기");
   var okDaily   = activate($("btnDaily"),   CONFIG.dailyUrl,   "스마트스토어에서 구매하기");
-  activate($("stickyBooster"), CONFIG.boosterUrl, "스킨부스터 6종");
-  activate($("stickyDaily"),   CONFIG.dailyUrl,   "샴푸 · 에센스겔");
 
   if (okBooster) $("noteBooster").textContent = "네이버 스마트스토어 새 창으로 이동합니다.";
   if (okDaily)   $("noteDaily").textContent   = "네이버 스마트스토어 새 창으로 이동합니다.";
 
   if (CONFIG.periodText) $("periodText").textContent = CONFIG.periodText;
-
-  /* 모바일 하단 고정바 — 히어로를 지나가면 올라오고, 맨 위로 돌아가면 내려간다 */
-  var sticky = $("sticky"), hero = document.querySelector(".hero");
-  document.body.classList.add("has-sticky");
-
-  function setSticky(show) {
-    sticky.classList.toggle("on", show);
-    sticky.setAttribute("aria-hidden", show ? "false" : "true");
-  }
-  setSticky(false);
-
-  function onScroll() {
-    var trigger = hero ? hero.offsetHeight - 60 : 420;
-    setSticky(window.scrollY > trigger);
-  }
-  window.addEventListener("scroll", onScroll, { passive: true });
-  window.addEventListener("resize", onScroll);
-  onScroll();
 })();
 </script>
 </body>
