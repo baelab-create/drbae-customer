@@ -94,7 +94,8 @@ a{color:inherit}
 .alert p{margin-top:6px;font-size:.86rem;line-height:1.68;color:rgba(255,255,255,.82)}
 .alert em{font-style:normal;font-weight:800;color:#FFB0A5;border-bottom:1px solid rgba(255,176,165,.5)}
 @media(max-width:600px){
-  .alert{margin-top:20px;padding:13px 14px;gap:10px}
+  /* 좌우로 조금 들여써서 여백을 준다 */
+  .alert{margin:20px 14px 0;padding:14px 15px;gap:10px}
   .alert b{font-size:.9rem}
   .alert p{font-size:.82rem}
 }
@@ -105,17 +106,7 @@ a{color:inherit}
 .alert.light p{color:#7A3B34}
 .alert.light em{color:#B3281E;border-bottom-color:rgba(179,40,30,.4)}
 
-/* 히어로 안의 주문 버튼 — 모바일에서 첫 화면에 두 링크를 모두 노출 */
-.hero-cta{display:none}
 @media(max-width:760px){
-  .hero-cta{display:grid;gap:10px;margin:24px auto 0;max-width:420px;text-align:left}
-  .hero-cta .btn{padding:16px 16px;font-size:1rem;box-shadow:0 10px 24px rgba(3,199,90,.24)}
-  .hero-cta .btn[aria-disabled="true"]{
-    background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.24);
-    color:rgba(255,255,255,.66);box-shadow:none;
-  }
-  .hero-cta .btn[aria-disabled="true"] .nlogo{background:rgba(255,255,255,.24);color:rgba(255,255,255,.78)}
-  .hero-cta .cta-hint{margin-top:12px;text-align:center;font-size:.76rem;color:rgba(255,255,255,.56)}
   .hero .lede{margin-top:14px;font-size:.94rem;line-height:1.7}
   .hero .kicker{margin-bottom:14px}
   .period{margin-top:18px;padding:8px 15px;font-size:.82rem}
@@ -124,12 +115,6 @@ a{color:inherit}
   .hero-logo{height:28px;margin-bottom:16px}
   .hero .lede{font-size:.9rem}
 }
-@keyframes ctaPulse{
-  0%,100%{box-shadow:0 10px 24px rgba(3,199,90,.24)}
-  50%{box-shadow:0 10px 30px rgba(3,199,90,.46)}
-}
-.hero-cta .btn.live{animation:ctaPulse 2.8s ease-in-out infinite}
-@media(prefers-reduced-motion:reduce){ .hero-cta .btn.live{animation:none} }
 
 /* ============================== SECTION ============================== */
 section{padding:56px 0}
@@ -170,20 +155,24 @@ section.tight{padding:40px 0}
 .card .btn-wrap{margin-top:auto;padding:20px 22px 22px}
 .card .card-in{padding-bottom:0}
 
-/* 모바일 — 카드를 가로형으로 압축해 두 장이 한 스크롤 안에 들어오게 */
+/* 모바일 — 카드를 가로형으로 압축하되, 사진과 버튼에 여백을 준다 */
 @media(max-width:600px){
   .cards{gap:14px}
   .card{
-    display:grid;grid-template-columns:104px 1fr;
+    display:grid;grid-template-columns:100px 1fr;
     grid-template-areas:"fig in" "btn btn";
+    column-gap:14px;padding:14px;
   }
-  .card-fig{grid-area:fig;aspect-ratio:auto;height:100%;min-height:150px;border-right:1px solid var(--sandl)}
+  .card-fig{
+    grid-area:fig;aspect-ratio:auto;height:100%;min-height:148px;
+    border:1px solid var(--sandl);border-radius:8px;
+  }
   .card-badge{display:none}
-  .card-in{grid-area:in;padding:15px 15px 12px}
+  .card-in{grid-area:in;padding:2px 0 0}
   .card-in h3{margin-top:6px;font-size:1.1rem}
   .card-in .desc{margin-top:7px;font-size:.85rem;line-height:1.62}
   .items{display:none}
-  .card .btn-wrap{grid-area:btn;padding:0 15px 15px}
+  .card .btn-wrap{grid-area:btn;padding:18px 0 2px}
 }
 
 /* ============================== BUTTON ============================== */
@@ -316,19 +305,6 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
       </div>
     </div>
 
-    <div class="hero-cta" id="heroCta">
-      <a class="btn" id="heroBooster" href="#" aria-disabled="true" target="_blank" rel="noopener">
-        <span class="nlogo">N</span>
-        <span class="label">스킨부스터 6종 · 링크 준비 중</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-      </a>
-      <a class="btn" id="heroDaily" href="#" aria-disabled="true" target="_blank" rel="noopener">
-        <span class="nlogo">N</span>
-        <span class="label">샴푸 · 에센스 겔 · 링크 준비 중</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-      </a>
-      <p class="cta-hint" id="ctaHint">스마트스토어 링크가 열리면 이 버튼으로 바로 주문하실 수 있습니다.</p>
-    </div>
   </div>
 </header>
 
@@ -562,19 +538,16 @@ var CONFIG = {
 
   var okBooster = activate($("btnBooster"), CONFIG.boosterUrl, "스마트스토어에서 구매하기");
   var okDaily   = activate($("btnDaily"),   CONFIG.dailyUrl,   "스마트스토어에서 구매하기");
-  activate($("heroBooster"),   CONFIG.boosterUrl, "스킨부스터 6종 주문하기");
-  activate($("heroDaily"),     CONFIG.dailyUrl,   "샴푸 · 에센스 겔 주문하기");
   activate($("stickyBooster"), CONFIG.boosterUrl, "스킨부스터 6종");
   activate($("stickyDaily"),   CONFIG.dailyUrl,   "샴푸 · 에센스겔");
 
   if (okBooster) $("noteBooster").textContent = "네이버 스마트스토어 새 창으로 이동합니다.";
   if (okDaily)   $("noteDaily").textContent   = "네이버 스마트스토어 새 창으로 이동합니다.";
-  if (okBooster && okDaily) $("ctaHint").textContent = "네이버 스마트스토어 새 창으로 이동합니다.";
 
   if (CONFIG.periodText) $("periodText").textContent = CONFIG.periodText;
 
-  /* 모바일 하단 고정바 — 히어로 버튼이 화면에서 사라지면 올라오고, 돌아오면 내려간다 */
-  var sticky = $("sticky"), heroCta = $("heroCta");
+  /* 모바일 하단 고정바 — 히어로를 지나가면 올라오고, 맨 위로 돌아가면 내려간다 */
+  var sticky = $("sticky"), hero = document.querySelector(".hero");
   document.body.classList.add("has-sticky");
 
   function setSticky(show) {
@@ -583,15 +556,13 @@ var CONFIG = {
   }
   setSticky(false);
 
-  if ("IntersectionObserver" in window && heroCta) {
-    new IntersectionObserver(function (entries) {
-      setSticky(!entries[0].isIntersecting);
-    }, { rootMargin: "-8px 0px 0px 0px" }).observe(heroCta);
-  } else {
-    var onScroll = function () { setSticky(window.scrollY > 420); };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+  function onScroll() {
+    var trigger = hero ? hero.offsetHeight - 60 : 420;
+    setSticky(window.scrollY > trigger);
   }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", onScroll);
+  onScroll();
 })();
 </script>
 </body>
