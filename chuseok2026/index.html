@@ -57,9 +57,9 @@ a{color:inherit}
   box-shadow:0 0 0 12px rgba(233,214,150,.10), 0 0 64px 18px rgba(233,206,130,.28);
   opacity:.95;
 }
-@media(max-width:600px){ .moon{width:88px;height:88px;top:28px} }
+@media(max-width:600px){ .moon{width:74px;height:74px;top:22px} }
 .hero-in{position:relative;z-index:1;padding:176px 0 58px;text-align:center}
-@media(max-width:600px){ .hero-in{padding:140px 0 46px} }
+@media(max-width:600px){ .hero-in{padding:114px 0 34px} }
 .hero-logo{height:34px;width:auto;margin:0 auto 22px;opacity:.95}
 .hero .kicker{
   display:inline-block;margin:0 auto 18px;padding:6px 14px;
@@ -82,6 +82,32 @@ a{color:inherit}
   font-size:.86rem;font-weight:700;letter-spacing:-.01em;color:#F4E7BD;
 }
 .period .dot{width:6px;height:6px;border-radius:50%;background:#F2DFA4;box-shadow:0 0 0 4px rgba(242,223,164,.18)}
+
+/* 히어로 안의 주문 버튼 — 모바일에서 첫 화면에 두 링크를 모두 노출 */
+.hero-cta{display:none}
+@media(max-width:760px){
+  .hero-cta{display:grid;gap:10px;margin:24px auto 0;max-width:420px;text-align:left}
+  .hero-cta .btn{padding:16px 16px;font-size:1rem;box-shadow:0 10px 24px rgba(3,199,90,.24)}
+  .hero-cta .btn[aria-disabled="true"]{
+    background:rgba(255,255,255,.10);border-color:rgba(255,255,255,.24);
+    color:rgba(255,255,255,.66);box-shadow:none;
+  }
+  .hero-cta .btn[aria-disabled="true"] .nlogo{background:rgba(255,255,255,.24);color:rgba(255,255,255,.78)}
+  .hero-cta .cta-hint{margin-top:12px;text-align:center;font-size:.76rem;color:rgba(255,255,255,.56)}
+  .hero .lede{margin-top:14px;font-size:.94rem;line-height:1.7}
+  .hero .kicker{margin-bottom:14px}
+  .period{margin-top:18px;padding:8px 15px;font-size:.82rem}
+}
+@media(max-width:600px){
+  .hero-logo{height:28px;margin-bottom:16px}
+  .hero .lede{font-size:.9rem}
+}
+@keyframes ctaPulse{
+  0%,100%{box-shadow:0 10px 24px rgba(3,199,90,.24)}
+  50%{box-shadow:0 10px 30px rgba(3,199,90,.46)}
+}
+.hero-cta .btn.live{animation:ctaPulse 2.8s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){ .hero-cta .btn.live{animation:none} }
 
 /* ============================== SECTION ============================== */
 section{padding:56px 0}
@@ -119,7 +145,24 @@ section.tight{padding:40px 0}
   background:var(--sandl);border:1px solid var(--sandd);
   font-size:.74rem;font-weight:600;color:var(--taupe);
 }
-.card .btn-wrap{margin-top:auto;padding-top:20px}
+.card .btn-wrap{margin-top:auto;padding:20px 22px 22px}
+.card .card-in{padding-bottom:0}
+
+/* 모바일 — 카드를 가로형으로 압축해 두 장이 한 스크롤 안에 들어오게 */
+@media(max-width:600px){
+  .cards{gap:14px}
+  .card{
+    display:grid;grid-template-columns:104px 1fr;
+    grid-template-areas:"fig in" "btn btn";
+  }
+  .card-fig{grid-area:fig;aspect-ratio:auto;height:100%;min-height:150px;border-right:1px solid var(--sandl)}
+  .card-badge{display:none}
+  .card-in{grid-area:in;padding:15px 15px 12px}
+  .card-in h3{margin-top:6px;font-size:1.1rem}
+  .card-in .desc{margin-top:7px;font-size:.85rem;line-height:1.62}
+  .items{display:none}
+  .card .btn-wrap{grid-area:btn;padding:0 15px 15px}
+}
 
 /* ============================== BUTTON ============================== */
 .btn{
@@ -183,13 +226,17 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
   position:fixed;left:0;right:0;bottom:0;z-index:40;
   display:none;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
   background:rgba(251,250,248,.94);backdrop-filter:blur(8px);
-  border-top:1px solid var(--hair);
+  border-top:1px solid var(--hair);box-shadow:0 -6px 20px rgba(38,38,36,.07);
+  transform:translateY(120%);transition:transform .26s cubic-bezier(.22,.8,.3,1);
 }
-.sticky .btn{padding:13px 10px;font-size:.86rem}
+.sticky .btn{padding:14px 10px;font-size:.88rem}
+.sticky .btn .nlogo{width:17px;height:17px;font-size:.66rem}
 @media(max-width:760px){
-  .sticky.on{display:flex}
-  body.has-sticky{padding-bottom:78px}
+  .sticky{display:flex}
+  .sticky.on{transform:none}
+  body.has-sticky{padding-bottom:80px}
 }
+@media(prefers-reduced-motion:reduce){ .sticky{transition:none} }
 </style>
 </head>
 <body>
@@ -205,6 +252,20 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
       한가위 기간 동안 네이버 스마트스토어에서 특별한 조건으로 만나보실 수 있습니다.
     </p>
     <div class="period"><span class="dot"></span><span id="periodText">행사 기간 안내 예정</span></div>
+
+    <div class="hero-cta" id="heroCta">
+      <a class="btn" id="heroBooster" href="#" aria-disabled="true" target="_blank" rel="noopener">
+        <span class="nlogo">N</span>
+        <span class="label">스킨부스터 6종 · 링크 준비 중</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="btn" id="heroDaily" href="#" aria-disabled="true" target="_blank" rel="noopener">
+        <span class="nlogo">N</span>
+        <span class="label">샴푸 · 에센스 겔 · 링크 준비 중</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <p class="cta-hint" id="ctaHint">스마트스토어 링크가 열리면 이 버튼으로 바로 주문하실 수 있습니다.</p>
+    </div>
   </div>
 </header>
 
@@ -235,14 +296,14 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
             <span>엑소토카인 블루</span><span>피디로엔 핑크</span><span>리퀴드 마스크</span>
             <span>토코포르테 브라운</span><span>칼리파우더</span><span>블랙 포 스칼프</span>
           </div>
-          <div class="btn-wrap">
-            <a class="btn" id="btnBooster" href="#" aria-disabled="true" target="_blank" rel="noopener">
-              <span class="nlogo">N</span>
-              <span class="label">스마트스토어 링크 준비 중</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-            </a>
-            <p class="btn-note" id="noteBooster">링크가 열리면 이 버튼으로 바로 이동합니다.</p>
-          </div>
+        </div>
+        <div class="btn-wrap">
+          <a class="btn" id="btnBooster" href="#" aria-disabled="true" target="_blank" rel="noopener">
+            <span class="nlogo">N</span>
+            <span class="label">스마트스토어 링크 준비 중</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="btn-note" id="noteBooster">링크가 열리면 이 버튼으로 바로 이동합니다.</p>
         </div>
       </article>
 
@@ -262,14 +323,14 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
           <div class="items">
             <span>엑소토카인 스칼프 샴푸</span><span>에센스 겔</span><span>홈케어</span>
           </div>
-          <div class="btn-wrap">
-            <a class="btn" id="btnDaily" href="#" aria-disabled="true" target="_blank" rel="noopener">
-              <span class="nlogo">N</span>
-              <span class="label">스마트스토어 링크 준비 중</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
-            </a>
-            <p class="btn-note" id="noteDaily">링크가 열리면 이 버튼으로 바로 이동합니다.</p>
-          </div>
+        </div>
+        <div class="btn-wrap">
+          <a class="btn" id="btnDaily" href="#" aria-disabled="true" target="_blank" rel="noopener">
+            <span class="nlogo">N</span>
+            <span class="label">스마트스토어 링크 준비 중</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+          <p class="btn-note" id="noteDaily">링크가 열리면 이 버튼으로 바로 이동합니다.</p>
         </div>
       </article>
 
@@ -337,8 +398,8 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
 </footer>
 
 <nav class="sticky" id="sticky" aria-label="스마트스토어 바로가기">
-  <a class="btn" id="stickyBooster" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="label">스킨부스터 6종</span></a>
-  <a class="btn" id="stickyDaily" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="label">샴푸 · 에센스겔</span></a>
+  <a class="btn" id="stickyBooster" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="nlogo">N</span><span class="label">스킨부스터 6종</span></a>
+  <a class="btn" id="stickyDaily" href="#" aria-disabled="true" target="_blank" rel="noopener"><span class="nlogo">N</span><span class="label">샴푸 · 에센스겔</span></a>
 </nav>
 
 <script>
@@ -361,6 +422,7 @@ var CONFIG = {
     if (!btn || !url) return false;
     btn.href = url;
     btn.removeAttribute("aria-disabled");
+    btn.classList.add("live");
     var el = btn.querySelector(".label");
     if (el && label) el.textContent = label;
     return true;
@@ -368,17 +430,35 @@ var CONFIG = {
 
   var okBooster = activate($("btnBooster"), CONFIG.boosterUrl, "스마트스토어에서 구매하기");
   var okDaily   = activate($("btnDaily"),   CONFIG.dailyUrl,   "스마트스토어에서 구매하기");
+  activate($("heroBooster"),   CONFIG.boosterUrl, "스킨부스터 6종 주문하기");
+  activate($("heroDaily"),     CONFIG.dailyUrl,   "샴푸 · 에센스 겔 주문하기");
   activate($("stickyBooster"), CONFIG.boosterUrl, "스킨부스터 6종");
   activate($("stickyDaily"),   CONFIG.dailyUrl,   "샴푸 · 에센스겔");
 
   if (okBooster) $("noteBooster").textContent = "네이버 스마트스토어 새 창으로 이동합니다.";
   if (okDaily)   $("noteDaily").textContent   = "네이버 스마트스토어 새 창으로 이동합니다.";
+  if (okBooster && okDaily) $("ctaHint").textContent = "네이버 스마트스토어 새 창으로 이동합니다.";
 
   if (CONFIG.periodText) $("periodText").textContent = CONFIG.periodText;
 
-  if (okBooster || okDaily) {
-    $("sticky").classList.add("on");
-    document.body.classList.add("has-sticky");
+  /* 모바일 하단 고정바 — 히어로 버튼이 화면에서 사라지면 올라오고, 돌아오면 내려간다 */
+  var sticky = $("sticky"), heroCta = $("heroCta");
+  document.body.classList.add("has-sticky");
+
+  function setSticky(show) {
+    sticky.classList.toggle("on", show);
+    sticky.setAttribute("aria-hidden", show ? "false" : "true");
+  }
+  setSticky(false);
+
+  if ("IntersectionObserver" in window && heroCta) {
+    new IntersectionObserver(function (entries) {
+      setSticky(!entries[0].isIntersecting);
+    }, { rootMargin: "-8px 0px 0px 0px" }).observe(heroCta);
+  } else {
+    var onScroll = function () { setSticky(window.scrollY > 420); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
   }
 })();
 </script>
