@@ -5,13 +5,13 @@
 <meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
 <title>2026 추석 한가위 — 닥터배 라인업 특별 할인</title>
 <meta content="noindex, nofollow" name="robots"/>
-<meta content="2026년 추석 맞이 닥터배 라인업 특별 할인. 스킨부스터 6종과 스칼프 샴푸 · 에센스겔을 네이버 스마트스토어에서 만나보세요." name="description"/>
+<meta content="기존 거래처 전용 — 2026년 추석 맞이 닥터배 라인업 특별 할인. 스킨부스터 6종과 스칼프 샴푸 · 에센스겔을 네이버 스마트스토어에서 만나보세요." name="description"/>
 <meta content="website" property="og:type"/>
 <meta content="닥터배" property="og:site_name"/>
 <meta content="ko_KR" property="og:locale"/>
 <meta content="https://baelab-create.github.io/drbae-customer/chuseok2026/" property="og:url"/>
 <meta content="2026 추석 한가위 — 닥터배 라인업 특별 할인" property="og:title"/>
-<meta content="스킨부스터 6종 · 스칼프 샴푸 · 에센스겔 — 한가위 한정 혜택" property="og:description"/>
+<meta content="기존 거래처 전용 · 한가위 한정 — 스킨부스터 6종 · 스칼프 샴푸 · 에센스겔" property="og:description"/>
 <meta content="https://baelab-create.github.io/drbae-customer/assets/og-customer-v2.jpg" property="og:image"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="#1F3A5C" name="theme-color"/>
@@ -82,6 +82,28 @@ a{color:inherit}
   font-size:.86rem;font-weight:700;letter-spacing:-.01em;color:#F4E7BD;
 }
 .period .dot{width:6px;height:6px;border-radius:50%;background:#F2DFA4;box-shadow:0 0 0 4px rgba(242,223,164,.18)}
+
+/* 기존 거래처 전용 — 빨간 하이라이트 공지 */
+.alert{
+  display:flex;gap:12px;align-items:flex-start;text-align:left;
+  max-width:540px;margin:24px auto 0;padding:15px 17px;border-radius:10px;
+  background:rgba(196,52,42,.24);border:1px solid rgba(242,133,121,.58);
+}
+.alert .ico{flex:none;width:20px;height:20px;margin-top:2px;stroke:#FF9C90;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.alert b{display:block;font-size:.95rem;font-weight:800;letter-spacing:-.02em;color:#FFCFC8;line-height:1.5}
+.alert p{margin-top:6px;font-size:.86rem;line-height:1.68;color:rgba(255,255,255,.82)}
+.alert em{font-style:normal;font-weight:800;color:#FFB0A5;border-bottom:1px solid rgba(255,176,165,.5)}
+@media(max-width:600px){
+  .alert{margin-top:20px;padding:13px 14px;gap:10px}
+  .alert b{font-size:.9rem}
+  .alert p{font-size:.82rem}
+}
+/* 밝은 배경용 */
+.alert.light{background:#FCEAE8;border-color:#E9B0A9}
+.alert.light .ico{stroke:#B3281E}
+.alert.light b{color:#962017}
+.alert.light p{color:#7A3B34}
+.alert.light em{color:#B3281E;border-bottom-color:rgba(179,40,30,.4)}
 
 /* 히어로 안의 주문 버튼 — 모바일에서 첫 화면에 두 링크를 모두 노출 */
 .hero-cta{display:none}
@@ -253,6 +275,18 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
     </p>
     <div class="period"><span class="dot"></span><span id="periodText">행사 기간 안내 예정</span></div>
 
+    <div class="alert" role="note">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+      <div>
+        <b>기존 거래처 원장님을 위한 특별 구성입니다</b>
+        <p>
+          그동안 닥터배 제품을 사용해 주신 거래처에 드리는 감사 할인으로,
+          <em>기존 구매 내역이 없는 주문은 확인 후 자동 취소됩니다.</em>
+          너른 양해 부탁드립니다.
+        </p>
+      </div>
+    </div>
+
     <div class="hero-cta" id="heroCta">
       <a class="btn" id="heroBooster" href="#" aria-disabled="true" target="_blank" rel="noopener">
         <span class="nlogo">N</span>
@@ -375,6 +409,17 @@ footer a{color:var(--slate);text-decoration:none;border-bottom:1px solid var(--s
 
 <section class="tight">
   <div class="wrap">
+    <div class="alert light" role="note" style="max-width:none;margin:0 0 16px">
+      <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+      <div>
+        <b>기존 거래처 전용 할인입니다</b>
+        <p>
+          본 할인 구성은 닥터배와 거래해 오신 원장님들께만 제공됩니다.
+          <em>기존 구매 내역이 확인되지 않는 주문은 자동으로 취소</em>되는 점 양해 부탁드리며,
+          신규 거래를 원하시는 경우 담당자에게 먼저 문의해 주세요.
+        </p>
+      </div>
+    </div>
     <div class="note">
       <h3>구매 전 확인해 주세요</h3>
       <ul>
