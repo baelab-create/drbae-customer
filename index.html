@@ -798,10 +798,14 @@ h3.blk::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;box-
 .ing .row .k{border-bottom:0;box-shadow:0 2px 0 -1px rgba(163,152,136,.28),0 3px 0 -1px var(--neu-light);}
 
 /* --- 상단 바 --- */
-.nav{background:rgba(232,229,223,.94);border-bottom:0;box-shadow:0 6px 16px rgba(163,152,136,.28);}
+/* 상단 바는 불투명하게 — 반투명 + blur 위에 불투명한 버튼을 얹으면
+   눌린 면이 아니라 색이 다른 박스로 보인다 */
+.nav{background:var(--neu-bg);-webkit-backdrop-filter:none;backdrop-filter:none;
+     border-bottom:0;box-shadow:0 6px 16px rgba(163,152,136,.28);}
 .nav-links button{border:0;border-radius:10px;transition:box-shadow .2s,color .2s;}
 .nav-links button:hover{background:transparent;box-shadow:var(--neu-out-sm);}
-.nav-links button.on{background:var(--neu-bg);color:var(--navy);box-shadow:var(--neu-in-sm);}
+/* 선택된 메뉴는 배경을 두지 않고 안쪽 그림자만으로 눌린 면을 만든다 */
+.nav-links button.on{background:transparent;color:var(--navy);box-shadow:var(--neu-in-sm);}
 
 /* --- 언어 스위처: 파인 홈 안에 버튼, 선택된 언어는 튀어나온 버튼 --- */
 .lang-sw{background:var(--neu-bg);border:0;box-shadow:var(--neu-in-sm);padding:4px;}
