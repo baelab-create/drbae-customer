@@ -156,19 +156,12 @@
         b.setAttribute('title', LABEL[code]);
         b.innerHTML = '<span class="flag">' + FLAGS[code] + '</span><span class="code">' + LANGS[code] + '</span>';
         b.addEventListener('click', function () {
-          var compact = box.closest('.nav');           // 스티키 바의 컴팩트 모드
-          if (compact && !box.classList.contains('open') && code === current) { box.classList.add('open'); return; }
-          box.classList.remove('open');
           if (current !== code) apply(code);
         });
         box.appendChild(b);
       });
     });
   }
-
-  document.addEventListener('click', function (e) {
-    $all('.nav .lang-sw.open').forEach(function (box) { if (!box.contains(e.target)) box.classList.remove('open'); });
-  });
 
   function init() {
     cacheOriginal();

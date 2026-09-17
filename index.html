@@ -688,12 +688,20 @@ footer .fs{color:#8FA3B6;font-size:.8rem;}
 .hero .lang-sw{position:absolute;top:16px;right:16px;z-index:2;}
 @media(max-width:600px){ .hero .lang-sw{top:12px;right:12px;} .hero .lang-sw button{padding:6px 7px;font-size:.62rem;gap:4px;} .hero .lang-sw .flag{width:17px;height:12px;} }
 .nav .lang-sw{flex:0 0 auto;margin-left:6px;background:transparent;}
-/* 스티키 바에서는 현재 언어만 표시 → 탭하면 4개 펼침 */
-.nav .lang-sw button:not(.on){display:none;}
-.nav .lang-sw.open button:not(.on){display:inline-flex;}
-/* 닫힌 상태에서는 국기 + 화살표만 — 내비게이션 항목이 잘리지 않도록 폭을 아낀다 */
-.nav .lang-sw:not(.open) button.on .code{display:none;}
-.nav .lang-sw:not(.open) button.on::after{content:"▾";font-size:.7em;opacity:.7;margin-left:2px;}
+/* 상단 바의 언어 버튼은 처음부터 4개 모두 표시. 대신 좌우 여백을 줄여 폭을 아낀다 */
+.nav .lang-sw button{padding:6px 7px;}
+.nav .lang-sw .code{letter-spacing:.04em;}
+/* 언어 버튼 4개가 들어갈 자리를 만든다 —
+   상단 바의 작은 로고는 히어로의 큰 로고와 중복이라 내리고(좌우 118px 확보),
+   1200px 미만에서는 언어 코드(KO/EN/JA/FR) 글자도 접어 국기만 남긴다.
+   이렇게 해야 4개 언어 모두 메뉴가 잘리지 않는다. */
+.nav .brandmark{display:none;}
+@media(max-width:1199px){
+  .nav .lang-sw .code{display:none;}
+  .nav .lang-sw button{padding:6px 6px;}
+  /* 일본어 메뉴 이름이 가장 길어 8px 모자랐다 */
+  html[data-lang="ja"] .nav .nav-links button{padding:9px 5px;}
+}
 @media(max-width:900px){ .nav-links{width:auto;flex:1 1 auto;min-width:0;} }
 @media(max-width:720px){ .nav .lang-sw{margin-left:6px;} .nav .lang-sw button{padding:6px 7px;} }
 
