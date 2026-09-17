@@ -765,6 +765,115 @@ html:not([data-lang="ko"]) .ko-ref{
   display:block;margin-top:5px;
   font-size:.86rem;font-weight:600;color:#ABA598;letter-spacing:-.01em;line-height:1.4;
 }
+
+/* ============================================================
+   NEUMORPHISM — 부드러운 입체(소프트 UI) 스타일 레이어
+   바탕과 요소가 같은 색이고, 왼쪽 위 밝은 그림자 + 오른쪽 아래 어두운 그림자로
+   '튀어나온' 면을, 안쪽 그림자로 '눌린' 면을 표현한다. 테두리선은 쓰지 않는다.
+   이 블록만 지우면 이전 디자인으로 돌아간다.
+   ============================================================ */
+:root{
+  --neu-bg:#E8E5DF;
+  --neu-light:rgba(255,255,255,.92);
+  --neu-dark:rgba(163,152,136,.52);
+  --neu-out:9px 9px 20px var(--neu-dark),-9px -9px 20px var(--neu-light);
+  --neu-out-md:6px 6px 14px var(--neu-dark),-6px -6px 14px var(--neu-light);
+  --neu-out-sm:3px 3px 8px var(--neu-dark),-3px -3px 8px var(--neu-light);
+  --neu-in:inset 5px 5px 12px var(--neu-dark),inset -5px -5px 12px var(--neu-light);
+  --neu-in-sm:inset 2px 2px 6px var(--neu-dark),inset -2px -2px 6px var(--neu-light);
+  --neu-groove:inset 0 1px 0 rgba(163,152,136,.38),inset 0 -1px 0 var(--neu-light);
+
+  --bg:var(--neu-bg);
+  --paper:var(--neu-bg);
+  --r:20px;
+  --sub:#5E5B55;          /* 회색 바탕에서 읽히도록 보조 글자색을 한 단계 진하게 */
+}
+body,.hero{background:var(--neu-bg);}
+.hero{border-bottom:0;}
+
+/* --- 구분선은 선 대신 파인 홈(groove) --- */
+.divider{height:2px;background:none;box-shadow:var(--neu-groove);}
+h3.blk{border-top:0;position:relative;}
+h3.blk::before{content:"";position:absolute;left:0;right:0;top:0;height:2px;box-shadow:var(--neu-groove);}
+.ing .row .k{border-bottom:0;box-shadow:0 2px 0 -1px rgba(163,152,136,.28),0 3px 0 -1px var(--neu-light);}
+
+/* --- 상단 바 --- */
+.nav{background:rgba(232,229,223,.94);border-bottom:0;box-shadow:0 6px 16px rgba(163,152,136,.28);}
+.nav-links button{border:0;border-radius:10px;transition:box-shadow .2s,color .2s;}
+.nav-links button:hover{background:transparent;box-shadow:var(--neu-out-sm);}
+.nav-links button.on{background:var(--neu-bg);color:var(--navy);box-shadow:var(--neu-in-sm);}
+
+/* --- 언어 스위처: 파인 홈 안에 버튼, 선택된 언어는 튀어나온 버튼 --- */
+.lang-sw{background:var(--neu-bg);border:0;box-shadow:var(--neu-in-sm);padding:4px;}
+.nav .lang-sw{background:var(--neu-bg);}
+.lang-sw button{transition:box-shadow .2s,color .2s;}
+.lang-sw button:hover{background:transparent;color:var(--navy);}
+.lang-sw button.on{background:var(--neu-bg);color:var(--navy);box-shadow:var(--neu-out-sm);}
+.lang-sw button.on .flag{border-color:rgba(10,30,51,.18);}
+
+/* --- 섹션 카드 (01~08) --- */
+.secs{gap:30px;}
+details.sec{background:var(--neu-bg);border:0;border-radius:22px;box-shadow:var(--neu-out);transition:box-shadow .3s;}
+details.sec[open]{border-color:transparent;box-shadow:var(--neu-out);}
+details.sec > summary:active{background:transparent;}
+.chev{background:var(--neu-bg);border:0;box-shadow:var(--neu-out-sm);}
+details[open] > summary .chev{background:var(--neu-bg);border-color:transparent;box-shadow:var(--neu-in-sm);}
+details[open] > summary .chev svg{stroke:var(--navy);}
+details.sec[open] .sec-idx{color:var(--navy);}
+
+/* --- 튀어나온 카드류 --- */
+details.prod,details.track,details.faq,.dcard,.mini,.wk,
+.ing .row,.mech .m,.vs .c,.gate .g,.mol .x{
+  background:var(--neu-bg);border:0;box-shadow:var(--neu-out-md);
+}
+details.prod,details.track,.dcard,.wk{border-radius:18px;}
+details.faq,.mini,.ing .row,.mech .m,.vs .c,.gate .g,.mol .x{border-radius:16px;}
+details.prod[open],details.track[open],details.faq[open]{border-color:transparent;box-shadow:var(--neu-out-md);}
+.mini:hover,.dcard:hover,.wk:hover{border-color:transparent;box-shadow:var(--neu-out);}
+.prods{gap:20px;}
+.faqs{gap:16px;}
+.cards,.duo,.mech,.mol,.weeks{gap:18px;}
+.ing{gap:18px;}
+
+/* 강조 카드(권장 · 해당 · 선택)는 눌린 면으로 구분 */
+.vs .c.ok,.mol .x.hi{background:var(--neu-bg);border-color:transparent;box-shadow:var(--neu-in);}
+.gate .g.hi{background:var(--warnbg);border-color:transparent;box-shadow:var(--neu-in-sm);}
+
+/* --- 파인 면(정보 블록) --- */
+.note,.brandstate,.sf{background:var(--neu-bg);border:0;border-radius:16px;box-shadow:var(--neu-in);}
+.note.keep{background:var(--neu-bg);border:0;box-shadow:var(--neu-in);color:#4F493C;}
+details.faq .q,.mini .ic,.tk-ic{background:var(--neu-bg);box-shadow:var(--neu-in-sm);}
+
+/* 안전 안내는 색을 유지해 눈에 띄게 — 테두리 대신 부드러운 입체 */
+.warn{border:0;border-radius:16px;box-shadow:var(--neu-out-md);}
+
+/* --- 칩 · 태그 --- */
+.tags{gap:12px;}
+.tags span,.bs-tags span,.press .outlets span,.wk .ps span,.wk .off{
+  background:var(--neu-bg);border:0;border-radius:999px;box-shadow:var(--neu-out-sm);
+}
+
+/* --- 사진 --- */
+figure.shot,.baba .ph,.baba.baba-p .ph{border:0;border-radius:18px;background:var(--neu-bg);box-shadow:var(--neu-out-md);}
+.press figure{border:0;border-radius:18px;box-shadow:var(--neu-out-md);}
+.dcard img{background:var(--neu-bg);}
+
+/* --- 진한 색 블록(교수 소개 · 공식 · 푸터)은 그대로 두고 입체만 --- */
+.prof,.formula{border-radius:20px;box-shadow:var(--neu-out);}
+.dlabel{border-radius:8px;}
+.step .n{border:0;box-shadow:var(--neu-out-sm);}
+.steps::before{background:none;box-shadow:inset 1px 0 0 rgba(163,152,136,.38),inset -1px 0 0 var(--neu-light);width:2px;}
+
+/* --- 버튼 --- */
+.detail-btn{background:var(--neu-bg);border:0;box-shadow:var(--neu-out-sm);transition:box-shadow .2s,color .2s;}
+.detail-btn:hover{border-color:transparent;color:var(--navy);box-shadow:var(--neu-out-md);}
+.detail-btn.on{background:var(--neu-bg);color:var(--navy);border-color:transparent;box-shadow:var(--neu-in-sm);}
+
+/* --- 외국어 화면의 한국어 섹션 표식 — 회색 바탕에서 너무 흐려지지 않게 한 단계 진하게 --- */
+html:not([data-lang="ko"]) .ko-ref{color:#958E82;}
+
+/* --- 형광펜 강조를 회색 바탕에 맞게 --- */
+.hl{box-shadow:inset 0 -0.42em 0 rgba(157,180,198,.38);}
 </style>
 </head>
 <body>
