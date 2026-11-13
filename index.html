@@ -708,10 +708,10 @@ footer .fs{color:#8FA3B6;font-size:.8rem;}
 /* 언어별 폰트 · 길이 보정 */
 html[data-lang="ja"] body{font-family:"Noto Sans JP",var(--sans);}
 html[data-lang="ja"] .hero h1,html[data-lang="ja"] h2,html[data-lang="ja"] .prof h4,html[data-lang="ja"] .formula .w b{font-family:"Noto Serif JP",var(--serif);}
-html[data-lang="en"] .nav-links button,html[data-lang="fr"] .nav-links button,html[data-lang="ja"] .nav-links button{font-size:.76rem;padding:9px 9px;letter-spacing:-.01em;}
+html[data-lang="es"] .nav-links button,html[data-lang="en"] .nav-links button,html[data-lang="fr"] .nav-links button,html[data-lang="ja"] .nav-links button{font-size:.76rem;padding:9px 9px;letter-spacing:-.01em;}
 html[data-lang="ja"] .nav-links button{padding:9px 7px;letter-spacing:0;}
 @media(max-width:900px){ html:not([data-lang="ko"]) .nav-links button{font-size:.74rem;padding:9px 7px;} }
-html[data-lang="fr"] .hero h1,html[data-lang="en"] .hero h1{letter-spacing:-.02em;}
+html[data-lang="es"] .hero h1,html[data-lang="fr"] .hero h1,html[data-lang="en"] .hero h1{letter-spacing:-.02em;}
 html:not([data-lang="ko"]) .wk .wn,html:not([data-lang="ko"]) .wk .off{letter-spacing:.02em;}
 html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{letter-spacing:0;}
 
@@ -759,6 +759,8 @@ html:not([data-lang="ko"]) .bs-tags span,html:not([data-lang="ko"]) .tags span{l
 .detail-btn.on{color:#fff;background:var(--navy);border-color:var(--navy);}
 .detail-btn::before{content:"자세히 +";}
 .detail-btn.on::before{content:"간단히 \2212";}
+html[data-lang="es"] .detail-btn::before{content:"Detalles +";}
+html[data-lang="es"] .detail-btn.on::before{content:"Menos \2212";}
 html[data-lang="en"] .detail-btn::before{content:"Details +";}
 html[data-lang="en"] .detail-btn.on::before{content:"Less \2212";}
 html[data-lang="ja"] .detail-btn::before{content:"\8A73\3057\304F +";}
@@ -2225,6 +2227,7 @@ small,figcaption,.sub,.muted,.note,.hint,.caption,.desc,.meta,.foot,footer{font-
 <script src="i18n/en.js"></script>
 <script src="i18n/ja.js"></script>
 <script src="i18n/fr.js"></script>
+<script src="i18n/es.js"></script>
 <script src="i18n/i18n.js"></script>
 <script id="drbae-brief">
 /* 부록 토글 — 각 섹션에서 긴 산문(.sec-body 직계 p.body)과 부연 설명(.sec-body 직계 .note)을

@@ -1,14 +1,14 @@
-# drbae-customer — 다국어(KO/EN/JA/FR) 구조
+# drbae-customer — 다국어(KO/EN/JA/FR/ES) 구조
 
 ## 파일
 | 파일 | 역할 |
 |---|---|
 | `index.html` | 한국어 원문. 번역 대상 요소에 `data-i18n="tNNN"` (본문), `data-i18n-alt` (이미지 alt), `data-i18n-meta` (meta content) 부여 |
 | `i18n/i18n.js` | 런타임. 언어 판별 → 사전 치환 → 스위처 렌더링 |
-| `i18n/ko.js` `en.js` `ja.js` `fr.js` | 언어별 사전 `window.I18N.<lang> = { key: html }` (381개 키) |
+| `i18n/ko.js` `en.js` `ja.js` `fr.js` `es.js` | 언어별 사전 `window.I18N.<lang> = { key: html }` (390개 키) |
 
 ## 언어 결정 순서
-`?lang=en|ja|fr` URL 파라미터 → `localStorage(drbae.lang)` → 브라우저 언어 → `ko`
+`?lang=en|ja|fr|es` URL 파라미터 → `localStorage(drbae.lang)` → 브라우저 언어 → `ko`
 - 관리실별 QR 코드에 `https://baelab-create.github.io/drbae-customer/?lang=ja` 처럼 언어를 미리 심을 수 있음
 - 사전에 키가 없으면 한국어 원문이 그대로 남음(누락 안전)
 
@@ -18,8 +18,8 @@
 3. `<b>`, `<span class="hl">`, `<em>`, `<br>` 등 인라인 태그의 **종류와 순서**는 한국어 원문과 동일하게 유지 (검증 스크립트 `build.py`가 태그 시퀀스를 대조함)
 
 ## 새 문단 추가 시
-1. `index.html`의 새 요소에 `data-i18n="t382"` 처럼 **미사용 키**를 부여
-2. 4개 사전 모두에 같은 키 추가 (없으면 한국어로 표시됨)
+1. `index.html`의 새 요소에 `data-i18n="t394"` 처럼 **미사용 키**를 부여
+2. 5개 사전 모두에 같은 키 추가 (없으면 한국어로 표시됨)
 
 ## 국기 아이콘
 - 국기는 이모지가 아니라 **인라인 SVG**(`i18n.js`의 `FLAGS`)다. Windows의 Segoe UI Emoji에는

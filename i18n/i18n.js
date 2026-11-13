@@ -7,7 +7,7 @@
    · 사전에 키가 없으면 한국어 원문을 그대로 둔다(누락 안전).
    ========================================================================== */
 (function () {
-  var LANGS = { ko: 'KO', en: 'EN', ja: 'JA', fr: 'FR' };
+  var LANGS = { ko: 'KO', en: 'EN', ja: 'JA', fr: 'FR', es: 'ES' };
   /* 국기 — 이모지(KR/US/JP/FR 리저널 인디케이터)는 Windows의 Segoe UI Emoji에
      국기 글리프가 없어 'KR' 같은 문자 두 개로 깨져 보인다.
      모든 기기에서 같게 보이도록 인라인 SVG로 그린다. 좌표계는 36×24 (3:2). */
@@ -65,6 +65,8 @@
     ),
     /* 일장기 — 붉은 원 지름은 세로의 3/5 */
     ja: svg('<rect width="36" height="24" fill="#fff"/><circle cx="18" cy="12" r="7.2" fill="#bc002d"/>'),
+    /* 스페인 국기 — 가로 3색 */
+    es: svg('<rect width="36" height="24" fill="#aa151b"/><rect y="6" width="36" height="12" fill="#f1bf00"/>'),
     /* 삼색기 */
     fr: svg(
       '<rect width="12" height="24" fill="#002395"/>' +
@@ -72,7 +74,7 @@
       '<rect width="12" height="24" x="24" fill="#ed2939"/>'
     )
   };
-  var LABEL = { ko: '한국어', en: 'English', ja: '日本語', fr: 'Français' };
+  var LABEL = { ko: '한국어', en: 'English', ja: '日本語', fr: 'Français', es: 'Español' };
   var STORE = 'drbae.lang';
   var FONTS = {
     ja: 'https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Noto+Serif+JP:wght@500;700&display=swap'
@@ -115,7 +117,7 @@
     document.documentElement.lang = lang;
     document.documentElement.setAttribute('data-lang', lang);
     var og = document.querySelector('meta[property="og:locale"]');
-    if (og) og.setAttribute('content', { ko: 'ko_KR', en: 'en_US', ja: 'ja_JP', fr: 'fr_FR' }[lang]);
+    if (og) og.setAttribute('content', { ko: 'ko_KR', en: 'en_US', ja: 'ja_JP', fr: 'fr_FR', es: 'es_ES' }[lang]);
 
     $all('.lang-sw button').forEach(function (b) {
       var on = b.getAttribute('data-lang') === lang;
