@@ -323,6 +323,7 @@ window.I18N.en = {
  "t322": "Before · after",
  "t323": "Before<span>BEFORE</span>",
  "t324": "After<span>AFTER</span>",
+  "t324m": "After 3 months<span>AFTER 3 MONTHS</span>",
  "t325": "Photographed under the same lighting, at the same angle, without makeup.<br> Skin condition and results vary from person to person.",
  "t326": "Taking it a level higher",
  "t327": "Dissolving <b>Cali Powder</b> into Black for Scalp creates a treatment in which <b>three products work together</b>.",

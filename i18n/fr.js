@@ -323,6 +323,7 @@ window.I18N.fr = {
  "t322": "Avant · après",
  "t323": "Avant<span>BEFORE</span>",
  "t324": "Après<span>AFTER</span>",
+  "t324m": "Après 3 mois<span>APRÈS 3 MOIS</span>",
  "t325": "Photos prises sous le même éclairage, sous le même angle, sans maquillage.<br> L'état de la peau et les résultats varient d'une personne à l'autre.",
  "t326": "Passer au niveau supérieur",
  "t327": "Dissoudre <b>Cali Powder</b> dans Black for Scalp crée un soin où <b>trois produits agissent ensemble</b>.",

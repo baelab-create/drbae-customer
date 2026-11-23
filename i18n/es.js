@@ -322,6 +322,7 @@ window.I18N.es = {
   "t322": "Antes y después",
   "t323": "Antes<span>ANTES</span>",
   "t324": "Después<span>DESPUÉS</span>",
+  "t324m": "A los 3 meses<span>DESPUÉS DE 3 MESES</span>",
   "t325": "Fotografías tomadas con la misma iluminación, desde el mismo ángulo y sin maquillaje.<br> El estado de la piel y los resultados varían según la persona.",
   "t326": "Un nivel más de cuidado",
   "t327": "Disolver <b>Cali Powder</b> en Black for Scalp permite un cuidado en el que <b>tres productos actúan juntos</b>.",
