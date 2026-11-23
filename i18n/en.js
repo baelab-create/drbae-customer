@@ -324,7 +324,7 @@ window.I18N.en = {
  "t323": "Before<span>BEFORE</span>",
  "t324": "After<span>AFTER</span>",
   "t324m": "After 3 months<span>AFTER 3 MONTHS</span>",
- "t325": "Photographed under the same lighting, at the same angle, without makeup.<br> Skin condition and results vary from person to person.",
+ "t325": "These are records of <b>visible change in individual cases</b>; results vary from person to person.<br> Camera angle, lighting and hair condition differ between photos, and they do not indicate product efficacy or any medical treatment effect.",
  "t326": "Taking it a level higher",
  "t327": "Dissolving <b>Cali Powder</b> into Black for Scalp creates a treatment in which <b>three products work together</b>.",
  "t328": "<b>Essence-gel fascia rolling</b> — continuing along the back of the neck, the trapezius and the base of the skull also eases stiffness around the scalp.",

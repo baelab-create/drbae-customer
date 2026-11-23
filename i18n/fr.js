@@ -324,7 +324,7 @@ window.I18N.fr = {
  "t323": "Avant<span>BEFORE</span>",
  "t324": "Après<span>AFTER</span>",
   "t324m": "Après 3 mois<span>APRÈS 3 MOIS</span>",
- "t325": "Photos prises sous le même éclairage, sous le même angle, sans maquillage.<br> L'état de la peau et les résultats varient d'une personne à l'autre.",
+ "t325": "Il s’agit d’un <b>relevé du changement visible sur des cas individuels</b> ; les résultats varient d’une personne à l’autre.<br> L’angle, l’éclairage et l’état des cheveux ne sont pas identiques, et ces photos n’indiquent ni l’efficacité du produit ni un effet de traitement médical.",
  "t326": "Passer au niveau supérieur",
  "t327": "Dissoudre <b>Cali Powder</b> dans Black for Scalp crée un soin où <b>trois produits agissent ensemble</b>.",
  "t328": "<b>Roulement des fascias au gel essence</b> — en poursuivant sur la nuque, les trapèzes et la base du crâne, les tensions autour du cuir chevelu se relâchent aussi.",

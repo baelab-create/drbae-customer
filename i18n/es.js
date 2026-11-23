@@ -323,7 +323,7 @@ window.I18N.es = {
   "t323": "Antes<span>ANTES</span>",
   "t324": "Después<span>DESPUÉS</span>",
   "t324m": "A los 3 meses<span>DESPUÉS DE 3 MESES</span>",
-  "t325": "Fotografías tomadas con la misma iluminación, desde el mismo ángulo y sin maquillaje.<br> El estado de la piel y los resultados varían según la persona.",
+  "t325": "Son registros del <b>cambio visible en casos individuales</b>; los resultados varían según la persona.<br> El ángulo, la iluminación y el estado del cabello no son iguales, y no indican eficacia del producto ni efecto de tratamiento médico.",
   "t326": "Un nivel más de cuidado",
   "t327": "Disolver <b>Cali Powder</b> en Black for Scalp permite un cuidado en el que <b>tres productos actúan juntos</b>.",
   "t328": "El <b>masaje de fascia con gel de esencia</b>, continuado por la nuca, los trapecios y la base del cráneo, también alivia la rigidez alrededor del cuero cabelludo.",
